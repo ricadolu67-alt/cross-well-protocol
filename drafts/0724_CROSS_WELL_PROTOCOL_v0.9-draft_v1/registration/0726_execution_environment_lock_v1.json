@@ -1,6 +1,6 @@
 {
   "status": "PREUNLOCK_EXECUTION_ENVIRONMENT_LOCKED",
-  "captured_at_utc": "2026-07-26T04:17:37.390374+00:00",
+  "captured_at_utc": "2026-07-26T04:19:34.541264+00:00",
   "layer_D_numeric_ROP_accessed": false,
   "python_executable": "D:\\python\\python.exe",
   "python_version": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
@@ -17,7 +17,7 @@
     "scripts/run_layer_d_confirmatory.py": "DE5CF8AEE34C113DD309FFD3EC01626A61B79EC61D7AF225C9E864C2E42D12A6",
     "scripts/execute_frozen_run.py": "3160A37F5BCBEEBEA863D360C1CF2D3E57E7CB0ADA901793DDA3D39599C0EF7B",
     "scripts/build_frozen_scoring_source_map.py": "238F0F81CD521E5A6E6CD9BC96102087490DEFEFD09342708758FEE9E99F9326",
-    "scripts/build_private_local_archive_locator.py": "64418BC70412DA37BE103A101BB928CE52E2EDA78EF8C585B7D4F368F58DD73B",
+    "scripts/build_private_local_archive_locator.py": "B40ED3E0979821C5AE2D20A2A70FDB4B0F33733ABCB7D22A392C445B3079A4DB",
     "scripts/validate_protocol.py": "448A8029FCA7D5D29715B6FF245392DA8614A23C3290153D1DE79263E3BC5599",
     "scripts/generate_freeze_manifest.py": "843A077FD8CDD9A47BBDB863C6A24C02878DE9CAA40B3A6D2B85785F8EEBF700"
   },

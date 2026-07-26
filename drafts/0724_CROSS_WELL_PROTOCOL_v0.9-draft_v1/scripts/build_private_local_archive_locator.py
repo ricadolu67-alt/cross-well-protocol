@@ -51,14 +51,15 @@ def main() -> int:
             Path("D:/data") / item["basin_folder"] / item["file_name"],
             Path.home() / "Downloads" / item["file_name"],
         ]
-        candidates = [
-            path for path in candidates
-            if path.is_file() and path.stat().st_size == int(item["size_bytes"])
-        ]
-        unique = {str(path.resolve()).casefold(): path.resolve() for path in candidates}
-        if len(unique) != 1:
-            raise RuntimeError(f"Local path resolution count={len(unique)} for {digest}")
-        path = next(iter(unique.values()))
+        path = next(
+            (
+                candidate.resolve() for candidate in candidates
+                if candidate.is_file() and candidate.stat().st_size == int(item["size_bytes"])
+            ),
+            None,
+        )
+        if path is None:
+            raise RuntimeError(f"No size-matched local path for {digest}")
         actual = sha256(path)
         if actual != digest:
             raise RuntimeError(f"SHA-256 mismatch: {path}")

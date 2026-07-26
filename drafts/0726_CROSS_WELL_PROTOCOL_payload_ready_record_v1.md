@@ -2,16 +2,19 @@
 
 - 状态：`PAYLOAD_READY_PENDING_EXTERNAL_TIMESTAMP_AND_UNLOCK_GATE`
 - 协议目录：`drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1`
-- 候选 ZIP：`drafts/0726_CROSS_WELL_PROTOCOL_v0.9-draft_payload-ready_v2.zip`
-- ZIP SHA-256：`4775B236C2E9C296FA27CFD82FBA3B359AD6725872F806845467C31008FCBE54`
-- ZIP 大小：`3,488,234 bytes`
-- `16_freeze_manifest.json` SHA-256：`6C521FF9917A56F0E7C076DC57567CAF35B74DE81D0E2B224EA8C1BCB6E5436D`
+- 候选 ZIP：`drafts/0726_CROSS_WELL_PROTOCOL_v0.9-draft_payload-ready_v3.zip`
+- ZIP SHA-256：`7B972411D28A1F59BF67FEA2C5BEAACCE2EC1C7010A3A55CB96C53DCFB7FB6B8`
+- ZIP 大小：`3,488,216 bytes`
+- `16_freeze_manifest.json` SHA-256：`7866E0768C5D93DF535C8EE9E3EB2B026C3913CCD0780A1415FD8C3DF88C1869`
 - Manifest 覆盖文件：`139`
 - 冻结评分来源映射：`23` 个 qualified families
 - 严格校验：`PASS`
 - 未决科学/执行占位符：`0`
 - Layer D 数值 ROP：`未访问`
 - 公开载荷中的本机绝对归档路径：`0`
+- 私有本地归档定位 sidecar：`drafts/0726_CROSS_WELL_private_execution_sidecars_v1/0726_local_archive_locator_completed_v1.json`
+- 私有定位 sidecar SHA-256：`F4D16D19F72674C8295E4B9149C1E50A244A7E4FBC5E19C6531D8F3609F1CD77`
+- 已整文件复核的评分归档：`23 / 23`
 
 ## 非循环外部门
 
