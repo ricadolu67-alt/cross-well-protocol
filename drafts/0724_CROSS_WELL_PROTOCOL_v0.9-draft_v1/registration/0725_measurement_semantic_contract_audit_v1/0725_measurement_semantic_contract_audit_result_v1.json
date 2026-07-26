@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "CROSS_WELL_MEASUREMENT_SEMANTIC_COMPLETENESS_V1",
+  "executed_at_utc": "2026-07-25T09:49:12.075700+00:00",
+  "scope": "CONTRACT_METADATA_ONLY",
+  "input_identity": [
+    {
+      "path": "05_measurement_semantic_contract.csv",
+      "sha256": "ADAB087CA20755138F7606769AAFEA65B724F79629DBBADB36C9695D5752041D",
+      "rows": 100
+    },
+    {
+      "path": "05d_extension_v4_measurement_semantic_contract.csv",
+      "sha256": "C9712CE0DBE9E06373BFD6525D879073E8D08884966F9D68757F01FF6E3645D1",
+      "rows": 15
+    }
+  ],
+  "archive_scope_count": 23,
+  "row_count": 115,
+  "feature_row_count": 92,
+  "target_row_count": 23,
+  "checks": {
+    "input_files_parse": true,
+    "schemas_identical": true,
+    "archive_scope_count_is_23": true,
+    "row_count_is_115": true,
+    "every_scope_has_exactly_five_rows": true,
+    "every_scope_has_common4_plus_ROP": true,
+    "all_ambiguity_status_pass": true,
+    "all_target_semantic_fields_nonempty": true,
+    "numeric_ROP_accessed": false
+  },
+  "failures": [],
+  "overall_status": "PASS"
+}

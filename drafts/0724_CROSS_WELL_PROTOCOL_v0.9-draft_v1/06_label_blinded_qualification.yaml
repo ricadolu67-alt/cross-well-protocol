@@ -1,0 +1,170 @@
+schema_version: "0.9"
+status: "DRAFT_NOT_FROZEN"
+
+T1a_structural_qualification:
+  numeric_arrays_readable: false
+  permitted_inputs:
+    - "archive and ZIP member inventory"
+    - "headers"
+    - "mnemonics"
+    - "units of measure"
+    - "well and wellbore identifiers"
+    - "field and basin identifiers"
+    - "curve descriptions"
+    - "non-numeric structural metadata"
+  required_outputs:
+    - "archive identity"
+    - "field and basin identity"
+    - "required mnemonic availability"
+    - "declared units"
+    - "structural exclusion reason codes"
+
+T1a0_archive_structural_inventory:
+  status: "COMPLETED"
+  completed_at_utc: "2026-07-24T17:04:08.761Z"
+  authorized_scope: "ZIP central-directory metadata only"
+  candidate_archive_count: 59
+  successful_archive_count: 59
+  failed_archive_count: 0
+  total_member_count: 17700
+  file_member_count: 15634
+  directory_member_count: 2066
+  entry_stream_opened: false
+  member_extracted: false
+  member_header_read: false
+  numeric_payload_read: false
+  member_inventory_path: "../0725_CROSS_WELL_T1a0_structural_inventory_v1/0725_T1a0_member_inventory_v1.csv"
+  member_inventory_sha256: "e2533319a7bea556055cc91e5357acf08820437f54138396c245fb136b3da976"
+  access_log_sha256: "2230b663152f2c3be7bacd07a4366eb7c21152b271dcf80685a97db8a67f91be"
+  interpretation: >-
+    The member structure is inventoried, but archive identity, field and basin
+    identity, curve availability, units, and semantic eligibility remain
+    pending a separately frozen restricted header procedure.
+
+T1a1_restricted_header_qualification:
+  status: "COMPLETED_PENDING_IDENTITY_AND_SEMANTIC_REVIEW"
+  started_at_utc: "2026-07-24T17:13:07.661Z"
+  completed_at_utc: "2026-07-24T17:13:46.176Z"
+  parser_path: "../0725_CROSS_WELL_T1a1_header_qualification_v1/0725_T1a1_restricted_header_parser_v1.py"
+  parser_sha256: "d39c825e9ff5a52874b4f50a7fa356e277e5d222d554813ad561acf68952c0b1"
+  member_types_permitted_for_header_access:
+    - ".las"
+    - ".csv"
+    - ".xml"
+    - ".witsml"
+  authorized_member_count: 1206
+  processed_member_count: 1206
+  safe_pass_member_count: 1159
+  unsafe_member_count: 47
+  normalized_header_item_count: 67732
+  archive_count_with_safe_header_evidence: 53
+  archive_count_without_authorized_header_member: 6
+  archive_count_with_all_common4_plus_ROP_candidate_tokens: 34
+  candidate_token_interpretation: "token evidence only; semantic qualification remains pending"
+  member_qualification_sha256: "f98ff495265c27b013e8d106d3d988419c7b1f9a7f55ca01583f89b154fbd3b3"
+  header_items_sha256: "97564dad6b1baba40fe919d9321801ce38ddb826ed58794430ef3454296166de"
+  access_log_sha256: "d900baa4e8b7ab7755076deff27e6534f90a7102c94844c411b397f5a010c967"
+  numeric_array_access: false
+  target_ROP_numeric_access: false
+  member_extraction: false
+  raw_header_retained: false
+  automatic_archive_exclusion: false
+
+identity_dependence_review:
+  status: "CANDIDATES_READY_PENDING_PRINCIPAL_RESEARCHER_REVIEW"
+  D2_identity_reconstruction_correction: "D2-T1A1-001"
+  corrected_identity_reconstruction_path: "../0725_CROSS_WELL_identity_dependence_review_v1/0725_identity_item_reconstruction_v2.csv"
+  corrected_identity_reconstruction_sha256: "a14db259e9a857308859ab82379535962921904f13313f57f257342aa6f30c5a"
+  archive_identity_candidates_path: "../0725_CROSS_WELL_identity_dependence_review_v1/0725_archive_identity_candidates_v2.csv"
+  archive_identity_candidates_sha256: "93809d26c30b7bfd07e3aa2be10a81518ed90a6633b3636fd4e91888d1181c56"
+  archive_count: 59
+  single_header_well_candidate_archives: 42
+  multiple_header_well_candidate_archives: 7
+  path_only_review_archives: 10
+  final_identity_assignment: false
+  final_field_assignment: false
+  final_dependence_assignment: false
+
+T1b_label_blinded_covariate_qualification:
+  authorization_status: "AUTHORIZED_BY_PRINCIPAL_RESEARCHER_2026-07-25"
+  execution_stage: "LAS_LABEL_BLINDED_QUALIFICATION_V4_COMPLETED"
+  restricted_extractor_path: "../0725_CROSS_WELL_T1b_label_blinded_v4/scripts/run_T1b_restricted_las_qc.py"
+  restricted_extractor_sha256: "77F64C7DC3C4CED6470AFAC022CF6BD0B674EB0BCDF65F69C59D354D452C3830"
+  selected_development_archive_count: 48
+  development_family_count: 25
+  las_file_count: 886
+  exact_common4_las_file_count: 123
+  family_label_blinded_qualified_count: 18
+  family_held_or_failed_count: 7
+  fields_with_two_or_more_qualified_families: 6
+  normalized_basin_context_count: 6
+  primary_qualified_basin_context_count: 4
+  thresholds_applied: true
+  family_qualification_decisions_made: true
+  canonical_source_object_rule: >-
+    Require the source object itself to pass all frozen covariate and coverage
+    rules, then rank by MD coverage, valid common4 rows and total rows
+    descending, with member path ascending as the stable final tie-break.
+  model_prediction_executed: false
+  permitted_numeric_curves:
+    - "measured_depth"
+    - "weight_on_bit"
+    - "surface_rotary_speed"
+    - "standpipe_pressure"
+  prohibited_numeric_curves:
+    - "rate_of_penetration"
+    - "any proxy that directly exposes target ROP"
+  permitted_outputs_only:
+    - "missing_fraction"
+    - "finite_fraction"
+    - "physical_range_violation_count"
+    - "measured_depth_coverage"
+    - "continuous_segment_count"
+    - "sampling_interval_summary"
+  raw_covariate_export_to_analysis_team: false
+  target_rop_exposure_to_analysis_team: false
+  q_c_rules_frozen_before_execution: true
+  performance_based_exclusion: false
+  semantic_mapping_amendment:
+    amendment_id: "SEMANTIC_MAP_AMENDMENT_20260725_V1"
+    path: "05c_label_blinded_semantic_mapping_amendment_v1.yaml"
+    status: "PREUNLOCK_GLOBAL_DRAFT_AMENDMENT"
+    added_exact_tokens:
+      measured_depth_mnemonic:
+        - "TOTDEPTH"
+      weight_on_bit_units:
+        - "klbs"
+        - "t"
+    outcome_basis_used: false
+    thresholds_changed: false
+    same_source_object_rule_changed: false
+
+qualification_thresholds:
+  feature_missing_fraction_maximum: 0.20
+  finite_fraction_minimum: 0.80
+  physical_ranges_reference: "05b_measurement_alignment_sampling_contract.yaml"
+  measured_depth_coverage_minimum_m: 100.0
+  scoring_points_minimum: 100
+  continuous_segment_minimum: 1
+  source_only_basis: "source_only_audit/source_only_parameter_basis.md"
+
+same_file_feature_and_target_control:
+  required: true
+  mechanism: >-
+    Fail-closed restricted extractor parses numeric tokens only at the
+    preidentified MD/WOB/surface-RPM/SPP indices. ROP bytes may transit the
+    restricted line reader when target and features share a row, but ROP
+    tokens are never converted, retained, summarized, logged, or emitted.
+    Only aggregate covariate QC summaries are released.
+  extractor_hash: "77F64C7DC3C4CED6470AFAC022CF6BD0B674EB0BCDF65F69C59D354D452C3830"
+  output_summary_hash_required: true
+  access_log_required: true
+  rop_values_in_summary_prohibited: true
+
+qualification_integrity:
+  target_covariates_do_not_enter_model_fitting: true
+  target_covariates_do_not_enter_normalization_fitting: true
+  target_covariates_do_not_enter_hyperparameter_selection: true
+  target_covariates_do_not_enter_threshold_calibration: true
+  no_support_based_cohort_exclusion_unless_prespecified: true
+  outcome_access_status_required_in_parameter_register: true

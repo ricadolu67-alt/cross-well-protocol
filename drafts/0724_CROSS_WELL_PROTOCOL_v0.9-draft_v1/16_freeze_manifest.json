@@ -1,0 +1,713 @@
+{
+  "schema_version": "0.9",
+  "protocol_id": "CROSS_WELL_PROTOCOL_v0.9-draft",
+  "status": "DRAFT_NOT_FROZEN",
+  "hash_algorithm": "SHA-256",
+  "generated_at_utc": "2026-07-26T03:42:19.642708+00:00",
+  "generated_by": "Codex protocol engineering",
+  "git_commit_or_code_snapshot": "PREPARATION_COMMIT_PENDING",
+  "environment_lock_path": "../../content/0718_机械钻速跨井泛化复现包_v3/environment_lock.txt",
+  "environment_sha256": "ef41422ba934cd310c485d66b95566a669416617681960175ecccb76c69a07de",
+  "trusted_timestamp_service": "OSF Registration (primary); GitHub signed release (secondary); Zenodo DOI (final public package)",
+  "trusted_timestamp_receipt_path": "TO_BE_FROZEN",
+  "trusted_timestamp_receipt_sha256": "TO_BE_FROZEN",
+  "outcome_access_status_at_manifest": "INACCESSIBLE_TO_BE_VERIFIED",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "385c7f91cd120358d77678de70c0c55224af48d05144d5eeaf29ec3f88032407",
+      "role": "protocol_readme"
+    },
+    {
+      "path": "01_deployment_claim.yaml",
+      "sha256": "d2acbc89f31c51d323659b24a8873895dfc292f843f688539d39ece7421eaf27",
+      "role": "module_01"
+    },
+    {
+      "path": "02_candidate_acquisition_plan.yaml",
+      "sha256": "31c871e232c2243de26340eafe777aa536b8a2ca2132336d77d8729be2125f23",
+      "role": "module_02"
+    },
+    {
+      "path": "03_unit_registry.csv",
+      "sha256": "1ff16ef6437030a2cbedfa7cd2c62460ef614025ca1b51e17497e7fc94a4a197",
+      "role": "module_03"
+    },
+    {
+      "path": "03a_preunlock_extension_unit_registry.csv",
+      "sha256": "3585b27cadae365e21c0115e7a8366d6ef3e3b6d6eb5c7f17cedf1ab31fb16a5",
+      "role": "module_03_extension"
+    },
+    {
+      "path": "03b_preunlock_extension_v2_unit_registry.csv",
+      "sha256": "0389096fd709bbdb06c2337709b7c7d128e9f6e4415cb39a766f192eeadbb08f",
+      "role": "module_03_extension_v2"
+    },
+    {
+      "path": "03c_preunlock_extension_v3_unit_registry.csv",
+      "sha256": "af122af190fc26ff9d9ae40872869feb244d04c944b34f5be09154cb821c0038",
+      "role": "module_03_extension_v3"
+    },
+    {
+      "path": "03d_preunlock_extension_v4_unit_registry.csv",
+      "sha256": "34616c0178180e3085afa3e4fc104c537b0b95e52495b564d3381fa8c64c7240",
+      "role": "module_03_extension_v4"
+    },
+    {
+      "path": "04_dependence_rules.yaml",
+      "sha256": "a51e6b4dd93bb837699582d7e3020a0e3ffbb8dd160caf3011799072de1dcd5f",
+      "role": "module_04"
+    },
+    {
+      "path": "05_measurement_semantic_contract.csv",
+      "sha256": "adab087ca20755138f7606769aafea65b724f79629dbbadb36c9695d5752041d",
+      "role": "module_05"
+    },
+    {
+      "path": "05a_ROP_measurement_semantic_freeze_record.md",
+      "sha256": "46fbed456cf1834d1376c56dcfded5330880eb0999141a2f7e863fbd579c13ac",
+      "role": "module_05_semantic_freeze_record"
+    },
+    {
+      "path": "05b_measurement_alignment_sampling_contract.yaml",
+      "sha256": "32d9f5e451085de9b8c3b971fe22c736524fa232f5ddf5100bb983c2997a42a2",
+      "role": "module_05_alignment_sampling"
+    },
+    {
+      "path": "05c_label_blinded_semantic_mapping_amendment_v1.yaml",
+      "sha256": "bd34817f39b8711098d0f7d152a1e0c3edc913d58fdc5bd59184d334c856757d",
+      "role": "module_05_semantic_mapping_amendment"
+    },
+    {
+      "path": "05d_extension_v4_measurement_semantic_contract.csv",
+      "sha256": "c9712ce0dbe9e06373bfd6525d879073e8d08884966f9d68757f01ff6e3645d1",
+      "role": "module_05_extension_v4_semantic_contract"
+    },
+    {
+      "path": "06_label_blinded_qualification.yaml",
+      "sha256": "04a89f079b9fbbc78cc995ab7a5cc66933846028a5f8d249585b664d64552fb3",
+      "role": "module_06"
+    },
+    {
+      "path": "07_falsification_diagnostics.yaml",
+      "sha256": "e71acc4691d097645d2cf7b8e41f8a7262d376e5b7a407cf27875eee799b8c97",
+      "role": "module_07"
+    },
+    {
+      "path": "08_model_baseline_manifest.json",
+      "sha256": "a03d61db08d21fba60b2cf1c14b53131386a110b0ce600286faa0b5b1a5fc3d4",
+      "role": "module_08"
+    },
+    {
+      "path": "09_loss_and_estimands.yaml",
+      "sha256": "53dbd9e904465f8ff2c815f0861602c8eddfb6512f860afac3b438a380aa62d4",
+      "role": "module_09"
+    },
+    {
+      "path": "10_uncertainty_plan.yaml",
+      "sha256": "04561859f45674a5126b1fa9ccef31e36aa7955dc6d7597e25ea23f0fad4da4a",
+      "role": "module_10"
+    },
+    {
+      "path": "11_confirmatory_cohort_manifest.csv",
+      "sha256": "bb33cbb7b96353eb0a432c423a77ece6a72f6e615fd6a9ec810e5e0c66395bc3",
+      "role": "module_11"
+    },
+    {
+      "path": "11a_preunlock_extension_cohort_manifest.csv",
+      "sha256": "237c054a8d765b64ddcac0f7fd7dccaa9691b9e3dd2955c16a7d4300f7b954b0",
+      "role": "module_11_extension"
+    },
+    {
+      "path": "11b_preunlock_extension_v2_cohort_manifest.csv",
+      "sha256": "b1805d37ce2231efbf6e6b58a0cf7862914327aabcaad07e3f68f3e7e5929a81",
+      "role": "module_11_extension_v2"
+    },
+    {
+      "path": "11c_preunlock_extension_v3_cohort_manifest.csv",
+      "sha256": "9c44d9ee42f49fcfe450e11371e7dc8383025fc3d78c421025c6e01e01593492",
+      "role": "module_11_extension_v3"
+    },
+    {
+      "path": "11d_preunlock_extension_v4_cohort_manifest.csv",
+      "sha256": "32cc583b2ad8dbe6df0dbd4d84ac9ebba538faab10d46a5e75a4fc70dec8f8cd",
+      "role": "module_11_extension_v4"
+    },
+    {
+      "path": "12_outcome_lock_and_custody.yaml",
+      "sha256": "b1c76128cb1ae2b08927fd8e8e4760e80ce5ab29e18c8f5d01f386b186d81590",
+      "role": "module_12"
+    },
+    {
+      "path": "13_output_table_shells/README.md",
+      "sha256": "cb5fed0c7e57cf02fb9c85486ec0002617f64c8de3902f7bad35b2059e107332",
+      "role": "module_13"
+    },
+    {
+      "path": "13_output_table_shells/01_candidate_flow.csv",
+      "sha256": "02e888b8983c8513f711f7b7a01bd3d62b2937b2c476d9f8762813d92f41d818",
+      "role": "output_shell"
+    },
+    {
+      "path": "13_output_table_shells/02_family_metrics.csv",
+      "sha256": "3f570bc86c3577b8176e079c119284fc57b0160b371a5993260b1f23bab38c3d",
+      "role": "output_shell"
+    },
+    {
+      "path": "13_output_table_shells/03_field_effects.csv",
+      "sha256": "181044e507d6d85fe555c36b2ac76a0c56d183e2b6a88f3f918a727008abea6e",
+      "role": "output_shell"
+    },
+    {
+      "path": "13_output_table_shells/04_basin_context_summary.csv",
+      "sha256": "0a2216b1b71da9676c1d6dc26ad7121c719c1243eeeba89e48083955f957e137",
+      "role": "output_shell"
+    },
+    {
+      "path": "13_output_table_shells/05_leave_one_field_out.csv",
+      "sha256": "d2840aaf50ebacff3b5fcdfc09804749c9edd184283e288cc7b8337b0791ec9d",
+      "role": "output_shell"
+    },
+    {
+      "path": "13_output_table_shells/06_leave_one_basin_out.csv",
+      "sha256": "e3759885927c207dd775699c2a7f6f1569179d6966bfb4b283ebc7597dcdf045",
+      "role": "output_shell"
+    },
+    {
+      "path": "13_output_table_shells/07_falsification_diagnostics.csv",
+      "sha256": "763b43f04a0cac7baeb75dcc131d10a8979636480f01f0fdc9ca83d75438b3ed",
+      "role": "output_shell"
+    },
+    {
+      "path": "13_output_table_shells/08_uncertainty_summary.csv",
+      "sha256": "9d0183797547166e0402e41b551007cc5f7e9313237d89edbf1d1b9dcfe16141",
+      "role": "output_shell"
+    },
+    {
+      "path": "13_output_table_shells/09_claim_boundary_output.csv",
+      "sha256": "27be653597926b356c4328908b8baa2bcade5397e551d3eb8ca6e6c6e2cd8bf2",
+      "role": "output_shell"
+    },
+    {
+      "path": "13_output_table_shells/10_execution_trace.csv",
+      "sha256": "e472b5afde97d0f41940c0d60f1942736fc0ad46120fc38bbf7181f844600e32",
+      "role": "output_shell"
+    },
+    {
+      "path": "14_claim_wording_matrix.md",
+      "sha256": "dc1ef400cb080c510a383d377b5228334cc64d3541847e927a32d92ddba81a44",
+      "role": "module_14"
+    },
+    {
+      "path": "15_protocol_deviation_log.csv",
+      "sha256": "38154abf334d840b3d7bd954d9d7178052cdf63cca3c0d88c3adfec874fc2630",
+      "role": "module_15"
+    },
+    {
+      "path": "parameter_register.csv",
+      "sha256": "ea4489f948b48ae59f4d9e973da9d2fd321d87b03b791dfa526d770449b05e73",
+      "role": "parameter_control"
+    },
+    {
+      "path": "v1.0_freeze_checklist.csv",
+      "sha256": "e92a1305a7eaa9078ae8b765d60d386c9b2b9e888868be8645d3e1db9185eaa5",
+      "role": "freeze_gate"
+    },
+    {
+      "path": "schemas/SCHEMA.md",
+      "sha256": "c9bedbad9a05451a047ea09ea9a44facfc3bf2b2147884f8c5a5ed90fe5c20a1",
+      "role": "schema_documentation"
+    },
+    {
+      "path": "scripts/validate_protocol.py",
+      "sha256": "c36dbee4bc196fa95706bcf424a26fa9b7bad4f0e2d8fe661aa2cf33bfa73d24",
+      "role": "validation_code"
+    },
+    {
+      "path": "scripts/audit_source_sampling.py",
+      "sha256": "cbd093b9aefd3793e1d990bcb19862807adca43b0e21c659c365ba4fffc496d6",
+      "role": "source_sampling_audit_code"
+    },
+    {
+      "path": "source_only_audit/source_sampling_audit_manifest.json",
+      "sha256": "6502a4468ae0bf780018fa574d28cc52e40a1d3ccf1da8f029eadbfe0831c0c9",
+      "role": "source_sampling_audit_manifest"
+    },
+    {
+      "path": "scripts/build_frozen_model_bundle.py",
+      "sha256": "789e7c86be92b80c6bf9b4e51107e8bd304e1b81d6df275cc1abdf08b798c09f",
+      "role": "source_model_export_code"
+    },
+    {
+      "path": "model_artifacts/model_bundle_manifest.json",
+      "sha256": "230d822e4261cf54442175e853ca59832d8c337f3793d6907acc8ef452e501b3",
+      "role": "source_model_bundle_manifest"
+    },
+    {
+      "path": "scripts/generate_freeze_manifest.py",
+      "sha256": "57898c2ce08bd2ca39a52bdb0e07ccd55d27c31edf7923db21dcd40447a7d317",
+      "role": "freeze_manifest_generator"
+    },
+    {
+      "path": "scripts/build_measurement_semantic_contract.py",
+      "sha256": "3c536fa478e26cf86c5fdda103f054d1f13eb6e94d8830f3e51e555e934b89f5",
+      "role": "semantic_contract_generator"
+    },
+    {
+      "path": "registration/README.md",
+      "sha256": "c6325bc0f7edeec4f41dc3f879348930911ad857d89b63b4ee4bf77d0eb4f646",
+      "role": "registration_readme"
+    },
+    {
+      "path": "registration/0725_OSF_registration_draft_v1.md",
+      "sha256": "7cb315266ed78627e502a66558e9cbf9126db6b578a098b3ba0c60ff6f2df27e",
+      "role": "OSF_registration_draft"
+    },
+    {
+      "path": "registration/0725_timestamp_evidence_plan_v1.yaml",
+      "sha256": "0e6765e35b5d8cb4332a84f34a8eed781723ccb13746630c1eb81cf9d4eaa042",
+      "role": "timestamp_evidence_plan"
+    },
+    {
+      "path": "registration/0725_GitHub_release_checklist_v1.md",
+      "sha256": "f2c258f483ab92246e7868dcca388b9c3f48a89106076b9ce21eb49a44d1b513",
+      "role": "GitHub_release_checklist"
+    },
+    {
+      "path": "registration/0725_Zenodo_deposition_checklist_v1.md",
+      "sha256": "a73163ab8e50612dc625b09a5ef8a9508d19f810ae710a3cbee3af8edd3f23f9",
+      "role": "Zenodo_deposition_checklist"
+    },
+    {
+      "path": "registration/0725_registration_upload_inventory_v1.csv",
+      "sha256": "493d7db5ef667e7c992079a0d9124c25de6d91cf9112ef4e7e94b3ada89d48fa",
+      "role": "registration_upload_inventory"
+    },
+    {
+      "path": "registration/0725_outcome_lock_attestation_template_v1.md",
+      "sha256": "30d9a5afd669a163787de7fbe7c5f16e6bf724147aaea044e2d34664dd79dcb1",
+      "role": "outcome_lock_attestation_template"
+    },
+    {
+      "path": "registration/0725_acquisition_closure_record_v1.md",
+      "sha256": "4f523a5a1081b4f211784d2ce22a4c402fc3cc9e040192bf77d252180d30ec0b",
+      "role": "acquisition_closure_record"
+    },
+    {
+      "path": "registration/0725_outcome_custody_decision_v1.md",
+      "sha256": "200b602f821c614df61bbf14394d125396f95bdc51b845d6bc62491e2d969e58",
+      "role": "outcome_custody_governance_decision"
+    },
+    {
+      "path": "scripts/test_outcome_lock_synthetic.py",
+      "sha256": "d83291cd049682982e5c634b2b145a861427a6c7ff3b5e61e965d89ec87b8ca6",
+      "role": "synthetic_outcome_lock_test_script"
+    },
+    {
+      "path": "registration/0725_outcome_lock_access_test_v1/0725_synthetic_sentinel_archive_v1.zip",
+      "sha256": "383aeed734b7591aa5a41e490be61dd50c6e4beeb93a4f2a9ab992be9b4ce576",
+      "role": "synthetic_outcome_lock_fixture"
+    },
+    {
+      "path": "registration/0725_outcome_lock_access_test_v1/0725_preunlock_access_test_log_v1.csv",
+      "sha256": "544d4110013ddf980ed440c01cea6345b205426dd15d0cbe720f270570382910",
+      "role": "synthetic_outcome_lock_access_log"
+    },
+    {
+      "path": "registration/0725_outcome_lock_access_test_v1/0725_outcome_lock_access_test_result_v1.json",
+      "sha256": "22f211c4af163f56b2d7f3eda39d0ee17537b8ec34f48569f9bb7a58c506613d",
+      "role": "synthetic_outcome_lock_machine_result"
+    },
+    {
+      "path": "registration/0725_outcome_lock_access_test_v1/0725_outcome_lock_access_test_report_v1.md",
+      "sha256": "65c3a60f6b9b04b1dcba14be156bbded28535498a9a2d7d030e79ea0fcd73430",
+      "role": "synthetic_outcome_lock_report"
+    },
+    {
+      "path": "registration/0725_outcome_lock_access_test_v1/0725_outcome_lock_access_test_manifest_v1.json",
+      "sha256": "090867ed2ed6accfd85c6d1f04d83d55a22959ec701fee28bb869285111fbaf2",
+      "role": "synthetic_outcome_lock_evidence_manifest"
+    },
+    {
+      "path": "scripts/audit_measurement_semantic_contract.py",
+      "sha256": "967581edccd0994621f212a2b307df578f41ab1541758e1f8e90934cedd96173",
+      "role": "measurement_semantic_contract_audit_script"
+    },
+    {
+      "path": "registration/0725_measurement_semantic_contract_audit_v1/0725_measurement_semantic_contract_audit_result_v1.json",
+      "sha256": "e108f727fa3498c9c5258854ec4a1eef1bd67d50ef3bf47c5fee5763c20efa1d",
+      "role": "measurement_semantic_contract_audit_result"
+    },
+    {
+      "path": "registration/0725_measurement_semantic_contract_audit_v1/0725_measurement_semantic_contract_audit_report_v1.md",
+      "sha256": "736672bdf20fdc6ec34d6591b3cb88cfb9523256b244457f2bcfa5e69267bb9c",
+      "role": "measurement_semantic_contract_audit_report"
+    },
+    {
+      "path": "scripts/run_synthetic_full_dry_run.py",
+      "sha256": "e59ec57fe6c630752ccc5abad5de4ce0b4b85961a830d3621a09a8d2a8f373d1",
+      "role": "synthetic_full_dry_run_script"
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/0725_synthetic_full_dry_run_result_v1.json",
+      "sha256": "6791b138ca4dd2730da49c5696f07e702e3ee79368d4a31d325e38ed8a07bffb",
+      "role": "synthetic_full_dry_run_result"
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/0725_synthetic_full_dry_run_report_v1.md",
+      "sha256": "95181154610013634515a42b98802ac3daa949fa1ad9e20b3979160b2a4bf5fc",
+      "role": "synthetic_full_dry_run_report"
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/0725_synthetic_full_dry_run_manifest_v1.json",
+      "sha256": "e436e4a9e926cfb91b4f4114722f08b95779ecab6da2cf5998d24bfd753c044b",
+      "role": "synthetic_full_dry_run_evidence_manifest"
+    },
+    {
+      "path": "14a_claim_wording_rules.csv",
+      "sha256": "ae5595e4a93c0493c25b52f7f1e6303b953cd97111d49591112c657dd14f70e8",
+      "role": "machine_readable_claim_wording_rules"
+    },
+    {
+      "path": "15a_protocol_deviation_rules.json",
+      "sha256": "5c06287775b139d5d6cf4b44c1d2269084e712f1cc6685b5c5ea0456196c261c",
+      "role": "machine_readable_protocol_deviation_rules"
+    },
+    {
+      "path": "schemas/protocol_deviation_example.csv",
+      "sha256": "6ed22180da10421ed9640ffc4ef07ccfcb6c0b6c018d9cce98ecf77950162122",
+      "role": "protocol_deviation_schema_example"
+    },
+    {
+      "path": "scripts/test_claim_and_deviation_rules.py",
+      "sha256": "1339a0478ab7c72ed51d3a0d2c3f64aa151b37ed8a95d1e62e2512422ca972f0",
+      "role": "claim_and_deviation_rule_test_script"
+    },
+    {
+      "path": "registration/0725_claim_deviation_rule_test_v1/0725_claim_deviation_rule_test_result_v1.json",
+      "sha256": "ed2960a5081ed8701bb087dc4a72a1168e099585e759dc76f821688839f687d3",
+      "role": "claim_and_deviation_rule_test_result"
+    },
+    {
+      "path": "registration/0725_claim_deviation_rule_test_v1/0725_claim_deviation_rule_test_report_v1.md",
+      "sha256": "eb06b6350b616335879134cbe43438932ed5e4cd4159497274b738992d39e205",
+      "role": "claim_and_deviation_rule_test_report"
+    },
+    {
+      "path": "scripts/build_principal_dependence_cohort_review.py",
+      "sha256": "5bf73719f04b81fcd410bbf5d16abba916dd7f5f99976f38570d823bab95d5ac",
+      "role": "principal_dependence_cohort_review_builder"
+    },
+    {
+      "path": "registration/0725_principal_dependence_cohort_review_v1/0725_principal_dependence_cohort_review_v1.csv",
+      "sha256": "17e68dba8afeea477bcae774f2a65b8985f8808b8d3d896c0a8ad72adaa4f15a",
+      "role": "principal_family_dependence_review_queue"
+    },
+    {
+      "path": "registration/0725_principal_dependence_cohort_review_v1/0725_principal_field_review_v1.csv",
+      "sha256": "06f5a1a91cff0c4bc4e51760c8573aad80e8cfd893ffccb21232b51337feffdc",
+      "role": "principal_field_review_queue"
+    },
+    {
+      "path": "registration/0725_principal_dependence_cohort_review_v1/0725_principal_dependence_cohort_review_report_v1.md",
+      "sha256": "11cdce68e7108cd718af2da0071eefc5844ae8ff70df0ee15961a4af90ee0428",
+      "role": "principal_dependence_cohort_review_report"
+    },
+    {
+      "path": "registration/0725_principal_dependence_cohort_review_v1/0725_principal_dependence_cohort_review_manifest_v1.json",
+      "sha256": "7a3397d3a878ead574091baba28c8d2953078c5ae5c5fb76d91467b9a591e650",
+      "role": "principal_dependence_cohort_review_manifest"
+    },
+    {
+      "path": "scripts/finalize_principal_dependence_cohort.py",
+      "sha256": "964a0cc534a127f7aeb6d23780388174091ce2e098766d686346fab869948633",
+      "role": "principal_dependence_cohort_finalizer"
+    },
+    {
+      "path": "03e_final_preunlock_dependence_registry.csv",
+      "sha256": "831ccf610ecb194b74f03463e1b1dee5a69f0d80e251cefc0b2b6bad278d9796",
+      "role": "final_preunlock_dependence_registry"
+    },
+    {
+      "path": "11e_final_preunlock_cohort_manifest.csv",
+      "sha256": "9cabfb60b028a9e54d10f1fa3ed488216f98dd1e1a7e07ffc9910dec640c5a4d",
+      "role": "final_preunlock_cohort_manifest"
+    },
+    {
+      "path": "11f_final_preunlock_field_manifest.csv",
+      "sha256": "5a1a5ad60534eb1af42d06b280801562f929806308ffec7cbeb439e7189c9c42",
+      "role": "final_preunlock_field_manifest"
+    },
+    {
+      "path": "registration/0725_principal_dependence_cohort_review_v1/0725_principal_acceptance_record_v1.md",
+      "sha256": "b4c108efb01989ea34d7fa08ece9c380d629a14967df6073bae70e98e58723a0",
+      "role": "principal_dependence_cohort_acceptance_record"
+    },
+    {
+      "path": "registration/0725_principal_dependence_cohort_review_v1/0725_principal_finalization_result_v1.json",
+      "sha256": "852c6f07294ceebcc96c8a57b1240033666bf50030967dd7cad69b5c367b48d4",
+      "role": "principal_dependence_cohort_finalization_result"
+    },
+    {
+      "path": "registration/0725_principal_dependence_cohort_review_v1/0725_principal_finalization_report_v1.md",
+      "sha256": "e432928065aba78e63c6794397f27a0b765a42b1f541640d64cf1fd117ca3f80",
+      "role": "principal_dependence_cohort_finalization_report"
+    },
+    {
+      "path": "07a_falsification_test_intervals.csv",
+      "sha256": "c4f03d109839e270df5efd134dc2ad3110cc61c27ed3d28f70d06ce4d85eb5b2",
+      "role": "falsification_test_interval_registry"
+    },
+    {
+      "path": "scripts/run_source_matched_falsification_diagnostics.py",
+      "sha256": "9047cf5bcee86eef7bdd150cc396022a3060fb20b7c311cd510d9752a815b6c6",
+      "role": "source_matched_diagnostic_executor"
+    },
+    {
+      "path": "scripts/test_uncertainty_plan.py",
+      "sha256": "a814d3dc7818dc9c5286318b1b29d4945723b855df4a8e02de0e4ee71cadebfa",
+      "role": "uncertainty_plan_synthetic_test"
+    },
+    {
+      "path": "registration/0725_source_matched_diagnostics_v1/0725_F15_retrospective_semantic_track_v1.json",
+      "sha256": "8b2a46ace822888f7221f20b59b51f57de0a151a56212dda7e61418c913ab717",
+      "role": "retrospective_F15_semantic_result"
+    },
+    {
+      "path": "registration/0725_source_matched_diagnostics_v1/0725_source_matched_diagnostic_detail_v1.csv",
+      "sha256": "156f6536c17afe8f7c0224bc9c6e9f31bca879934a762be64609cff22e232c55",
+      "role": "source_matched_diagnostic_detail"
+    },
+    {
+      "path": "registration/0725_source_matched_diagnostics_v1/0725_source_matched_diagnostic_manifest_v1.json",
+      "sha256": "446654923bd1407bfaf37bb3e81493d5b86f527aa4ff6f62a4a72046972554a5",
+      "role": "source_matched_diagnostic_manifest"
+    },
+    {
+      "path": "registration/0725_source_matched_diagnostics_v1/0725_source_matched_diagnostic_report_v1.md",
+      "sha256": "0d797f697e8931c14f37e8a24c38432d5954a46defadccb4a25293a3eea2b521",
+      "role": "source_matched_diagnostic_report"
+    },
+    {
+      "path": "registration/0725_source_matched_diagnostics_v1/0725_source_matched_diagnostic_result_v1.json",
+      "sha256": "76c91ef513fb881224789e2c9ace9a0642796ec6c32216c64b10caacb21894b6",
+      "role": "source_matched_diagnostic_result"
+    },
+    {
+      "path": "registration/0725_source_matched_diagnostics_v1/0725_source_matched_diagnostic_summary_v1.csv",
+      "sha256": "0037d1abe8d8ff48eee9e943b251012c5cdbebb123d477ff491d471b387fbc7a",
+      "role": "source_matched_diagnostic_summary"
+    },
+    {
+      "path": "registration/0725_uncertainty_plan_test_v1/0725_uncertainty_plan_test_manifest_v1.json",
+      "sha256": "5ad5eadc60495b3c6c7a36b712a43e6a3af5ff9c69af933b75b5ff76afa25daa",
+      "role": "uncertainty_plan_test_manifest"
+    },
+    {
+      "path": "registration/0725_uncertainty_plan_test_v1/0725_uncertainty_plan_test_report_v1.md",
+      "sha256": "06c816d8ab53b98dc40b7de9cbf9128b52a829a8f3b2693701a06891ae431a44",
+      "role": "uncertainty_plan_test_report"
+    },
+    {
+      "path": "registration/0725_uncertainty_plan_test_v1/0725_uncertainty_plan_test_result_v1.json",
+      "sha256": "d9dfa2b851569a90fe2cdbef97cd8bf1d4dd3a4e832659b35e1f1b826b4ba8b1",
+      "role": "uncertainty_plan_test_result"
+    },
+    {
+      "path": "registration/0725_v1.0_freeze_gap_report_v1.md",
+      "sha256": "c85655d4f100ada71ae34c02bfa516e7972f395f725b5f8ce916f3a7121cb990",
+      "role": "freeze_gap_report"
+    },
+    {
+      "path": "registration/0726_registration_identity_metadata_v1.yaml",
+      "sha256": "3f03ea0d7737cbdd210c3fb471d877f7ee2b6b1c5590049bce4ab2069dc422fc",
+      "role": "registration_identity_and_repository_metadata"
+    }
+  ],
+  "external_artifacts": [
+    {
+      "path": "../0725_CROSS_WELL_T0_acquisition_v1/0725_T0_file_hash_inventory_v1.csv",
+      "sha256": "47aa9de62f14bfb3a0733e9e107112e2d501e752698397a22183a0988c225471",
+      "role": "T0_candidate_file_inventory"
+    },
+    {
+      "path": "../0725_CROSS_WELL_T1a0_structural_inventory_v1/0725_T1a0_preexecution_manifest_v1.json",
+      "sha256": "9d8380bba1ffc8875071613984f5153bd18a02d3aaaedd9a34d078a218eff219",
+      "role": "T1a0_preexecution_manifest"
+    },
+    {
+      "path": "../0725_CROSS_WELL_T1a0_structural_inventory_v1/0725_T1a0_member_inventory_v1.csv",
+      "sha256": "e2533319a7bea556055cc91e5357acf08820437f54138396c245fb136b3da976",
+      "role": "T1a0_member_inventory"
+    },
+    {
+      "path": "../0725_CROSS_WELL_T1a0_structural_inventory_v1/0725_T1a0_access_log_v1.csv",
+      "sha256": "2230b663152f2c3be7bacd07a4366eb7c21152b271dcf80685a97db8a67f91be",
+      "role": "T1a0_access_log"
+    },
+    {
+      "path": "../0725_CROSS_WELL_T1a1_header_qualification_v1/0725_T1a1_preexecution_manifest_v1.json",
+      "sha256": "44a07cb98b3915f01ae54280d21a0ddb13017c52a5010ec3d1719750e2aee01f",
+      "role": "T1a1_preexecution_manifest"
+    },
+    {
+      "path": "../0725_CROSS_WELL_T1a1_header_qualification_v1/0725_T1a1_member_qualification_v1.csv",
+      "sha256": "f98ff495265c27b013e8d106d3d988419c7b1f9a7f55ca01583f89b154fbd3b3",
+      "role": "T1a1_member_qualification"
+    },
+    {
+      "path": "../0725_CROSS_WELL_T1a1_header_qualification_v1/0725_T1a1_header_items_v1.csv",
+      "sha256": "97564dad6b1baba40fe919d9321801ce38ddb826ed58794430ef3454296166de",
+      "role": "T1a1_normalized_header_evidence"
+    },
+    {
+      "path": "../0725_CROSS_WELL_T1a1_header_qualification_v1/0725_T1a1_access_log_v1.csv",
+      "sha256": "d900baa4e8b7ab7755076deff27e6534f90a7102c94844c411b397f5a010c967",
+      "role": "T1a1_access_log"
+    },
+    {
+      "path": "../0725_CROSS_WELL_T1a1_header_qualification_v1/0725_T1a1_candidate_token_coverage_v1.csv",
+      "sha256": "d39720714670cb0a2b3542d2a1742c77e2dd9f29a9fc9873f51df9d37cb13844",
+      "role": "T1a1_candidate_token_coverage"
+    },
+    {
+      "path": "../0725_CROSS_WELL_identity_dependence_review_v1/0725_identity_dependence_preexecution_manifest_v1.json",
+      "sha256": "e7866809adc2758406c82118c7998ec66a4c23eea7af64e8ea3f8362b7bb9342",
+      "role": "identity_dependence_preexecution_manifest"
+    },
+    {
+      "path": "../0725_CROSS_WELL_identity_dependence_review_v1/0725_identity_item_reconstruction_v2.csv",
+      "sha256": "a14db259e9a857308859ab82379535962921904f13313f57f257342aa6f30c5a",
+      "role": "corrected_identity_reconstruction"
+    },
+    {
+      "path": "../0725_CROSS_WELL_identity_dependence_review_v1/0725_archive_identity_candidates_v2.csv",
+      "sha256": "93809d26c30b7bfd07e3aa2be10a81518ed90a6633b3636fd4e91888d1181c56",
+      "role": "archive_identity_candidates"
+    },
+    {
+      "path": "../0725_CROSS_WELL_identity_dependence_review_v1/0725_unit_candidates_v1.csv",
+      "sha256": "6432d8ab05e8eda3028d012f6acdf9ff6dd938d2084af3011897ff880265eff6",
+      "role": "unit_candidates"
+    },
+    {
+      "path": "../0725_CROSS_WELL_identity_dependence_review_v1/0725_dependence_edges_v1.csv",
+      "sha256": "7726ac2fb9dff48f4ae13e72846b3231e3248f034ba1121c7725b04ac8587289",
+      "role": "dependence_candidate_edges"
+    },
+    {
+      "path": "../0725_CROSS_WELL_identity_dependence_review_v1/0725_dependence_family_candidates_v1.csv",
+      "sha256": "2ac7ea5e9f960c63026695d199958ddef4d81eb9e52c4343d4247ef0738f1aae",
+      "role": "dependence_family_candidates"
+    },
+    {
+      "path": "../0725_CROSS_WELL_identity_dependence_review_v1/0725_archive_identity_review_queue_v2.csv",
+      "sha256": "4313990650f1d6b40d73ba34c18c472c93c048f8cdc42331fbe26e9064c7b3d8",
+      "role": "principal_archive_review_queue"
+    },
+    {
+      "path": "../0725_CROSS_WELL_identity_dependence_review_v1/0725_unit_dependence_review_queue_v1.csv",
+      "sha256": "9b40e1e2338d3fddc1c2c56d8c92ddf9976baf6424886cb3d89507f0337e7beb",
+      "role": "principal_unit_dependence_review_queue"
+    },
+    {
+      "path": "../0725_CROSS_WELL_principal_signed_decisions_v1/0725_signed_decisions_postexecution_manifest_v1.json",
+      "sha256": "57b5e423f7b01f90165d44f450c7cce7a9c785acd54e8f52c4bd0d832e9b688d",
+      "role": "principal_signed_identity_dependence_decisions"
+    },
+    {
+      "path": "../0725_CROSS_WELL_principal_signed_decisions_v2/0725_signed_decisions_v2_postexecution_manifest.json",
+      "sha256": "ba23fd2037cdca78c2ed66ecca557fc8555e0c9bf5f4628b39f42f6b7312132d",
+      "role": "principal_signed_identity_dependence_decisions_v2"
+    },
+    {
+      "path": "../0725_CROSS_WELL_external_identity_metadata_v1/0725_external_metadata_postexecution_manifest_v1.json",
+      "sha256": "1c8f8b97f1f908c94f92b50a4570452d42679d01cf81aa33d2f45f18d267edda",
+      "role": "official_external_identity_metadata"
+    },
+    {
+      "path": "../0725_CROSS_WELL_T1b_label_blinded_v4/0725_T1b_manifest_v1.json",
+      "sha256": "cd74b5f96d82f0ba0d684352fe401c78858fbed82cae846a83fcdb8f1b8e14d4",
+      "role": "active_label_blinded_qualification_manifest"
+    },
+    {
+      "path": "../0725_CROSS_WELL_T1b_label_blinded_v4/0725_T1b_validation_report_v4.md",
+      "sha256": "2e37cbba1683142a14c4de49556eefc4b91dcc44a61b5d58bfbfabc488b1c0ca",
+      "role": "active_label_blinded_qualification_validation"
+    },
+    {
+      "path": "model_artifacts/model_bundle_manifest.json",
+      "sha256": "230d822e4261cf54442175e853ca59832d8c337f3793d6907acc8ef452e501b3",
+      "role": "FrozenExtraTrees_bundle"
+    },
+    {
+      "path": "model_artifacts/FrozenExtraTrees_seed_20260722.joblib",
+      "sha256": "8048a6210dae166627992be93f13f528b223a91d750cbd28e3eabaff81015ed6",
+      "role": "FrozenExtraTrees_seed_20260722"
+    },
+    {
+      "path": "model_artifacts/FrozenExtraTrees_seed_20260723.joblib",
+      "sha256": "6e2773883c52a065b55b843ff11e5e60e34f469e9ba53238d4f8c427b5966a8e",
+      "role": "FrozenExtraTrees_seed_20260723"
+    },
+    {
+      "path": "model_artifacts/FrozenExtraTrees_seed_20260724.joblib",
+      "sha256": "d14da2f28a3aaa1e51190acea65d8b8245d1916d25c01d17e9569da75a7a6644",
+      "role": "FrozenExtraTrees_seed_20260724"
+    },
+    {
+      "path": "model_artifacts/FrozenExtraTrees_seed_20260725.joblib",
+      "sha256": "eac8f4f27a475a5b974dc44de0445281dc00da1fce66305f4644a605f634680a",
+      "role": "FrozenExtraTrees_seed_20260725"
+    },
+    {
+      "path": "model_artifacts/FrozenExtraTrees_seed_20260726.joblib",
+      "sha256": "579715bb38df97315f26a3b38e056453c8ba86a88f4852df93f5e3dc33cd9dd4",
+      "role": "FrozenExtraTrees_seed_20260726"
+    },
+    {
+      "path": "model_artifacts/source_median.json",
+      "sha256": "e9f92fc6181f431a58f437588d69e5754444c23daa82ab3839f449a37a2830e2",
+      "role": "SourceMedian"
+    },
+    {
+      "path": "model_artifacts/source_feature_medians.json",
+      "sha256": "d44e254ca8f9f2b3e7e08f32001cf452a152a8d0a53bf0c09cdcc04fc0f4d457",
+      "role": "FrozenSourceFeatureMedians"
+    },
+    {
+      "path": "model_artifacts/FrozenSourceOnlyRidge_alpha100.joblib",
+      "sha256": "3d8c24431f51f97f7b430e98c25b8de67f530e0f0c85cf46336a348e24ccc857",
+      "role": "FrozenSourceOnlyRidge"
+    },
+    {
+      "path": "TO_BE_FROZEN",
+      "sha256": "TO_BE_FROZEN",
+      "role": "analysis_code_snapshot"
+    },
+    {
+      "path": "../../content/0718_机械钻速跨井泛化复现包_v3/environment_lock.txt",
+      "sha256": "ef41422ba934cd310c485d66b95566a669416617681960175ecccb76c69a07de",
+      "role": "software_environment_lock"
+    },
+    {
+      "path": "../../content/0718_机械钻速跨井泛化复现包_v3/requirements.txt",
+      "sha256": "236ca46002ed1b302d1193be35c4146f69be7cc9cc49eb0e679ae0e6050883a9",
+      "role": "software_requirements"
+    }
+  ],
+  "signatures": [
+    {
+      "role": "protocol_owner",
+      "name": "TO_BE_FROZEN",
+      "signed_at_utc": "TO_BE_FROZEN",
+      "signature_or_receipt": "TO_BE_FROZEN"
+    },
+    {
+      "role": "outcome_custodian",
+      "name": "TO_BE_FROZEN",
+      "signed_at_utc": "TO_BE_FROZEN",
+      "signature_or_receipt": "TO_BE_FROZEN"
+    }
+  ]
+}

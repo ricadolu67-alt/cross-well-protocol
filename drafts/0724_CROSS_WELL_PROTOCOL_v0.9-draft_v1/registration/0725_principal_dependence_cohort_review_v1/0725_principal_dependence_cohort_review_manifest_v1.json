@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "packet_status": "READY_FOR_PRINCIPAL_REVIEW",
+  "numeric_ROP_accessed": false,
+  "inputs": [
+    {
+      "path": "C:\\Users\\LYH\\Documents\\\u8bba\u6587\\drafts\\0725_CROSS_WELL_preunlock_integration_v4\\0725_combined_T1b_family_status_v4.csv",
+      "sha256": "DB99E199DAD15448DA0D1717FF278399926DFD3A7E720B2210A6691583919F81"
+    },
+    {
+      "path": "C:\\Users\\LYH\\Documents\\\u8bba\u6587\\drafts\\0725_CROSS_WELL_preunlock_integration_v4\\0725_combined_T1b_field_status_v4.csv",
+      "sha256": "0414242A43FFF3313AF155413422BCB7606C90E8AE6B1A569B09134B3F5E55C6"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "0725_principal_dependence_cohort_review_v1.csv",
+      "sha256": "17E68DBA8AFEEA477BCAE774F2A65B8985F8808B8D3D896C0A8AD72ADAA4F15A",
+      "rows": 36
+    },
+    {
+      "path": "0725_principal_field_review_v1.csv",
+      "sha256": "06F5A1A91CFF0C4BC4E51760C8573AAD80E8CFD893FFCCB21232B51337FEFFDC",
+      "rows": 13
+    },
+    {
+      "path": "0725_principal_dependence_cohort_review_report_v1.md",
+      "sha256": "11CDCE68E7108CD718AF2DA0071EEFC5844AE8FF70DF0EE15961A4AF90EE0428"
+    }
+  ]
+}

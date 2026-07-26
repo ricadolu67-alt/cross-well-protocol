@@ -1,0 +1,107 @@
+schema_version: "0.9"
+status: "DRAFT_NOT_FROZEN"
+
+primary_loss:
+  name: "MD_interval_weighted_MAE"
+  unit: "ROP canonical unit"
+  sort_order:
+    - "dependence_family_id"
+    - "continuous_segment_id"
+    - "measured_depth_ascending"
+    - "stable_original_row_id"
+  prediction_and_duplicate_order: >-
+    Apply the frozen preprocessing and fitted model to original scoring rows
+    first; then aggregate observed and predicted ROP separately at duplicate MD
+    within the same continuous segment.
+  duplicate_MD:
+    observed_aggregation: "median"
+    predicted_aggregation: "median"
+    feature_aggregation_before_prediction: false
+  segment_break:
+    on_decreasing_MD: true
+    on_duplicate_MD: false
+    on_drilling_run_change: true
+    on_operational_state_discontinuity: true
+    on_missing_interval_above_threshold: true
+    gap_threshold_g_max: 1.0
+  weights:
+    interior: "min((MD[k+1]-MD[k-1])/2, w_max)"
+    first_endpoint: "min((MD[2]-MD[1])/2, w_max)"
+    last_endpoint: "min((MD[n]-MD[n-1])/2, w_max)"
+    weight_cap_w_max: 0.5
+    invalid_weight_action: "exclude and count"
+    invalid_conditions:
+      - "non_finite"
+      - "zero"
+      - "negative"
+  family_loss_formula: "sum(w_k * abs(y_k - yhat_k)) / sum(w_k)"
+  minimum_segment_length: "2 unique MD points"
+  minimum_family_MD_coverage_L_min: 100.0
+  minimum_scoring_points_n_min: 100
+  minimum_valid_segments: 1
+
+fixed_depth_block_sensitivity:
+  enabled: true
+  block_length: 1.0
+  block_origin: 0.0
+  minimum_block_coverage: 0.5
+  observed_aggregation: "MD_interval_weighted_mean"
+  predicted_aggregation: "MD_interval_weighted_mean"
+  interpolation_allowed: false
+
+family_effects:
+  frozen_seed_aggregation:
+    seeds: [20260722, 20260723, 20260724, 20260725, 20260726]
+    rule: "calculate family MD-interval-weighted MAE per seed, then take the equal mean of the five MAEs"
+    ensemble_prediction_substitution_allowed: false
+  primary_absolute_transfer_gain:
+    symbol: "Delta_bfj"
+    formula: "MAE_SourceMedian_bfj - MAE_FrozenExtraTrees_bfj"
+    positive_interpretation: "FrozenExtraTrees has lower MAE than SourceMedian"
+  secondary_complexity_gain:
+    formula: "MAE_FrozenSourceOnlyRidge_bfj - MAE_FrozenExtraTrees_bfj"
+    positive_interpretation: "FrozenExtraTrees has lower MAE than frozen Ridge"
+  secondary_log_MAE_ratio:
+    formula: "log(MAE_FrozenExtraTrees_bfj / MAE_SourceMedian_bfj)"
+    favorable_direction: "negative"
+    zero_or_negative_MAE_action: "mark_undefined_and_report"
+
+field_aggregation:
+  field_effect_formula: "Delta_bf = mean_j(Delta_bfj) over scorable independent families in field bf"
+  minimum_scorable_independent_families: 2
+  one_scorable_family_action: >-
+    Retain in cohort flow and family-level external table, but exclude from the
+    primary field-equal estimand.
+  difficult_but_scorable_family_exclusion: false
+
+primary_estimand:
+  name: "field_equal_mean_transfer_gain"
+  formula: "Delta_field = mean_bf(Delta_bf) over primary scorable fields"
+  interpretation: >-
+    Mean baseline-relative transport across the sampled petroleum fields
+    represented in the sampled basin contexts.
+
+secondary_estimands:
+  - "family_equal_transfer_gain"
+  - "field_equal_log_MAE_ratio"
+  - "median_field_gain"
+  - "positive_field_fraction"
+  - "positive_family_fraction"
+  - "worst_field_gain"
+  - "worst_20_percent_family_gain"
+  - "exact_sign_test"
+
+basin_analysis:
+  role: "stratified_replication"
+  population_inference: false
+  leave_one_basin_out: true
+
+qualified_to_scorable:
+  qualified_definition: >-
+    Passed identity, dependence, feature availability, measurement-semantic
+    contract, and label-blinded covariate QC before T2.
+  scorable_definition: >-
+    After outcome unlock, satisfies the frozen target and scoring coverage
+    rules required to calculate the primary loss.
+  attrition_report_required: true
+  performance_based_attrition_prohibited: true

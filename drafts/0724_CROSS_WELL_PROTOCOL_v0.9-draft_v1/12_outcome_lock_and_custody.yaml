@@ -1,0 +1,168 @@
+schema_version: "0.9"
+status: "DRAFT_NOT_FROZEN"
+
+integrity_label_target: "externally timestamped, access-controlled confirmatory freeze"
+
+roles:
+  analysis_team: "principal researcher and protocol-execution agent operating only through frozen preunlock commands"
+  outcome_custodian: "principal researcher (user)"
+  independent_timestamp_service: "OSF Registration (primary)"
+  protocol_signatories: "principal researcher"
+
+T0_acquisition:
+  raw_archive_sha256_required: true
+  immutable_candidate_inventory_required: true
+  acquisition_timestamp_required: true
+  completed_at_utc: "2026-07-24T16:57:29.463Z"
+  candidate_file_count: 59
+  candidate_total_bytes: 32429909139
+  file_inventory_sha256: "47aa9de62f14bfb3a0733e9e107112e2d501e752698397a22183a0988c225471"
+  content_inspected: false
+
+T1a_structural_access:
+  numeric_arrays_accessible: false
+  access_log_required: true
+  T1a0_completed: true
+  T1a0_completed_at_utc: "2026-07-24T17:04:08.761Z"
+  T1a0_access_mode: "ZIP_CENTRAL_DIRECTORY_READ_ONLY"
+  T1a0_entry_stream_opened: false
+  T1a0_member_extracted: false
+  T1a0_header_read: false
+  T1a0_numeric_payload_read: false
+  T1a0_access_log_path: "../0725_CROSS_WELL_T1a0_structural_inventory_v1/0725_T1a0_access_log_v1.csv"
+  T1a0_access_log_sha256: "2230b663152f2c3be7bacd07a4366eb7c21152b271dcf80685a97db8a67f91be"
+  T1a1_completed: true
+  T1a1_completed_at_utc: "2026-07-24T17:13:46.176Z"
+  T1a1_access_mode: "RESTRICTED_HEADER_ONLY"
+  T1a1_authorized_member_count: 1206
+  T1a1_member_streams_opened: true
+  T1a1_member_extracted: false
+  T1a1_raw_header_retained: false
+  T1a1_numeric_payload_requested: false
+  T1a1_numeric_array_emitted: false
+  T1a1_access_log_path: "../0725_CROSS_WELL_T1a1_header_qualification_v1/0725_T1a1_access_log_v1.csv"
+  T1a1_access_log_sha256: "d900baa4e8b7ab7755076deff27e6534f90a7102c94844c411b397f5a010c967"
+
+T1b_covariate_access:
+  authorization_status: "AUTHORIZED_BY_PRINCIPAL_RESEARCHER_2026-07-25"
+  las_descriptive_qc_status: "V4_LABEL_BLINDED_QUALIFICATION_COMPLETED"
+  restricted_extractor_sha256: "77F64C7DC3C4CED6470AFAC022CF6BD0B674EB0BCDF65F69C59D354D452C3830"
+  access_log_sha256: "1264F1B1354C5A288129B7BE2F5C7E7A9286BD7A86879A6CAEC74FED850191F1"
+  family_qc_summary_sha256: "A8264CCDF6CEE6958F745ACF69DEEC1E8597E9CB0FCABF59610F3F68EE46DC2C"
+  restricted_covariates:
+    - "MD"
+    - "WOB"
+    - "surface RPM"
+    - "standpipe pressure"
+  target_ROP_accessible_to_analysis_team: false
+  restricted_extractor_or_custodian_mechanism: >-
+    Fail-closed restricted LAS extractor converts only preidentified
+    MD/WOB/surface-RPM/SPP tokens and emits aggregate QC summaries. ROP
+    numeric tokens are not converted, retained, logged, summarized, or
+    released to the analysis team.
+  only_prespecified_QC_summaries_released: true
+  input_output_and_code_hashes_required: true
+
+T2_confirmatory_freeze:
+  required_frozen_objects:
+    - "candidate inventory and exclusions"
+    - "unit and dependence registry"
+    - "measurement and semantic contract"
+    - "qualification rules"
+    - "model and baseline artifacts"
+    - "parser and analysis code commit"
+    - "software environment"
+    - "random seeds"
+    - "loss and estimands"
+    - "uncertainty plan"
+    - "output table shells"
+    - "protocol deviation process"
+  manifest_sha256_required: true
+  external_trusted_timestamp_required: true
+  outcome_must_remain_inaccessible: true
+  timestamp_evidence_stack:
+    primary: "OSF Registration"
+    content_identity: "SHA-256 freeze manifest"
+    secondary_code_evidence: "GitHub signed commit and immutable release"
+    final_public_reproduction_DOI: "Zenodo"
+  timestamp_receipt_path: "TO_BE_FROZEN_AFTER_OSF_REGISTRATION"
+
+outcome_lock:
+  mechanism: >-
+    PRINCIPAL_CUSTODIAN_FAIL_CLOSED_PARSER_AND_EXPLICIT_SINGLE_USE_UNLOCK:
+    the principal researcher retains the original archives; before T3, the
+    protocol-execution agent may invoke only frozen structural and
+    covariate-qualification commands that reject or suppress ROP numeric
+    output. Numeric ROP parsing becomes authorized only after the principal
+    researcher issues an explicit single-use unlock instruction following
+    completion of OSF Registration and the GitHub signed immutable release.
+  physical_separation_required: false
+  access_control_required: true
+  numeric_ROP_payload_inaccessible_before_T3: true
+  custodian_retains_original_archives: true
+  preunlock_permitted_outputs:
+    - "archive and member identity metadata"
+    - "header mnemonics, descriptions and units"
+    - "prespecified MD/WOB/surface-RPM/SPP QC summaries"
+    - "hashes, access logs and qualification reason codes"
+  preunlock_prohibited_outputs:
+    - "ROP numeric values"
+    - "ROP descriptive statistics or distributions"
+    - "predictions, residuals or performance metrics"
+    - "target-informed exclusions, transformations or thresholds"
+  access_test_procedure: >-
+    Run the frozen access-control dry-run suite against a synthetic archive
+    containing a sentinel ROP curve and permitted covariates. Verify that T1a
+    emits no numeric arrays, T1b emits only permitted covariate summaries, any
+    explicit ROP-output request exits nonzero, the sentinel never appears in
+    stdout/stderr/output files, and all attempted access is logged. Repeat the
+    same command set against inventory metadata without invoking the numeric
+    outcome parser.
+  access_test_evidence_path: "registration/0725_outcome_lock_access_test_v1/0725_outcome_lock_access_test_report_v1.md"
+  access_log_path: "registration/0725_outcome_lock_access_test_v1/0725_preunlock_access_test_log_v1.csv"
+  access_test_manifest_path: "registration/0725_outcome_lock_access_test_v1/0725_outcome_lock_access_test_manifest_v1.json"
+  access_test_manifest_sha256: "090867ED2ED6ACCFD85C6D1F04D83D55A22959EC701FEE28BB869285111FBAF2"
+  access_test_status: "PASS_SYNTHETIC_SENTINEL"
+  access_test_executed_at_utc: "2026-07-25T09:05:30.747198Z"
+  real_Layer_D_archives_opened_by_access_test: false
+  prohibited_ROP_request_exit_code: 17
+  sentinel_found_in_permitted_outputs: false
+  accepted_by_principal_researcher_at_utc: "2026-07-25T09:00:00Z"
+  governance_decision_record: "registration/0725_outcome_custody_decision_v1.md"
+
+T3_unlock:
+  prerequisites:
+    - "all freeze checklist items PASS"
+    - "minimum qualified field and basin threshold met"
+    - "trusted timestamp obtained"
+    - "outcome still inaccessible immediately before authorized unlock"
+  authorized_person_or_role: "principal researcher (user)"
+  unlock_instruction_required: true
+  unlock_instruction_form: "explicit written single-use authorization after all prerequisites PASS"
+  unlock_datetime_utc: "NOT_YET_AUTHORIZED"
+  execution_command: "TO_BE_FROZEN"
+  single_frozen_execution: true
+  stdout_path: "TO_BE_FROZEN"
+  stderr_path: "TO_BE_FROZEN"
+  raw_result_directory: "TO_BE_FROZEN"
+  execution_environment_hash: "TO_BE_FROZEN"
+
+post_unlock:
+  retain_all_unfavorable_results: true
+  raw_results_immutable: true
+  selective_field_rerun_prohibited: true
+  protocol_deviation_log_required: true
+  corrected_analysis_requires_full_cohort_rerun: true
+  original_and_corrected_results_both_reported: true
+  scientific_rule_change_status: "post_hoc_or_new_protocol_version"
+
+custody_assertions:
+  cohort_frozen: true
+  analytical_freedom_frozen: false
+  outcome_inaccessible_before_unlock: true
+  execution_trace_complete: false
+  assertion_scope_note: >-
+    Cohort closure and preunlock outcome inaccessibility are evidenced,
+    including a passing synthetic-sentinel access-control test. Analytical-
+    freedom and execution-trace assertions remain false until all v1.0 checks
+    pass and the frozen execution is completed.

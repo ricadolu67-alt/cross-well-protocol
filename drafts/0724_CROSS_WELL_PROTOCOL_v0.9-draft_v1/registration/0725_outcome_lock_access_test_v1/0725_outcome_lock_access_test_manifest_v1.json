@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "test_id": "CROSS_WELL_OUTCOME_LOCK_SYNTHETIC_V1",
+  "overall_status": "PASS",
+  "files": [
+    {
+      "path": "registration/0725_outcome_lock_access_test_v1/0725_synthetic_sentinel_archive_v1.zip",
+      "sha256": "383AEED734B7591AA5A41E490BE61DD50C6E4BEEB93A4F2A9AB992BE9B4CE576",
+      "bytes": 419
+    },
+    {
+      "path": "registration/0725_outcome_lock_access_test_v1/0725_preunlock_access_test_log_v1.csv",
+      "sha256": "544D4110013DDF980ED440C01CEA6345B205426DD15D0CBE720F270570382910",
+      "bytes": 566
+    },
+    {
+      "path": "registration/0725_outcome_lock_access_test_v1/0725_outcome_lock_access_test_result_v1.json",
+      "sha256": "22F211C4AF163F56B2D7F3EDA39D0EE17537B8EC34F48569F9BB7A58C506613D",
+      "bytes": 1108
+    },
+    {
+      "path": "registration/0725_outcome_lock_access_test_v1/0725_outcome_lock_access_test_report_v1.md",
+      "sha256": "65C3A60F6B9B04B1DCBA14BE156BBDED28535498A9A2D7D030E79EA0FCD73430",
+      "bytes": 618
+    },
+    {
+      "path": "scripts/test_outcome_lock_synthetic.py",
+      "sha256": "D83291CD049682982E5C634B2B145A861427A6C7FF3B5E61E965D89EC87B8CA6",
+      "bytes": 12137
+    }
+  ]
+}

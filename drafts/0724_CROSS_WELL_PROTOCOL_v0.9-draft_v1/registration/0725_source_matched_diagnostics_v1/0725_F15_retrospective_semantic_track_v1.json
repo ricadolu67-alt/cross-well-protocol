@@ -1,0 +1,14 @@
+{
+  "diagnostic": "semantics",
+  "case_id": "F15_RETROSPECTIVE_RAW11_VS_RAW10_RIDGE",
+  "status": "retrospective_semantic_failure_analysis",
+  "confirmatory_average_bias_estimator": false,
+  "rows_in_common": 53039,
+  "scoring_points": 53039,
+  "scoring_coverage_m": 1863.3149999999996,
+  "mae_released_raw11": 311.17424219819503,
+  "mae_harmonized_proxy_raw10": 11.503135968596414,
+  "released_minus_harmonized": 299.6711062295986,
+  "raw11_source": "content\\0718_机械钻速跨井泛化复现包_v3\\results_generated\\p1_harmonized_nested_v1\\predictions\\oof_row_raw11.csv",
+  "raw10_source": "content\\0718_机械钻速跨井泛化复现包_v3\\results_generated\\p1_harmonized_nested_v1\\predictions\\oof_row_raw10.csv"
+}

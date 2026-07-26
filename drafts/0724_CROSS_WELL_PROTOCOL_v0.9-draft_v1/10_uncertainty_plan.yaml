@@ -1,0 +1,72 @@
+schema_version: "0.9"
+status: "FROZEN_DRAFT_SYNTHETICALLY_VALIDATED"
+
+primary_presentation:
+  - "complete field-level effect table"
+  - "field-equal mean Transfer Gain"
+  - "two-sided small-sample t interval over field effects"
+  - "field-level forest-plot source table"
+
+t_interval:
+  confidence_level: 0.95
+  degrees_of_freedom: "F_primary_scorable_fields_minus_1"
+  field_effects_treated_as_equal_weight: true
+
+prespecified_robustness:
+  leave_one_field_out:
+    enabled: true
+    report_sign_magnitude_and_conclusion_change: true
+  leave_one_basin_out:
+    enabled: true
+    report_sign_magnitude_and_conclusion_change: true
+  field_bootstrap:
+    enabled: true
+    repetitions: 10000
+    seed: 20260725
+    confidence_interval_method: "percentile"
+
+supplementary_sensitivity:
+  basin_stratified_bootstrap:
+    enabled: true
+    repetitions: 10000
+    seed: 20260726
+    resampling_unit: "field"
+    strata: "sampled_basin_context"
+    rule: "resample fields with replacement within each basin while preserving each basin's observed field count; calculate the equal-field mean"
+    confidence_interval_method: "percentile"
+  wild_cluster_method:
+    enabled: true
+    role: "supplementary_only"
+    exact_method_and_software: >-
+      Intercept-only Rademacher wild cluster bootstrap-t over field effects,
+      clustered by sampled basin context, 9999 repetitions, seed 20260727,
+      implemented in the frozen Python protocol script. The method is
+      retained as small-cluster sensitivity and cannot replace the headline
+      field table or small-sample t interval.
+    repetitions: 9999
+    seed: 20260727
+    cluster: "sampled_basin_context"
+    weights: "Rademacher {-1,+1} independently by basin per repetition"
+    confidence_level: 0.95
+  hierarchical_model:
+    enabled: true
+    role: "supplementary_only"
+    specification_and_priors_or_estimator: >-
+      Gaussian random-intercept model for field Transfer Gain with a fixed
+      intercept and basin-context random intercept, fitted by REML using the
+      frozen NumPy/SciPy protocol implementation. Report the fixed intercept, standard error,
+      95-percent Wald interval, between-basin variance, convergence flag and
+      any warnings. If fitting fails or is singular, retain and report the
+      failure without substituting another hierarchical specification.
+
+secondary_reporting:
+  exact_sign_test: true
+  p_values_headline_status: "secondary_not_headline"
+  worst_field_required: true
+  worst_20_percent_families_required: true
+
+interpretation_rules:
+  primary_conclusion_must_not_depend_on_single_sophisticated_estimator: true
+  all_field_effects_visible: true
+  uncertainty_methods_may_not_be_selected_post_outcome: true
+  basin_contexts_are_not_a_random_sample_of_all_basins: true

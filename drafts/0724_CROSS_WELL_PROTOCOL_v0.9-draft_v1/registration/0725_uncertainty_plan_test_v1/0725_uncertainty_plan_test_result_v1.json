@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "scope": "synthetic dry-run field effects only",
+  "n_fields": 8,
+  "n_basins": 4,
+  "field_equal_mean": 2.513072492735401,
+  "small_sample_t_interval": [
+    1.8105336326205217,
+    3.2156113528502805
+  ],
+  "field_bootstrap_percentile_interval": [
+    1.955805491732585,
+    3.071038465094338
+  ],
+  "basin_stratified_bootstrap_percentile_interval": [
+    2.3912085776642233,
+    2.6349364078065793
+  ],
+  "wild_cluster_bootstrap_t_interval": [
+    0.95294466762554,
+    4.073200317845261
+  ],
+  "wild_cluster_valid_repetitions": 9999,
+  "hierarchical_REML": {
+    "converged": true,
+    "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+    "fixed_intercept": 2.513072492735401,
+    "standard_error": 0.4435472039857179,
+    "wald_95_low": 1.6437359474799533,
+    "wald_95_high": 3.3824090379908487,
+    "between_basin_variance": 0.7592441464865683,
+    "residual_variance": 0.05538468433524762,
+    "singular_boundary_flag": false,
+    "warnings": []
+  }
+}

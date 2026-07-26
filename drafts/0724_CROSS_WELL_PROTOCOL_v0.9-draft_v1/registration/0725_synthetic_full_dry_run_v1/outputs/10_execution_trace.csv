@@ -1,0 +1,2 @@
+﻿event_id,event_datetime_utc,actor_or_process,event_type,input_path,input_sha256,command_or_action,output_path,output_sha256,exit_status,protocol_version,notes
+SYNTH-DRYRUN-001,2026-07-25T09:54:14.767359+00:00,run_synthetic_full_dry_run.py,SYNTHETIC_FULL_PIPELINE,SCRIPT_GENERATED_SYNTHETIC_DATA,,python scripts/run_synthetic_full_dry_run.py,registration/0725_synthetic_full_dry_run_v1/outputs,SEE_DRY_RUN_MANIFEST,PASS,v0.9-draft-synthetic-dry-run,NO_REAL_LAYER_D_DATA_OPENED

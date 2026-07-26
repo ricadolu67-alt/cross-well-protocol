@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.9",
+  "feature_order": [
+    "MD_m",
+    "WOB_1000_kgf",
+    "surface_RPM_rpm",
+    "SPP_kPa"
+  ],
+  "canonical_units": {
+    "MD_m": "m",
+    "WOB_1000_kgf": "kkgf",
+    "surface_RPM_rpm": "rpm",
+    "SPP_kPa": "kPa"
+  },
+  "missing_feature_handling": "apply source_feature_medians.json before ExtraTrees prediction; Ridge contains its fitted source-only SimpleImputer",
+  "target": "ROP_m_per_h",
+  "target_unit": "m/h",
+  "primary_prediction_contract": "five frozen seed-specific predictions; family loss is calculated per seed and then averaged equally across the five seeds"
+}

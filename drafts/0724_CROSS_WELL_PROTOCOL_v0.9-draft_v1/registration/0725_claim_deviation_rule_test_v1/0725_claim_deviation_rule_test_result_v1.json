@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "test_id": "CROSS_WELL_CLAIM_AND_DEVIATION_RULES_V1",
+  "executed_at_utc": "2026-07-25T09:58:22.590450+00:00",
+  "scope": "GOVERNANCE_FILES_ONLY",
+  "input_sha256": {
+    "14a_claim_wording_rules.csv": "AE5595E4A93C0493C25B52F7F1E6303B953CD97111D49591112C657DD14F70E8",
+    "15a_protocol_deviation_rules.json": "5C06287775B139D5D6CF4B44C1D2269084E712F1CC6685B5C5EA0456196C261C",
+    "15_protocol_deviation_log.csv": "CA8AF11388839F9D70D8BE7738760D50C3B30EA02D8C3980223FCB313F6281CD"
+  },
+  "checks": {
+    "claim_rule_count_is_14": true,
+    "claim_ids_unique": true,
+    "condition_keys_unique": true,
+    "every_rule_has_allowed_wording": true,
+    "every_rule_has_prohibited_wording": true,
+    "all_model_result_branches_present": true,
+    "all_diagnostic_boundaries_present": true,
+    "mandatory_noncausal_boundary_present": true,
+    "random_basin_overclaim_prohibited": true,
+    "preunlock_D2_full_rerun_required": true,
+    "preunlock_D3_requires_new_version": true,
+    "postunlock_D2_selective_rerun_prohibited": true,
+    "postunlock_D3_not_confirmatory_correction": true,
+    "active_log_contains_no_example_row": true,
+    "actual_D2_full_rerun_case_closed": true,
+    "numeric_Layer_D_outcome_accessed": false
+  },
+  "overall_status": "PASS"
+}

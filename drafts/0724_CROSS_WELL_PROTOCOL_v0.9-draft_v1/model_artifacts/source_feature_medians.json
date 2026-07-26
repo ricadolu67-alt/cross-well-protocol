@@ -1,0 +1,18 @@
+{
+  "id": "FrozenSourceFeatureMedians",
+  "definition": "per-feature medians from the deterministic capped 10-unit source training bundle",
+  "feature_order": [
+    "MD_m",
+    "WOB_1000_kgf",
+    "surface_RPM_rpm",
+    "SPP_kPa"
+  ],
+  "values": {
+    "MD_m": 2512.314,
+    "WOB_1000_kgf": 5.373904305701469,
+    "surface_RPM_rpm": 159.6438,
+    "SPP_kPa": 17105.548106486
+  },
+  "target_values_used": false,
+  "application": "replace missing or frozen-range-invalid Layer D feature values after family qualification and before model prediction"
+}

@@ -1,0 +1,53 @@
+schema_version: "0.9"
+status: "DRAFT_NOT_EXECUTED"
+
+evidence_stack:
+  primary:
+    service: "OSF Registration"
+    purpose: "immutable primary evidence that the complete protocol preceded outcome unlock"
+    required_before_outcome_unlock: true
+    receipt_fields:
+      - registration_url
+      - registration_doi_or_id
+      - submitted_at_utc
+      - embargo_status
+      - attached_archive_sha256
+      - freeze_manifest_sha256
+  content_identity:
+    method: "SHA-256"
+    purpose: "bind every protocol, code, model, inventory and template to exact bytes"
+    algorithm: "SHA-256"
+    canonical_manifest: "16_freeze_manifest.json"
+  secondary:
+    service: "GitHub"
+    evidence: "signed commit plus immutable release"
+    purpose: "independent code-version and release evidence"
+    required_fields:
+      - repository_url
+      - commit_sha
+      - signature_verification
+      - release_tag
+      - release_url
+      - release_archive_sha256
+  final_public_package:
+    service: "Zenodo"
+    timing: "after confirmatory execution and preparation of the final public reproduction package"
+    purpose: "archival DOI for the final reproducibility package"
+    required_fields:
+      - deposition_id
+      - doi
+      - published_at_utc
+      - uploaded_archive_sha256
+
+pre_submission_gates:
+  - "v1.0_freeze_checklist.csv contains PASS for every requirement"
+  - "no TO_BE_FROZEN token remains in v1.0"
+  - "final archive and manifest validate"
+  - "outcome-lock access test passes"
+  - "custodian attests that Layer D ROP remains inaccessible"
+  - "OSF form text matches the frozen files"
+
+publication_authority:
+  authorized_person: "principal researcher (user)"
+  external_submission_requires_fresh_confirmation: true
+

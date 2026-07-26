@@ -1,0 +1,74 @@
+{
+  "schema_version": "0.9",
+  "status": "DRAFT_NOT_FROZEN",
+  "feature_contract": [
+    "measured_depth",
+    "weight_on_bit",
+    "surface_rotary_speed",
+    "standpipe_pressure"
+  ],
+  "primary_learner": {
+    "id": "FrozenExtraTrees",
+    "role": "primary_model",
+    "artifact_path": "model_artifacts/model_bundle_manifest.json",
+    "artifact_sha256": "230d822e4261cf54442175e853ca59832d8c337f3793d6907acc8ef452e501b3",
+    "training_data_scope": "source_only",
+    "hyperparameters": {
+      "legacy_candidate_id": "ExtraTrees_depth18_leaf100",
+      "n_estimators": 96,
+      "max_depth": 18,
+      "min_samples_leaf": 100,
+      "max_features": "sqrt",
+      "gate": "NoGate",
+      "training_weighting": "family_equal",
+      "cap_per_source_unit": 4000,
+      "sampling_seed": 20260722
+    },
+    "random_seeds": [20260722, 20260723, 20260724, 20260725, 20260726],
+    "prediction_contract": "calculate family loss separately for each frozen seed-specific model and average the five family losses equally",
+    "normalization_artifact_path": "model_artifacts/source_feature_medians.json",
+    "normalization_artifact_sha256": "d44e254ca8f9f2b3e7e08f32001cf452a152a8d0a53bf0c09cdcc04fc0f4d457"
+  },
+  "comparators": [
+    {
+      "id": "SourceMedian",
+      "role": "primary_baseline",
+      "definition": "constant median of source-domain ROP labels only",
+      "target_labels_used": false,
+      "artifact_path": "model_artifacts/source_median.json",
+      "artifact_sha256": "e9f92fc6181f431a58f437588d69e5754444c23daa82ab3839f449a37a2830e2",
+      "allowed_interpretation": "whether feature-conditioned predictive information transports beyond a deployment-available source-only constant"
+    },
+    {
+      "id": "FrozenSourceOnlyRidge",
+      "role": "secondary_predictive_baseline",
+      "definition": "source-only frozen low-complexity linear predictor using the same feature contract",
+      "target_labels_used": false,
+      "artifact_path": "model_artifacts/FrozenSourceOnlyRidge_alpha100.joblib",
+      "artifact_sha256": "3d8c24431f51f97f7b430e98c25b8de67f530e0f0c85cf46336a348e24ccc857",
+      "hyperparameters": {
+        "legacy_candidate_id": "Ridge_alpha_100",
+        "alpha": 100.0,
+        "imputer": "source-only median",
+        "scaler": "RobustScaler",
+        "training_weighting": "family_equal",
+        "cap_per_source_unit": 4000,
+        "sampling_seed": 20260722
+      },
+      "allowed_interpretation": "whether nonlinear complexity provides incremental external transport value"
+    }
+  ],
+  "comparison_wording": {
+    "ExtraTrees_gt_SourceMedian": "learned conditional transport exists relative to the source-only constant baseline",
+    "ExtraTrees_gt_Ridge": "nonlinear model complexity provides incremental external transport value",
+    "ExtraTrees_gt_SourceMedian_but_not_Ridge": "learned transport exists, but nonlinear complexity is not shown to be necessary",
+    "ExtraTrees_not_gt_SourceMedian": "little or negative evidence of useful external conditional transport under the frozen endpoint"
+  },
+  "prohibitions": [
+    "No Layer D target labels in training or model selection",
+    "No replacement of the primary learner after outcome unlock",
+    "No post-outcome hyperparameter or normalization changes",
+    "No engineering baseline with an incompatible feature contract"
+  ],
+  "execution_environment_reference": "parameter_register.csv"
+}

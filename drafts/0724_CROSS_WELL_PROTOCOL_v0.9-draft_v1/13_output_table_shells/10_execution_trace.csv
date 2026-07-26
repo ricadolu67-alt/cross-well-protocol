@@ -1,0 +1,2 @@
+event_id,event_datetime_utc,actor_or_process,event_type,input_path,input_sha256,command_or_action,output_path,output_sha256,exit_status,protocol_version,notes
+

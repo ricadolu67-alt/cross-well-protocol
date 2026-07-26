@@ -1,0 +1,125 @@
+{
+  "schema_version": "0.9",
+  "status": "SOURCE_ONLY_MODEL_BUNDLE_BUILT_PENDING_V1_FREEZE",
+  "generated_at_utc": "2026-07-25T05:23:25.170758+00:00",
+  "layer_D_outcome_access": false,
+  "source_scope": "verified 10-unit Volve source queue",
+  "source_rows_full": 269339,
+  "source_units": 10,
+  "training_rows_after_cap": 36779,
+  "training_rows_per_unit": {
+    "F-1": 4000,
+    "F-10": 4000,
+    "F-11": 4000,
+    "F-12": 4000,
+    "F-14": 4000,
+    "F-15 family": 4000,
+    "F-4": 779,
+    "F-5": 4000,
+    "F-7/F-9": 4000,
+    "F-9A": 4000
+  },
+  "feature_order": [
+    "MD_m",
+    "WOB_1000_kgf",
+    "surface_RPM_rpm",
+    "SPP_kPa"
+  ],
+  "ExtraTrees": {
+    "id": "ExtraTrees_depth18_leaf100",
+    "family": "ExtraTrees",
+    "n_estimators": 96,
+    "max_depth": 18,
+    "min_samples_leaf": 100,
+    "max_features": "sqrt"
+  },
+  "ExtraTrees_seeds": [
+    20260722,
+    20260723,
+    20260724,
+    20260725,
+    20260726
+  ],
+  "NoGate": true,
+  "Ridge": {
+    "id": "Ridge_alpha_100",
+    "family": "Ridge",
+    "alpha": 100.0
+  },
+  "training_weighting": "family_equal",
+  "sampling_seed": 20260722,
+  "cap_per_source_unit": 4000,
+  "source_median_m_per_h": 22.6289616,
+  "source_feature_medians": {
+    "MD_m": 2512.314,
+    "WOB_1000_kgf": 5.373904305701469,
+    "surface_RPM_rpm": 159.6438,
+    "SPP_kPa": 17105.548106486
+  },
+  "source_inventory_path": "../0722_跨井泛化证据链工作/0722_CROSS_WELL源输入清单_v1.json",
+  "source_inventory_sha256": "2b8a8c61bab30f072400e71863ab0a11db3573a6c6f4b67c3cbd924bf09cd4c8",
+  "experiment_manifest_sha256": "fe71beba8685bfc9647c3ae42ae7889e6c5b65d049d8ba90e29c1f25a163de1e",
+  "layer_B_transport_manifest_sha256": "5ad0e3a1b57468e8c5885967b3b8a8c6305a72aaf25857292b7987918e8e074a",
+  "layer_A_orchestrator_sha256": "2e86f08c79ff6d2eb015c73abf3ad14988a6517184794e621782f482a2cfeb2c",
+  "export_script_sha256": "789e7c86be92b80c6bf9b4e51107e8bd304e1b81d6df275cc1abdf08b798c09f",
+  "environment": {
+    "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.22631-SP0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3"
+  },
+  "artifacts": [
+    {
+      "path": "FrozenExtraTrees_seed_20260722.joblib",
+      "bytes": 631818,
+      "sha256": "8048a6210dae166627992be93f13f528b223a91d750cbd28e3eabaff81015ed6"
+    },
+    {
+      "path": "FrozenExtraTrees_seed_20260723.joblib",
+      "bytes": 611925,
+      "sha256": "6e2773883c52a065b55b843ff11e5e60e34f469e9ba53238d4f8c427b5966a8e"
+    },
+    {
+      "path": "FrozenExtraTrees_seed_20260724.joblib",
+      "bytes": 594820,
+      "sha256": "d14da2f28a3aaa1e51190acea65d8b8245d1916d25c01d17e9569da75a7a6644"
+    },
+    {
+      "path": "FrozenExtraTrees_seed_20260725.joblib",
+      "bytes": 598509,
+      "sha256": "eac8f4f27a475a5b974dc44de0445281dc00da1fce66305f4644a605f634680a"
+    },
+    {
+      "path": "FrozenExtraTrees_seed_20260726.joblib",
+      "bytes": 644001,
+      "sha256": "579715bb38df97315f26a3b38e056453c8ba86a88f4852df93f5e3dc33cd9dd4"
+    },
+    {
+      "path": "FrozenSourceOnlyRidge_alpha100.joblib",
+      "bytes": 1022,
+      "sha256": "3d8c24431f51f97f7b430e98c25b8de67f530e0f0c85cf46336a348e24ccc857"
+    },
+    {
+      "path": "source_median.json",
+      "bytes": 219,
+      "sha256": "e9f92fc6181f431a58f437588d69e5754444c23daa82ab3839f449a37a2830e2"
+    },
+    {
+      "path": "source_feature_medians.json",
+      "bytes": 567,
+      "sha256": "d44e254ca8f9f2b3e7e08f32001cf452a152a8d0a53bf0c09cdcc04fc0f4d457"
+    },
+    {
+      "path": "source_training_selection.csv",
+      "bytes": 702890,
+      "sha256": "3759a76e0b94ab1935b2ac5f821a5915df10e87c9dc731f1fcdbea2b1d03b238"
+    },
+    {
+      "path": "feature_and_prediction_schema.json",
+      "bytes": 626,
+      "sha256": "7b3ce049b7a5708429bb3f949b5c8b232c40f5a2e119d0fd35fb670a3006a598"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+schema_version: "0.9"
+protocol_id: "CROSS_WELL_PROTOCOL_v0.9-draft"
+status: "DRAFT_NOT_FROZEN"
+
+task:
+  target: "interval/depth-indexed rate of penetration (ROP)"
+  prediction_task: "depth-indexed conditional ROP estimation"
+  information_set:
+    - "measured_depth"
+    - "weight_on_bit"
+    - "surface_rotary_speed"
+    - "standpipe_pressure"
+  conditional_quantity: "E[ROP | MD, WOB, RPM, SPP]"
+  temporal_claim: "No ahead-of-state or future ROP forecasting claim"
+  target_domain_use: "label-blinded target-domain qualification only"
+  adaptation_allowed: false
+
+deployment_and_claim_units:
+  deployment_unit:
+    - "unseen dependence family"
+    - "unseen petroleum field"
+  primary_independent_unit: "field"
+  basin_role: "sampled replication context"
+  basin_population_inference: false
+  primary_external_claim: "baseline-relative cross-field transport across sampled petroleum fields represented in sampled basin contexts"
+
+allowed_target_covariate_use:
+  structural_metadata: true
+  prespecified_covariate_qc: true
+  model_fitting: false
+  hyperparameter_selection: false
+  representation_selection: false
+  normalization_fitting: false
+  threshold_calibration: false
+  performance_based_exclusion: false
+
+excluded_claims:
+  - "pre-drill ROP forecasting"
+  - "next-step or ahead-of-state real-time forecasting"
+  - "causal effects of manipulating WOB, RPM, or standpipe pressure"
+  - "drilling-control or optimization policy"
+  - "closed-loop optimization"
+  - "deployment readiness"
+  - "general population inference over all petroleum basins"
+
+required_manuscript_statement: >-
+  The fitted conditional associations do not identify the causal effects
+  of manipulating WOB, RPM, or standpipe pressure and should not be
+  interpreted as a drilling-control or optimization policy.
+
+claim_integrity_rule: >-
+  Scope and confirmation integrity are reported as separate dimensions.
+  Retrospective, locally frozen, and externally timestamped access-controlled
+  results must not be pooled as a single confirmatory cohort.
+

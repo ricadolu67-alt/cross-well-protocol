@@ -1,0 +1,107 @@
+schema_version: "0.9"
+status: "FROZEN_DRAFT_SOURCE_ONLY_VALIDATED"
+
+global_rules:
+  primary_learner: "FrozenExtraTrees"
+  primary_metric: "MD_interval_weighted_MAE"
+  same_test_observations: true
+  same_scoring_rule: true
+  same_preprocessing_except_manipulated_condition: true
+  primary_contrast_count_per_diagnostic: 1
+  primary_results_may_not_be_selected_by_effect_size: true
+  sensitivity_learners:
+    - "FrozenSourceOnlyRidge"
+  other_historical_models: "supplement_only_if_prespecified"
+
+split_induced_optimism:
+  role: "matched_diagnostic"
+  eligible_families_file_or_ids: "07a_falsification_test_intervals.csv"
+  exact_test_intervals_file: "07a_falsification_test_intervals.csv"
+  base_training_set_definition: >-
+    For target family i, construct a legal family-isolated base training set
+    S_i_base before any leaky replacement.
+  mechanism_isolated_primary:
+    leakage_fraction_q: 0.05
+    base_training_cap_per_legal_family: 4000
+    base_training_total_rows: 16000
+    replacement_rows: 800
+    replacement_slots_selection: "uniform without replacement from the fixed clean base training rows"
+    target_family_leaky_row_sampling: "uniform without replacement from target-family rows outside the fixed test interval"
+    total_training_size_matched: true
+    replacement_count_equality: "|R_i| = |L_i|"
+    source_composition_change_minimized: true
+    repetitions: 5
+    seeds: [20260722, 20260723, 20260724, 20260725, 20260726]
+    contrast: "MAE_clean_minus_MAE_row_leaky"
+    positive_value_interpretation: "within-family row exposure creates an optimistic performance shift"
+  operational_secondary:
+    natural_training_size_difference_allowed: true
+    contrast: "audited_workflow_MAE_minus_naive_row_workflow_MAE"
+    interpretation: "distortion produced by the operationally naive workflow"
+  population_claim_allowed: false
+
+dependence_induced_optimism:
+  role: "matched_diagnostic_in_identified_cases"
+  audited_cases:
+    - "F-7_F-9"
+    - "F-15_F-15S"
+  exact_test_intervals_file: "07a_falsification_test_intervals.csv"
+  primary:
+    audited_condition: "exclude the full frozen dependence family from training"
+    nominal_condition: "exclude only the nominal test file while permitting its identified related file"
+    same_test_rows: true
+    contrast: "MAE_audited_minus_MAE_nominal"
+    positive_value_interpretation: "nominal-file isolation creates an optimistic performance shift"
+  matched_training_size_sensitivity:
+    enabled: true
+    matching_algorithm: >-
+      Cap each permitted training family or nominal file at 4000 rows, then
+      downsample both audited and nominal conditions to the smaller total
+      training size using the same repetition seed.
+    repetitions: 5
+    seeds: [20260722, 20260723, 20260724, 20260725, 20260726]
+  permitted_claim: "distortion observed in the identified dependence cases"
+  prohibited_claim: "average dependence bias in petroleum wells generally"
+
+semantics_induced_pessimism:
+  primary_definition: "target-side representation intervention under an otherwise frozen canonical pipeline"
+  historical_F15:
+    status: "retrospective_semantic_failure_analysis"
+    confirmatory_average_bias_estimator: false
+    permitted_role: >-
+      Demonstrates that semantic inconsistency can manufacture catastrophic
+      apparent transfer failure and motivates the frozen semantic protocol.
+  confirmatory_contrasts_if_any:
+    enabled: false
+    exact_fields_and_mappings: []
+    reason: >-
+      No prospectively specified source-only semantic contrast satisfies the
+      frozen target-side intervention definition. F-15 remains retrospective.
+    mapping_decided_without_outcome: true
+    same_source_training: true
+    same_fitted_learner: true
+    same_target_observations: true
+    same_scoring_intersection: true
+    same_preprocessing_logic: true
+    only_target_semantic_representation_changes: true
+    ambiguous_mapping_action: "SENSITIVITY"
+    outcome_selected_mapping_prohibited: true
+    contrast: "MAE_released_minus_MAE_harmonized"
+    positive_value_interpretation: "semantic mismatch creates a pessimistic performance shift"
+  out_of_scope:
+    - "repairs that change source training data"
+    - "repairs that refit normalization"
+    - "repairs that change model fitting"
+    - "repairs that change the scoring-row population beyond the prespecified common intersection"
+
+reporting:
+  distinguish:
+    - "retrospective demonstration"
+    - "matched diagnostic estimate"
+    - "general population claim"
+  general_population_claim_from_identified_cases: false
+  primary_tracks:
+    - "matched split-induced optimism"
+    - "matched dependence-induced optimism in identified cases"
+  retrospective_track:
+    - "F-15 semantic failure analysis"

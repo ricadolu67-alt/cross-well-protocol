@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "source-only; no Layer D archive opened",
+  "split_rows": 25,
+  "dependence_rows": 20,
+  "semantic_track": "retrospective_only",
+  "fixed_seeds": [
+    20260722,
+    20260723,
+    20260724,
+    20260725,
+    20260726
+  ],
+  "leakage_fraction_q": 0.05,
+  "leakage_rows": 800,
+  "base_training_rows": 16000
+}

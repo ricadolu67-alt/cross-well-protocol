@@ -1,0 +1,8 @@
+diagnostic,case_id,target_family,target_file,start_md_m,end_md_m,interval_rule,selection_basis,outcome_access,status
+split,SPLIT_F9A,F9A,USROP_A 0 N-NA_F-9_Ad.csv,501.396,601.396,"start inclusive; end exclusive","first complete 100 m interval within the longest source-only continuous segment","NO_LAYER_D_OUTCOME_ACCESS","FROZEN_SOURCE_ONLY"
+split,SPLIT_F14,F14,USROP_A 2 N-SH_F-14d.csv,997.245,1097.245,"start inclusive; end exclusive","first complete 100 m interval within the longest source-only continuous segment","NO_LAYER_D_OUTCOME_ACCESS","FROZEN_SOURCE_ONLY"
+split,SPLIT_F5,F5,USROP_A 5 N-SH-F-5d.csv,3293.001,3393.001,"start inclusive; end exclusive","first complete 100 m interval within the longest source-only continuous segment","NO_LAYER_D_OUTCOME_ACCESS","FROZEN_SOURCE_ONLY"
+split,SPLIT_F15,F15_F15S,USROP_A 4 N-SH_F-15Sd.csv,1432.011,1532.011,"start inclusive; end exclusive","first complete 100 m interval within the longest source-only continuous segment","NO_LAYER_D_OUTCOME_ACCESS","FROZEN_SOURCE_ONLY"
+split,SPLIT_F7F9,F7_F9,USROP_A 1 N-S_F-7d.csv,324.999,424.999,"start inclusive; end exclusive","first complete 100 m interval within the longest source-only continuous segment retained by frozen family-level deduplication","NO_LAYER_D_OUTCOME_ACCESS","FROZEN_SOURCE_ONLY"
+dependence,DEP_F7F9,F7_F9,USROP_A 6 N-SH_F-9d.csv,324.999,424.999,"start inclusive; end exclusive","identified F-7/F-9 dependence case; fixed source-only interval","NO_LAYER_D_OUTCOME_ACCESS","FROZEN_SOURCE_ONLY"
+dependence,DEP_F15F15S,F15_F15S,USROP_A 4 N-SH_F-15Sd.csv,1432.011,1532.011,"start inclusive; end exclusive","identified F-15/F-15S dependence case; fixed source-only interval","NO_LAYER_D_OUTCOME_ACCESS","FROZEN_SOURCE_ONLY"

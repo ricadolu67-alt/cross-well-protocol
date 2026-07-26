@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "finalization_id": "CROSS_WELL_PRINCIPAL_DEPENDENCE_COHORT_V1",
+  "generated_at_utc": "2026-07-25T10:03:35.169077+00:00",
+  "checks": {
+    "family_count_is_36": true,
+    "dependence_family_ids_unique": true,
+    "qualified_family_count_is_23": true,
+    "held_family_count_is_13": true,
+    "field_count_is_13": true,
+    "primary_qualified_field_count_is_8": true,
+    "represented_primary_basin_count_is_5": true,
+    "all_principal_decisions_accepted": true,
+    "numeric_ROP_accessed": false
+  },
+  "outputs": {
+    "03e_final_preunlock_dependence_registry.csv": "831CCF610ECB194B74F03463E1B1DEE5A69F0D80E251CEFC0B2B6BAD278D9796",
+    "11e_final_preunlock_cohort_manifest.csv": "9CABFB60B028A9E54D10F1FA3ED488216F98DD1E1A7E07FFC9910DEC640C5A4D",
+    "11f_final_preunlock_field_manifest.csv": "5A1A5AD60534EB1AF42D06B280801562F929806308FFEC7CBEB439E7189C9C42",
+    "0725_principal_acceptance_record_v1.md": "B4C108EFB01989EA34D7FA08ECE9C380D629A14967DF6073BAE70E98E58723A0"
+  },
+  "overall_status": "PASS"
+}

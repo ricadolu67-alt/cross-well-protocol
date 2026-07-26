@@ -1,0 +1,130 @@
+schema_version: "0.9"
+status: "DRAFT_RULES_FIXED_PENDING_FINAL_COHORT"
+semantic_core_reference: "05a_ROP_measurement_semantic_freeze_record.md"
+outcome_access_at_authoring: "NO_LAYER_D_OUTCOME_ACCESS"
+
+primary_alignment:
+  alignment_basis: "native_co_sampled_record_on_shared_MD_index"
+  requirement: >-
+    MD, WOB, surface RPM, SPP, and source-reported ROP must originate from the
+    same tabular record or curve object sharing one native measured-depth index.
+  cross_file_nearest_neighbor_join_allowed: false
+  cross_stream_time_join_allowed: false
+  interpolation_allowed: false
+  resampling_before_primary_prediction_allowed: false
+  numeric_alignment_tolerance_m: 0.0
+  tolerance_interpretation: >-
+    No fuzzy join is performed. Numeric equality is not required between
+    separate streams because separate-stream joins are excluded from the
+    primary analysis.
+  nonconforming_alignment_action: "EXCLUDE_FROM_PRIMARY_AND_REPORT"
+
+canonical_source_object_selection:
+  scope: "one primary native source object per dependence family"
+  object_level_pass_required: true
+  ranking:
+    - "canonical MD coverage descending"
+    - "valid common4 row count descending"
+    - "total data row count descending"
+    - "member path ascending as stable final tie-break"
+  target_values_or_model_performance_used: false
+  duplicate_or_alternate_objects: "retain in audit tables; do not pool into primary scoring"
+  basis: >-
+    Prevent duplicated depth/time/interpolated products from jointly weighting
+    one family and ensure that qualification and later scoring refer to the
+    same deterministic source object.
+
+canonical_units:
+  measured_depth: "m"
+  weight_on_bit: "kkgf"
+  surface_rotary_speed: "rpm"
+  standpipe_pressure: "kPa"
+  rate_of_penetration: "m/h"
+  conversion_evidence_required: true
+  undocumented_conversion_allowed: false
+
+row_eligibility:
+  require_finite_MD: true
+  require_finite_ROP: true
+  require_positive_ROP: true
+  target_imputation_allowed: false
+  require_forward_new_hole_advancement: true
+  active_drilling_evidence_order:
+    - "explicit provider operational-state flag"
+    - "provider-documented drilling-only extraction"
+    - "positive forward MD progression plus source-reported operational ROP"
+  connection_exclusion: "exclude when explicitly flagged; otherwise do not infer from prediction error"
+  off_bottom_exclusion: "exclude when explicitly flagged; otherwise require documented drilling-only lineage"
+  reaming_exclusion: "exclude when explicitly flagged; otherwise require documented new-hole lineage"
+  state_boundary_buffer_m: 0.0
+  state_boundary_buffer_interpretation: "do not expand explicit exclusions into neighboring rows"
+  upper_ROP_filter: null
+  extreme_positive_ROP_action: "retain_and_flag"
+
+ordering_and_duplicates:
+  stable_sort:
+    keys:
+      - "dependence_family_id"
+      - "source_object_id"
+      - "native_MD_ascending"
+      - "stable_original_row_id"
+    algorithm: "mergesort"
+  duplicate_MD_scope: "within_source_object_and_continuous_segment"
+  prediction_order: "predict_original_rows_before_duplicate_MD_aggregation"
+  observed_ROP_aggregation: "median"
+  predicted_ROP_aggregation: "median"
+  feature_aggregation_before_prediction: false
+
+continuous_segments:
+  break_on_source_object_change: true
+  break_on_decreasing_MD: true
+  break_on_duplicate_MD: false
+  break_on_explicit_operational_state_change: true
+  break_on_ineligible_or_missing_MD_run: true
+  MD_gap_threshold_m: 1.0
+  parameter_basis: "source_only_audit/source_only_parameter_basis.md"
+
+primary_weighting:
+  method: "MD_interval_weighted_MAE"
+  representative_interval_cap_m: 0.5
+  endpoint_rule: "half adjacent positive MD difference, capped at 0.5 m"
+  interior_rule: "half span between adjacent unique MD values, capped at 0.5 m"
+  invalid_weight_action: "exclude_and_count"
+  minimum_segment_points: 2
+  minimum_family_MD_coverage_m: 100.0
+  minimum_family_scoring_points: 100
+  minimum_valid_segments: 1
+  parameter_basis: "source_only_audit/source_only_parameter_basis.md"
+
+fixed_depth_block_sensitivity:
+  enabled: true
+  block_length_m: 1.0
+  block_origin_m: 0.0
+  block_index_formula: "floor((MD_m - 0.0) / 1.0)"
+  minimum_represented_depth_per_block_m: 0.5
+  observed_aggregation: "MD_interval_weighted_mean"
+  predicted_aggregation: "MD_interval_weighted_mean"
+  block_weighting_in_MAE: "equal_weight_per_valid_block"
+  interpolation_allowed: false
+
+qualification_QC:
+  permitted_feature_missing_fraction_maximum: 0.20
+  permitted_feature_finite_fraction_minimum: 0.80
+  scoring_feature_imputation: "frozen_source_median_per_feature"
+  target_imputation_allowed: false
+  physical_ranges:
+    measured_depth_m: {minimum: 0.0, maximum: 15000.0}
+    weight_on_bit_kkgf: {minimum: 0.0, maximum: 100.0}
+    surface_rotary_speed_rpm: {minimum: 0.0, maximum: 500.0}
+    standpipe_pressure_kPa: {minimum: 0.0, maximum: 70000.0}
+    rate_of_penetration_m_per_h: {minimum_exclusive: 0.0, maximum: null}
+  range_violation_action: >-
+    Mark the affected value unavailable, count it, and apply the frozen
+    missingness/finite-fraction rule; never repair using outcome performance.
+
+reporting:
+  qualified_to_scorable_attrition_required: true
+  per_source_measurement_lineage_required: true
+  unknown_aggregation_window_reported: true
+  excluded_alignment_cases_reported: true
+  range_violation_counts_reported: true

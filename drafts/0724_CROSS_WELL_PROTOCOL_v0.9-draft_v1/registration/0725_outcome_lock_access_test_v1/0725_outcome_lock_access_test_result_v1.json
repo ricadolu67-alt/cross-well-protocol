@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "test_id": "CROSS_WELL_OUTCOME_LOCK_SYNTHETIC_V1",
+  "executed_at_utc": "2026-07-25T09:05:30.747198+00:00",
+  "scope": "SYNTHETIC_FIXTURE_ONLY",
+  "real_Layer_D_archives_opened": false,
+  "fixture_sha256": "383AEED734B7591AA5A41E490BE61DD50C6E4BEEB93A4F2A9AB992BE9B4CE576",
+  "fixture_sentinel_sha256": "0D250DCF3BF8C157609CCE547EEB0A87AA9F46D4A1322857876D6F95C1666619",
+  "checks": {
+    "synthetic_fixture_contains_sentinel": true,
+    "T1a_numeric_arrays_emitted_is_false": true,
+    "T1a_numeric_token_count_is_zero": true,
+    "T1b_schema_is_permitted_only": true,
+    "T1b_target_converted_is_zero": true,
+    "T1b_target_retained_is_zero": true,
+    "T1b_target_summary_is_zero": true,
+    "prohibited_request_exit_is_nonzero": true,
+    "prohibited_request_exit_is_expected_17": true,
+    "prohibited_probe_stdout_empty": true,
+    "prohibited_probe_stderr_has_only_reason_code": true,
+    "real_Layer_D_archives_opened": false,
+    "sentinel_absent_from_permitted_outputs": true
+  },
+  "sentinel_leak_paths": [],
+  "overall_status": "PASS"
+}

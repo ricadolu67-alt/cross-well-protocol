@@ -1,0 +1,3 @@
+﻿estimand,method,estimate,lower_bound,upper_bound,confidence_level,n_fields,n_basins,repetitions,seed,headline_status,notes
+field_equal_mean_transfer_gain,small_sample_t_interval,2.513072492735401,1.8105336326205212,3.215611352850281,0.95,8,4,,,PRIMARY,SYNTHETIC_DRY_RUN_ONLY
+field_equal_mean_transfer_gain,field_percentile_bootstrap,2.513072492735401,1.9644926053052867,3.071038465094338,0.95,8,4,10000,20260725,ROBUSTNESS,SYNTHETIC_DRY_RUN_ONLY

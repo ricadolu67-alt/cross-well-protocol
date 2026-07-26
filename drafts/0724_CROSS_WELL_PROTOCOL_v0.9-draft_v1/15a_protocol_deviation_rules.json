@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "pre_unlock": {
+    "D1": {
+      "confirmatory_correction_allowed": true,
+      "scientific_rule_change_allowed": false,
+      "full_cohort_rerun_required_if_outputs_affected": true,
+      "original_evidence_retained": true
+    },
+    "D2": {
+      "confirmatory_correction_allowed": true,
+      "outcome_independent_required": true,
+      "scientific_rule_change_allowed": false,
+      "full_cohort_rerun_required": true,
+      "original_evidence_retained": true
+    },
+    "D3": {
+      "confirmatory_correction_allowed": false,
+      "required_disposition": "NEW_PROTOCOL_VERSION_AND_NEW_TIMESTAMP",
+      "original_evidence_retained": true
+    }
+  },
+  "post_unlock": {
+    "D1": {
+      "administrative_only": true,
+      "scientific_result_replacement_allowed": false,
+      "original_results_retained": true
+    },
+    "D2": {
+      "outcome_independent_required": true,
+      "full_cohort_rerun_required": true,
+      "selective_unit_rerun_prohibited": true,
+      "original_and_corrected_results_reported": true
+    },
+    "D3": {
+      "confirmatory_correction_allowed": false,
+      "required_disposition": "POST_HOC_SENSITIVITY_OR_NEW_PROTOCOL_VERSION",
+      "original_results_retained": true
+    }
+  }
+}

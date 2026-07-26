@@ -1,0 +1,4 @@
+﻿diagnostic_id,diagnostic_type,case_or_family_id,contrast_role,learner,test_interval_id,training_size_clean,training_size_counterfactual,leakage_fraction_q,repetition,seed,MAE_reference,MAE_counterfactual,distortion_effect,effect_direction,claim_scope,notes
+SYNTH_SPLIT,split,SYNTH_FAMILY,PRIMARY_LOGIC_DRY_RUN,SyntheticFrozenLearner,SYNTH_FIXED_INTERVAL,1000,1000,0.2,1,20260725,4.0,2.5,1.5,positive,identified synthetic contrast,SYNTHETIC_DRY_RUN_ONLY_NOT_SCIENTIFIC_EVIDENCE
+SYNTH_DEP,dependence,SYNTH_RELATED_PAIR,PRIMARY_LOGIC_DRY_RUN,SyntheticFrozenLearner,SYNTH_FIXED_INTERVAL,1000,1000,,1,20260725,5.0,3.0,2.0,positive,identified synthetic case,SYNTHETIC_DRY_RUN_ONLY_NOT_SCIENTIFIC_EVIDENCE
+SYNTH_SEM,semantics,SYNTH_MAPPING,PRIMARY_LOGIC_DRY_RUN,SyntheticFrozenLearner,SYNTH_FIXED_INTERVAL,1000,1000,,1,20260725,8.0,2.0,6.0,positive,synthetic representation intervention,SYNTHETIC_DRY_RUN_ONLY_NOT_SCIENTIFIC_EVIDENCE

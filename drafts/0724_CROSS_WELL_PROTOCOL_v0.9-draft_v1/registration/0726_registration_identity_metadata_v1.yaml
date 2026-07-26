@@ -1,0 +1,46 @@
+schema_version: "0.9"
+status: "PRINCIPAL_CONFIRMED_PRE_SUBMISSION"
+confirmed_date: "2026-07-26"
+outcome_access: "NO_LAYER_D_OUTCOME_ACCESS"
+
+principal_researcher:
+  name_zh: "陆宇晗"
+  name_en: "Lu Yuhan"
+  affiliation: "Changzhou University"
+  location: "Changzhou, Jiangsu, China"
+  orcid: "https://orcid.org/0009-0006-8513-2732"
+  roles:
+    - "protocol owner"
+    - "principal researcher"
+    - "outcome custodian"
+
+github:
+  repository_web_url: "https://github.com/ricadolu67-alt/-"
+  repository_ssh_url: "git@github.com:ricadolu67-alt/-.git"
+  visibility_observed: "public"
+  initial_repository_state: "empty"
+  account_has_repository_settings_access: true
+  public_key_algorithm: "ED25519"
+  public_key_fingerprint_sha256: "SHA256:bARfzlmS6Tzj91hXCRf9mC3NnhcOIulh5zIUjov7j8w"
+  private_key_content_recorded_or_copied: false
+  ssh_authentication_test: "FAILED_PUBLICKEY_NOT_ACCEPTED_2026-07-26"
+  github_sudo_verification: "PENDING_EMAIL_CODE"
+  repository_local_remote_configured: true
+  local_git_user_name: "Lu Yuhan"
+  local_git_user_email: "ricadolu67@gmail.com"
+  local_git_signing_format: "ssh"
+  local_git_commit_gpgsign: true
+  authentication_key_registration: "VERIFIED_ON_GITHUB_2026-07-26"
+  signing_key_registration: "VERIFIED_ON_GITHUB_2026-07-26"
+  ssh_authentication_retest: "PASS_2026-07-26"
+  signed_commit_status: "PENDING_LOCAL_SIGNING_TEST"
+
+osf:
+  role: "primary externally trusted timestamp"
+  browser_session_observed: "signed-in dashboard available"
+  registration_submission_status: "NOT_SUBMITTED"
+  fresh_confirmation_required_before_submission: true
+
+zenodo:
+  role: "post-execution final reproduction-package DOI"
+  submission_status: "DEFERRED_BY_PROTOCOL"

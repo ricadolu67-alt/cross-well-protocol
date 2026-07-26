@@ -1,0 +1,143 @@
+schema_version: "0.9"
+status: "DRAFT_NOT_FROZEN"
+
+source_inventory:
+  provider: "NOPIMS"
+  prespecified_basin_source_inventory:
+    - "Gippsland"
+    - "Otway"
+    - "Northern Carnarvon"
+    - "Bonaparte"
+    - "Perth"
+    - "Browse"
+  acquisition_cutoff_datetime_utc: "2026-07-25T15:59:59Z"
+  acquisition_cutoff_datetime_local: "2026-07-25T23:59:59+08:00"
+  cutoff_confirmation: "Confirmed by principal researcher on 2026-07-25 before ROP outcome access."
+  acquisition_closed_early: true
+  acquisition_closure_confirmed_at_utc: "2026-07-25T08:56:00Z"
+  acquisition_closure_confirmed_at_local: "2026-07-25T16:56:00+08:00"
+  acquisition_closure_authority: "Principal researcher"
+  acquisition_closure_record: "registration/0725_acquisition_closure_record_v1.md"
+  final_candidate_inventory_immutable: true
+  final_candidate_inventory_version: "integration_v4_102_file_inventory"
+  t0_inventory_path: "../0725_CROSS_WELL_preunlock_integration_v4/0725_combined_acquisition_inventory_v5.csv"
+  t0_inventory_sha256: "20917E0BFD144DC2D9EF10B3AA7C2EBA592A012C2CB7498720CF7CA6EBB0310B"
+  t0_file_count: 102
+  t0_total_bytes: 63834771389
+  archive_or_data_content_inspected_at_T0: false
+  include_all_eligible_archives_acquired_before_cutoff: true
+  post_cutoff_additions_to_current_confirmation: false
+  preunlock_extension:
+    acquired_date_local: "2026-07-25"
+    acquired_before_cutoff: true
+    allowlist_file_count: 5
+    allowlist_total_bytes: 6321033044
+    extension_T1a_package: "../0725_CROSS_WELL_extension_T1a_v1"
+    extension_T1b_package: "../0725_CROSS_WELL_extension_T1b_v1"
+    integration_package: "../0725_CROSS_WELL_preunlock_integration_v1"
+    rop_outcome_accessed: false
+  preunlock_extension_v2:
+    authorization_date_local: "2026-07-25"
+    acquisition_cutoff_datetime_local: "2026-07-27T23:59:59+08:00"
+    extension_window_status: "CLOSED_EARLY_BY_PRINCIPAL_CONFIRMATION_2026-07-25T16:56:00+08:00"
+    frozen_allowlist_file_count: 3
+    actual_acquired_total_bytes: 9656586816
+    target_field: "Blacktip"
+    T1a_package: "../0725_CROSS_WELL_extension_v2_T1a_v1"
+    T1b_package: "../0725_CROSS_WELL_extension_v2_T1b_v1"
+    integration_package: "../0725_CROSS_WELL_preunlock_integration_v2"
+    family_qualification_result: "BLACKTIP_P1_HELD_AND_BLACKTIP_P2_REMAINS_HELD"
+    failure_reason: "No source object supplied a defensible surface-RPM curve under the frozen common4-SPP contract"
+    rop_outcome_accessed: false
+  preunlock_extension_v3:
+    authorization_date_local: "2026-07-25"
+    acquisition_cutoff_datetime_local: "2026-07-27T23:59:59+08:00"
+    extension_window_status: "CLOSED_EARLY_BY_PRINCIPAL_CONFIRMATION_2026-07-25T16:56:00+08:00"
+    frozen_allowlist_file_count: 3
+    actual_acquired_total_bytes: 792567641
+    target_field: "Scarborough"
+    T1a_package: "../0725_CROSS_WELL_extension_v3_T1a_v1"
+    T1b_package: "../0725_CROSS_WELL_extension_v3_T1b_v1"
+    integration_package: "../0725_CROSS_WELL_preunlock_integration_v3"
+    family_qualification_result: "SCARBOROUGH_5_HELD_AND_SCARBOROUGH_4_4A_HELD"
+    failure_reason: "No single frozen source object supplied exact MD WOB surface-RPM SPP and a unique ROP header"
+    rop_outcome_accessed: false
+  preunlock_extension_v4:
+    authorization_date_local: "2026-07-25"
+    acquisition_cutoff_datetime_local: "2026-07-27T23:59:59+08:00"
+    extension_window_status: "CLOSED_EARLY_BY_PRINCIPAL_CONFIRMATION_2026-07-25T16:56:00+08:00"
+    frozen_allowlist_file_count: 3
+    actual_acquired_total_bytes: 820103864
+    target_field: "Prelude"
+    T1a_package: "../0725_CROSS_WELL_extension_v4_T1a_v1"
+    initial_T1b_package: "../0725_CROSS_WELL_extension_v4_T1b_v1"
+    amended_T1b_package: "../0725_CROSS_WELL_extension_v4_T1b_v2"
+    integration_package: "../0725_CROSS_WELL_preunlock_integration_v4"
+    family_qualification_result: "PRELUDE_P3_P4_P6_LABEL_BLINDED_QUALIFIED"
+    semantic_amendment: "SEMANTIC_MAP_AMENDMENT_20260725_V1"
+    prior_cohort_amendment_impact_count: 0
+    rop_outcome_accessed: false
+
+stopping_rule:
+  type: "calendar_cutoff_plus_minimum_qualification"
+  minimum_qualified_fields: 8
+  minimum_basin_contexts: 4
+  minimum_scorable_independent_families_per_primary_field: 2
+  action_if_minimum_not_met_before_outcome_unlock: >-
+    Do not unlock outcomes. Report that the planned confirmation threshold
+    was not met and begin a separately versioned acquisition phase.
+  action_if_minimum_not_met_after_unlock: >-
+    Do not add archives or relax rules. Report the frozen cohort and its
+    confirmatory limitation.
+
+field_sampling:
+  retain_all_eligible_families: true
+  maximum_family_count_in_field_equal_weight: "not_applicable"
+  acquisition_priority_rule: >-
+    Search priority may be reduced after a field reaches approximately four
+    to five qualified families, but no eligible acquired family may be removed.
+  field_equal_final_weighting: true
+
+candidate_processing_order:
+  - "T0_acquisition_and_sha256"
+  - "T1a_structural_qualification"
+  - "dependence_family_construction"
+  - "measurement_and_semantic_contract"
+  - "T1b_label_blinded_covariate_qualification"
+  - "final_qualified_cohort"
+  - "T2_confirmatory_freeze"
+  - "T3_numeric_outcome_unlock"
+
+candidate_exclusion_policy:
+  outcome_based_exclusion: false
+  all_exclusions_must_use_prespecified_reason_code: true
+  all_candidates_and_exclusions_retained_in_flow: true
+  permitted_reason_codes:
+    - "DUPLICATE_ARCHIVE"
+    - "IDENTITY_UNRESOLVED"
+    - "FIELD_OR_BASIN_UNRESOLVED"
+    - "DEPENDENCE_UNRESOLVED"
+    - "REQUIRED_FEATURE_ABSENT"
+    - "TARGET_DEFINITION_INCOMPATIBLE"
+    - "SEMANTIC_AMBIGUITY_EXCLUDE"
+    - "COVARIATE_QC_FAIL"
+    - "ARCHIVE_CORRUPT"
+    - "OTHER_PRESPECIFIED"
+
+minimum_confirmation_interpretation: >-
+  Meeting the minimum field and basin counts is a procedural replication
+  threshold, not a power calculation and not evidence of random-basin
+  population inference.
+
+current_preunlock_gate:
+  evaluated_date_local: "2026-07-25"
+  development_family_count: 36
+  label_blinded_qualified_family_count: 23
+  petroleum_field_count: 13
+  primary_qualified_field_count: 8
+  represented_primary_basin_context_count: 5
+  minimum_qualified_fields_status: "PASS_8_OF_8"
+  minimum_basin_contexts_status: "PASS_5_OF_4"
+  acquisition_status: "CLOSED"
+  candidate_inventory_status: "IMMUTABLE_FOR_V1_0"
+  required_action: "KEEP_OUTCOME_LOCKED_PENDING_ALL_REMAINING_V1_0_FREEZE_CHECKS"

@@ -1,0 +1,9 @@
+quantity,quantile,value
+positive_consecutive_MD_gap_m,min,0.0029999999983374437
+positive_consecutive_MD_gap_m,p50,0.032999999999901775
+positive_consecutive_MD_gap_m,p90,0.08899999999948704
+positive_consecutive_MD_gap_m,p95,0.11900000000014188
+positive_consecutive_MD_gap_m,p99,0.19499999999970896
+positive_consecutive_MD_gap_m,p995,0.2619999999999675
+positive_consecutive_MD_gap_m,p999,0.6090000000000468
+positive_consecutive_MD_gap_m,max,166.49699999999984

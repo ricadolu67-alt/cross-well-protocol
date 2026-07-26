@@ -1,0 +1,2 @@
+deviation_id,detected_datetime_utc,detected_by,unlock_status,deviation_class,original_rule_or_artifact,description,outcome_independent,scientific_decision_rule_changed,corrective_action,full_cohort_rerun_required,original_results_retained,corrected_results_path,approval_or_signoff,reporting_status,notes
+EXAMPLE,TO_BE_FROZEN,EXAMPLE,PRE_UNLOCK,D1,README typographical label,Example administrative deviation,true,false,Correct label,false,true,,TO_BE_FROZEN,EXAMPLE_ONLY,Schema example only and not part of the active deviation log

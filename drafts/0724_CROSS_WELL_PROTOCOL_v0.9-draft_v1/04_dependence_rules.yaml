@@ -1,0 +1,101 @@
+schema_version: "0.9"
+status: "DRAFT_NOT_FROZEN"
+
+hierarchy:
+  - "provider"
+  - "basin"
+  - "field"
+  - "well"
+  - "wellbore"
+  - "branch"
+  - "dependence_family"
+
+primary_definition:
+  name: "conservative_traceable_related_well_family"
+  rule: >-
+    A dependence family groups a mother well, sidetracks or branches, shared
+    wellhead identities, and any records shown by metadata, trajectory, or
+    duplicate-data evidence to be non-independent.
+  freeze_before_outcomes: true
+  nominal_filename_is_sufficient_identity_evidence: false
+  related_components_jointly_held_out: true
+  component_scores_reported_separately: true
+  related_components_do_not_increase_effective_outer_unit_count: true
+
+evidence_sources:
+  - "provider metadata"
+  - "well and wellbore identifiers"
+  - "branch or sidetrack identifiers"
+  - "wellhead identity"
+  - "trajectory overlap"
+  - "duplicate or near-duplicate data audit"
+  - "archive provenance"
+
+primary_decision_order:
+  - "explicit mother-well, sidetrack, or branch relationship"
+  - "shared wellhead or traceable related-well identity"
+  - "trajectory and duplicate-data evidence"
+  - "unresolved identity is excluded under the frozen reason code"
+
+sensitivity_definitions:
+  separate_wellbores_where_defensible:
+    role: "sensitivity_only"
+    enabled: true
+  higher_level_platform_or_campaign:
+    role: "sensitivity_only_when_metadata_supports"
+    enabled: true
+    automatic_same_platform_grouping: false
+
+audit_outputs:
+  required_columns:
+    - "archive_id"
+    - "dependence_family_id"
+    - "evidence_type"
+    - "evidence_reference"
+    - "decision"
+    - "reviewer"
+    - "decision_date"
+
+known_retrospective_cases:
+  - case_id: "F-7_F-9"
+    role: "identified dependence case"
+  - case_id: "F-15_F-15S"
+    role: "identified dependence case"
+
+new_external_identity_dependence_review:
+  status: "PRINCIPAL_REVIEW_ACCEPTED_PREUNLOCK"
+  raw_ZIP_accessed: false
+  numeric_payload_accessed: false
+  archive_count: 59
+  unit_candidate_count: 68
+  dependence_edge_count: 23
+  candidate_dependence_family_count: 50
+  multi_unit_candidate_family_count: 16
+  edge_types:
+    EXACT_NORMALIZED_WELL: 14
+    EXACT_UWI: 1
+    EXPLICIT_SIDETRACK_ROOT: 8
+  final_identity_assigned: true
+  final_dependence_family_assigned: true
+  candidate_rules_path: "../0725_CROSS_WELL_identity_dependence_review_v1/0725_identity_dependence_contract_v1.yaml"
+  unit_candidates_sha256: "6432d8ab05e8eda3028d012f6acdf9ff6dd938d2084af3011897ff880265eff6"
+  dependence_edges_sha256: "7726ac2fb9dff48f4ae13e72846b3231e3248f034ba1121c7725b04ac8587289"
+  family_candidates_sha256: "2ac7ea5e9f960c63026695d199958ddef4d81eb9e52c4343d4247ef0738f1aae"
+  review_queue_status: "ACCEPTED_AS_PROPOSED_2026-07-25T10:02:38Z"
+
+final_preunlock_registry:
+  path: "03e_final_preunlock_dependence_registry.csv"
+  family_count: 36
+  unique_dependence_family_count: 36
+  qualified_family_count: 23
+  held_family_count: 13
+  principal_acceptance_record: "registration/0725_principal_dependence_cohort_review_v1/0725_principal_acceptance_record_v1.md"
+  decision_rule: "ONE_TRACEABLE_NOPTA_WELL_ID_PER_CONSERVATIVE_FAMILY"
+  cross_row_merges: 0
+  component_sidetrack_or_branch_retained_within_well_family: true
+  numeric_ROP_accessed: false
+
+claim_boundary: >-
+  Dependence diagnostic results describe distortion in the identified
+  dependence cases and do not estimate the average dependence bias of all
+  petroleum datasets.

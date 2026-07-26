@@ -1,0 +1,7 @@
+{
+  "id": "SourceMedian",
+  "value_m_per_h": 22.6289616,
+  "definition": "pooled median of all labels in the verified 10-unit Volve source queue",
+  "source_rows": 269339,
+  "target_labels_used": "source_only"
+}

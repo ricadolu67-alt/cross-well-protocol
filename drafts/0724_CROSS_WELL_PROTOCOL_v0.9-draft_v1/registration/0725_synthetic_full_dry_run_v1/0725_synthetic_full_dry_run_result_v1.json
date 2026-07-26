@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "dry_run_id": "CROSS_WELL_SYNTHETIC_FULL_DRY_RUN_V1",
+  "executed_at_utc": "2026-07-25T09:54:14.767359+00:00",
+  "scope": "SYNTHETIC_ONLY",
+  "checks": {
+    "real_Layer_D_data_opened": false,
+    "all_output_shells_generated": true,
+    "all_output_headers_match": true,
+    "duplicate_MD_path_exercised": true,
+    "qualified_to_scorable_attrition_exercised": true,
+    "field_aggregation_automatic": true,
+    "small_sample_t_interval_generated": true,
+    "field_bootstrap_10000_generated": true,
+    "leave_one_field_out_generated": true,
+    "leave_one_basin_out_generated": true,
+    "three_diagnostic_types_generated": true,
+    "claim_boundary_generated": true,
+    "deviation_rules_tested": true
+  },
+  "header_matches": {
+    "01_candidate_flow.csv": true,
+    "02_family_metrics.csv": true,
+    "03_field_effects.csv": true,
+    "04_basin_context_summary.csv": true,
+    "05_leave_one_field_out.csv": true,
+    "06_leave_one_basin_out.csv": true,
+    "07_falsification_diagnostics.csv": true,
+    "08_uncertainty_summary.csv": true,
+    "09_claim_boundary_output.csv": true,
+    "10_execution_trace.csv": true
+  },
+  "deviation_checks": {
+    "D1_administrative_does_not_change_rule": true,
+    "D2_requires_full_cohort_rerun_and_old_result_retention": true,
+    "D3_postunlock_is_post_hoc_or_new_version": true,
+    "selective_field_rerun_prohibited": true
+  },
+  "primary_synthetic_estimate": 2.513072492735401,
+  "overall_status": "PASS"
+}

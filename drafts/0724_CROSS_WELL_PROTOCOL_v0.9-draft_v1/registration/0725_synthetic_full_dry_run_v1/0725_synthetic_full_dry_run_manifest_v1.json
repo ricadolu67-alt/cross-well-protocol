@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "dry_run_id": "CROSS_WELL_SYNTHETIC_FULL_DRY_RUN_V1",
+  "overall_status": "PASS",
+  "files": [
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/0725_synthetic_full_dry_run_result_v1.json",
+      "sha256": "6791B138CA4DD2730DA49C5696F07E702E3EE79368D4A31D325E38ED8A07BFFB",
+      "bytes": 1527
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/0725_synthetic_full_dry_run_report_v1.md",
+      "sha256": "95181154610013634515A42B98802AC3DAA949FA1AD9E20B3979160B2A4BF5FC",
+      "bytes": 692
+    },
+    {
+      "path": "scripts/run_synthetic_full_dry_run.py",
+      "sha256": "E59EC57FE6C630752CCC5ABAD5DE4CE0B4B85961A830D3621A09A8D2A8F373D1",
+      "bytes": 21291
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/outputs/01_candidate_flow.csv",
+      "sha256": "3F9933CD1EBCF92E95DFCFEEE86347426F7AC916D4B4009F87DD146867EB42E1",
+      "bytes": 353
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/outputs/02_family_metrics.csv",
+      "sha256": "4F4A016FA958518A5872F2AF9B4CB5CF262E6E1AB5FAD41382CC3D82A8AB499A",
+      "bytes": 4630
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/outputs/03_field_effects.csv",
+      "sha256": "83F270B2774FD2D8A0096BD76DC94FC702571789B803B214A79B76FF5C395031",
+      "bytes": 1375
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/outputs/04_basin_context_summary.csv",
+      "sha256": "FFA609F169CD0012D3BC9D852FF15F62AAA7A304EB42C8A26CF6E9E310149963",
+      "bytes": 677
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/outputs/05_leave_one_field_out.csv",
+      "sha256": "EA419A642D3A0822AFAF82D90B78FCEF4FF840E61CE7016C307DFF0438CE2185",
+      "bytes": 937
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/outputs/06_leave_one_basin_out.csv",
+      "sha256": "43FCC54EDF832EB5E078DCB9E36C22E86E3451BAFD88CFE1FFD802F1469757AF",
+      "bytes": 500
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/outputs/07_falsification_diagnostics.csv",
+      "sha256": "77D492660250286E4E3025A4495790CE84E77844AA2005AD287B4F99B5654EFB",
+      "bytes": 934
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/outputs/08_uncertainty_summary.csv",
+      "sha256": "C874B333F0754EA8C7A9061442A4334A93AB560C137CD46CF3C75795C40A32CC",
+      "bytes": 452
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/outputs/09_claim_boundary_output.csv",
+      "sha256": "54BA588DA5BC12FFB515155BD219C63447DF2B4C661F4E6D09FFFA179B238074",
+      "bytes": 524
+    },
+    {
+      "path": "registration/0725_synthetic_full_dry_run_v1/outputs/10_execution_trace.csv",
+      "sha256": "54B1E75FB5B846B588FD74C1D739AE7DE024A1B41D21A185855BE00849265CEF",
+      "bytes": 481
+    }
+  ]
+}

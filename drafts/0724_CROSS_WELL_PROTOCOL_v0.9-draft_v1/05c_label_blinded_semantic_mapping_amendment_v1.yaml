@@ -1,0 +1,70 @@
+schema_version: "0.9"
+amendment_id: "SEMANTIC_MAP_AMENDMENT_20260725_V1"
+status: "PREUNLOCK_GLOBAL_DRAFT_AMENDMENT"
+decision_date: "2026-07-25"
+outcome_access_status: "NO_LAYER_D_OUTCOME_ACCESS"
+scientific_trigger: >
+  Source-side LAS headers in the frozen Prelude extension expose the required
+  concepts under deterministic engineering synonyms not listed in the
+  restricted parser. No ROP numeric value or model performance was inspected.
+
+scope:
+  applies_globally_to_all_candidate_source_objects: true
+  applies_only_before_T2_freeze: true
+  result_specific_exception: false
+  rerun_requirement: >
+    Re-audit the complete affected source-object universe. If the fixed
+    header-summary scan finds no prior object containing these exact tokens,
+    document zero prior affected objects and rerun the full new extension.
+
+mapping_additions:
+  measured_depth:
+    canonical_feature: MD
+    accepted_normalized_mnemonic: TOTDEPTH
+    accepted_declared_units:
+      m: 1.0
+      metre: 1.0
+      meter: 1.0
+    semantic_evidence:
+      - "Exact LAS curve label: Tot Depth"
+      - "Drilling-data member path explicitly reports interval in mMDRT"
+      - "No competing measured-depth curve may be present"
+    fail_closed_conditions:
+      - "ambiguous depth candidates"
+      - "unsupported depth unit"
+      - "time-indexed object without a depth curve"
+
+  weight_on_bit:
+    canonical_feature: WOB_kkgf
+    accepted_exact_mnemonic: WOB
+    unit_additions:
+      klbs:
+        factor_to_kkgf: 0.45359237
+        basis: "Plural spelling of klb; 1000 lbf to 1000 kgf conversion"
+      t:
+        factor_to_kkgf: 1.0
+        basis: "Metric tonne-force engineering label on an exact WOB curve"
+    fail_closed_conditions:
+      - "unit applied to a non-WOB curve"
+      - "ambiguous WOB candidates"
+      - "unsupported or absent unit"
+
+unchanged_rules:
+  same_source_object_required: true
+  cross_file_numeric_alignment_allowed: false
+  common4_required:
+    - MD
+    - WOB
+    - surface_RPM
+    - SPP
+  unique_ROP_header_required: true
+  qualification_thresholds_unchanged: true
+  source_object_selection_rule_unchanged: true
+  rop_numeric_conversion_allowed: false
+  model_prediction_allowed: false
+
+claim_boundary: >
+  This amendment resolves explicit engineering synonyms during label-blinded
+  qualification. It is not evidence of predictive performance and may not be
+  selected or reversed using Layer D outcomes.
+

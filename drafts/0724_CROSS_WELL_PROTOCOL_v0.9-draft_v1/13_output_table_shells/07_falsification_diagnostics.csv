@@ -1,0 +1,2 @@
+diagnostic_id,diagnostic_type,case_or_family_id,contrast_role,learner,test_interval_id,training_size_clean,training_size_counterfactual,leakage_fraction_q,repetition,seed,MAE_reference,MAE_counterfactual,distortion_effect,effect_direction,claim_scope,notes
+

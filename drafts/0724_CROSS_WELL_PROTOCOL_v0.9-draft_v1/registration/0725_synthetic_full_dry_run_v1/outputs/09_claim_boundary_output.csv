@@ -1,0 +1,2 @@
+﻿claim_id,evidence_condition,observed_result,allowed_wording,prohibited_wording,scope,integrity_status,generated_at_utc
+SYNTHETIC_CLAIM_001,SYNTHETIC_DRY_RUN_ONLY,FrozenExtraTrees better than SourceMedian in synthetic dry run,Feature-conditioned ROP information transported relative to the deployment-available source-only constant baseline.,"Deployment readiness, future forecasting, causal optimization, or random-basin inference.",PIPELINE_TEST_ONLY,SYNTHETIC_NOT_SCIENTIFIC_EVIDENCE,2026-07-25T09:54:14.767359+00:00

@@ -1,0 +1,3 @@
+﻿stage,basin_id,field_id,count_archives,count_families,count_fields,reason_code,generated_at_utc,protocol_version
+synthetic_candidate,ALL,ALL,17,17,8,SYNTHETIC,2026-07-25T09:54:14.767359+00:00,v0.9-draft-synthetic-dry-run
+synthetic_scorable,ALL,ALL,16,16,8,ONE_BELOW_FROZEN_MD_COVERAGE,2026-07-25T09:54:14.767359+00:00,v0.9-draft-synthetic-dry-run

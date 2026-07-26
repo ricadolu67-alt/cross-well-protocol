@@ -1,0 +1,75 @@
+{
+  "schema_version": "0.9",
+  "generated_at_utc": "2026-07-25T05:23:11.265357+00:00",
+  "source_only": true,
+  "layer_D_outcome_access": false,
+  "source_root_logical": "../../data/USROP",
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "pandas": "3.0.3",
+  "numpy": "2.4.6",
+  "script_sha256": "cbd093b9aefd3793e1d990bcb19862807adca43b0e21c659c365ba4fffc496d6",
+  "parameters": {
+    "g_max_m": 1.0,
+    "w_max_m": 0.5
+  },
+  "input_files": [
+    {
+      "path": "../../data/USROP/USROP_A 0 N-NA_F-9_Ad.csv",
+      "bytes": 2121158,
+      "sha256": "43adbc60885e72b2bbcc2ef79585ad61f72a4aeba603afd998c1df40e16d60bb"
+    },
+    {
+      "path": "../../data/USROP/USROP_A 1 N-S_F-7d.csv",
+      "bytes": 1091825,
+      "sha256": "5b9a4afa7504d829be9a5b7153694262ebb2ffe191dedb9d23adbb9d2abb2ce3"
+    },
+    {
+      "path": "../../data/USROP/USROP_A 2 N-SH_F-14d.csv",
+      "bytes": 8433142,
+      "sha256": "856ba5f743508de086ee6ed83eba7a2cbdebde0b36e892fbc85ba45ed251af28"
+    },
+    {
+      "path": "../../data/USROP/USROP_A 3 N-SH-F-15d.csv",
+      "bytes": 8200282,
+      "sha256": "d2fcb74f5b9a3f5e5ccd9bad6fc1570b56f5ffd9c3e420bfe8411fd3d22f5964"
+    },
+    {
+      "path": "../../data/USROP/USROP_A 4 N-SH_F-15Sd.csv",
+      "bytes": 8644335,
+      "sha256": "f52521cfcbc860f1082cc3e4f705ccae3a34dd038565944f6d314665b2aa43e2"
+    },
+    {
+      "path": "../../data/USROP/USROP_A 5 N-SH-F-5d.csv",
+      "bytes": 3258518,
+      "sha256": "f56ba1fb2cef40f0fe654513bdb6ee6ebda37987446dfdb02fd20ff6584b3e17"
+    },
+    {
+      "path": "../../data/USROP/USROP_A 6 N-SH_F-9d.csv",
+      "bytes": 1348123,
+      "sha256": "3d366d14eb8642a0ef51156e8292e5a33b1b13a7f22f4bb726b8ae90b58b549e"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "source_sampling_file_audit.csv",
+      "sha256": "df7a4242fc102ab01497688364e878b5ae81ae2c549b4ba5e3f6221b61dcd68a"
+    },
+    {
+      "path": "source_sampling_segment_audit.csv",
+      "sha256": "d269c212e0887247671a8ae28fb03f2fe4c453b08bf32bb9a45116bb6c83d019"
+    },
+    {
+      "path": "source_sampling_quantiles.csv",
+      "sha256": "22472ed97efb1527ac75c48a4d4559a225d7f6b0e7baac2a160d9801c513b9b9"
+    },
+    {
+      "path": "source_input_hashes.csv",
+      "sha256": "c45e81fbfc5fbf1ef1cd915333700285be41f5fc22f85c78d7d46b767adaf8e3"
+    },
+    {
+      "path": "source_only_parameter_basis.md",
+      "sha256": "905bfe5d20b58790b84fc07bf3d52d7989ac15b169d336640a2b2d18ce4e489a"
+    }
+  ]
+}
