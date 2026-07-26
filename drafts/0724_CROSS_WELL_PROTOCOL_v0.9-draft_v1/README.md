@@ -89,6 +89,9 @@ Additional control files:
   completed external gate is validated before any selected LAS member opens.
 - `scripts/execute_frozen_run.py`: sole frozen launcher, with no-overwrite and
   stdout/stderr retention rules.
+- `scripts/build_private_local_archive_locator.py`: pre-unlock builder for the
+  unpublished machine-local path sidecar. It resolves only the frozen archive
+  hashes, verifies every whole-file SHA-256, and never opens a member payload.
 - `registration/0725_measurement_semantic_contract_audit_v1/`: metadata-only
   completeness audit proving that all 23 qualified archive scopes contain the
   exact common4-plus-ROP contract without numeric ROP access.

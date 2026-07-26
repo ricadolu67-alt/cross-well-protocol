@@ -77,6 +77,7 @@ REQUIRED_FILES = [
     "registration/0726_external_unlock_gate_template_v1.json",
     "schemas/external_unlock_gate.schema.json",
     "scripts/build_frozen_scoring_source_map.py",
+    "scripts/build_private_local_archive_locator.py",
     "scripts/capture_execution_environment.py",
     "scripts/execute_frozen_run.py",
     "scripts/run_layer_d_confirmatory.py",

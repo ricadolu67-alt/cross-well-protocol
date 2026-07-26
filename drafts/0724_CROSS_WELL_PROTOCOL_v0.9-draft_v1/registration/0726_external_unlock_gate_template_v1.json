@@ -11,6 +11,7 @@
   "github_release_url": "",
   "github_signed_commit": "",
   "github_signature_verification_record_sha256": "",
+  "local_archive_locator_sha256": "POPULATE_FROM_PRIVATE_LOCAL_SIDECAR",
   "outcome_lock_reconfirmed": false,
   "outcome_lock_reconfirmation_datetime_utc": "",
   "principal_single_use_authorization": false,

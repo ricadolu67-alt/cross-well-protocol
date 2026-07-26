@@ -135,7 +135,8 @@ def main() -> int:
             "nopta_well_id": family["nopta_well_id"],
             "well_name": family["well_name"],
             "archive_name": archive["file_name"],
-            "archive_path": archive["source_path"],
+            "archive_source_pool": archive["source_pool"],
+            "archive_basin_folder": archive["basin_folder"],
             "archive_sha256": archive["sha256"].upper(),
             "selected_source_object": member,
             "md_mnemonic": by_canonical["measured_depth"]["raw_mnemonic"],
@@ -170,6 +171,7 @@ def main() -> int:
         "# Frozen scoring-source map\n\n"
         f"- Qualified families mapped: {len(rows)}\n"
         f"- Unique archives: {len({row['archive_sha256'] for row in rows})}\n"
+        "- Public payload stores archive names and hashes but no machine-local absolute paths.\n"
         "- Resolution used frozen cohort, semantic contract, acquisition inventory, "
         "and ZIP central-directory names only.\n"
         "- Numeric member payloads read: no.\n"

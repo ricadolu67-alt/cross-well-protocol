@@ -31,6 +31,7 @@ def main() -> int:
         "scripts/run_layer_d_confirmatory.py",
         "scripts/execute_frozen_run.py",
         "scripts/build_frozen_scoring_source_map.py",
+        "scripts/build_private_local_archive_locator.py",
         "scripts/validate_protocol.py",
         "scripts/generate_freeze_manifest.py",
     ]

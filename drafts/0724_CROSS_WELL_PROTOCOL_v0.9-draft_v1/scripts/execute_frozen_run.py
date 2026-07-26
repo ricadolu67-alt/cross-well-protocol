@@ -10,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 GATE = ROOT / "registration_external" / "0726_external_unlock_gate_completed_v1.json"
+LOCATOR = ROOT / "registration_external" / "0726_local_archive_locator_completed_v1.json"
 OUTPUT = ROOT / "execution" / "0726_layer_d_frozen_run_v1"
 
 
@@ -21,6 +22,7 @@ def main() -> int:
         str(ROOT / "scripts" / "run_layer_d_confirmatory.py"),
         "--protocol-root", str(ROOT),
         "--unlock-gate", str(GATE),
+        "--archive-locator", str(LOCATOR),
         "--output-root", str(OUTPUT),
     ]
     completed = subprocess.run(command, capture_output=True, text=True)

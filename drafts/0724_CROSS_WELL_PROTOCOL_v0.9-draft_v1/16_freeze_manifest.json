@@ -3,11 +3,11 @@
   "protocol_id": "CROSS_WELL_PROTOCOL_v1.0-frozen",
   "status": "PAYLOAD_READY_PENDING_EXTERNAL_TIMESTAMP_AND_UNLOCK_GATE",
   "hash_algorithm": "SHA-256",
-  "generated_at_utc": "2026-07-26T04:14:16.807816+00:00",
+  "generated_at_utc": "2026-07-26T04:17:38.067998+00:00",
   "generated_by": "Codex preunlock payload audit",
   "git_commit_or_code_snapshot": "SIGNED_RELEASE_COMMIT_RECORDED_IN_EXTERNAL_UNLOCK_GATE",
   "environment_lock_path": "registration/0726_execution_environment_lock_v1.json",
-  "environment_sha256": "20e28f2a8345e338dbd03e4e4c2ea365c062e4fb63c6ac98240ca04401bc6c87",
+  "environment_sha256": "d47248dc78280aca093febaae4c3caffe831f8034dfdf4ab369a96cc96cd4401",
   "trusted_timestamp_service": "OSF Registration (primary); GitHub signed immutable release (secondary); Zenodo DOI after execution",
   "trusted_timestamp_receipt_path": "registration_external/0726_external_unlock_gate_completed_v1.json",
   "trusted_timestamp_receipt_sha256": "EXTERNAL_GATE_PENDING",
@@ -123,7 +123,7 @@
     },
     {
       "path": "12_outcome_lock_and_custody.yaml",
-      "sha256": "feeb5730bca8e4c962def63ae0a3533d8fb429284b6cc558888e409c45e1922c"
+      "sha256": "c0cfddb996812fedf24d531461e4ef3569152438596b56f6df188da4747f52fe"
     },
     {
       "path": "13_output_table_shells/01_candidate_flow.csv",
@@ -235,7 +235,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "b7697c410860e549985aa4d0be2b958fddfbfe45b3bfd49addc0be3b0d7cae0d"
+      "sha256": "733c5d8671b86efe5dd144aada1b809a08ee8bf371c00cb9b4313eb9ef83f2de"
     },
     {
       "path": "registration/0725_acquisition_closure_record_v1.md",
@@ -431,19 +431,19 @@
     },
     {
       "path": "registration/0726_execution_environment_lock_v1.json",
-      "sha256": "20e28f2a8345e338dbd03e4e4c2ea365c062e4fb63c6ac98240ca04401bc6c87"
+      "sha256": "d47248dc78280aca093febaae4c3caffe831f8034dfdf4ab369a96cc96cd4401"
     },
     {
       "path": "registration/0726_external_unlock_gate_template_v1.json",
-      "sha256": "cc56cff969b3cc114394c28260ad55b6c24c1fc40ec867d83f5252b61ee38015"
+      "sha256": "827aafeac31ca36b783778afa7cf063a20541e1d554abc729db45fb29fbfe36b"
     },
     {
       "path": "registration/0726_frozen_scoring_source_map_report_v1.md",
-      "sha256": "2817f63484230efaa51b30ba5b3ec2724f3bb7cead1198e3cf56d0643945f7dd"
+      "sha256": "a86a382e0246da97f3b719440c33457ed99b93fde647de67e15fefd2d24ca74a"
     },
     {
       "path": "registration/0726_frozen_scoring_source_map_v1.csv",
-      "sha256": "e3f3fe0ca21592d3289b92347b5b7e6a8b273ba8d5bcd04cd2570c1067e89650"
+      "sha256": "fe97578b3bc260a4492ce54cab738785307d7a3c0263e7d332dcb8e311389a96"
     },
     {
       "path": "registration/0726_OSF_private_staging_record_v1.md",
@@ -459,7 +459,7 @@
     },
     {
       "path": "schemas/external_unlock_gate.schema.json",
-      "sha256": "d3a17bd090366492a1b9d422e1aab26078d6bb97d45a177262472032b09c2b59"
+      "sha256": "cc0a35034a54558c0ffe6eecba6024b4757189707090da30556a717e0e6e0c92"
     },
     {
       "path": "schemas/protocol_deviation_example.csv",
@@ -483,7 +483,7 @@
     },
     {
       "path": "scripts/build_frozen_scoring_source_map.py",
-      "sha256": "9e8e4aee58fea1932b913ae60ca0b6940f6af6289fe4018c64733d56a7cf9099"
+      "sha256": "238f0f81cd521e5a6e6cd9bc96102087490defefd09342708758fee9e99f9326"
     },
     {
       "path": "scripts/build_measurement_semantic_contract.py",
@@ -494,12 +494,16 @@
       "sha256": "5bf73719f04b81fcd410bbf5d16abba916dd7f5f99976f38570d823bab95d5ac"
     },
     {
+      "path": "scripts/build_private_local_archive_locator.py",
+      "sha256": "64418bc70412da37be103a101bb928ce52e2eda78ef8c585b7d4f368f58dd73b"
+    },
+    {
       "path": "scripts/capture_execution_environment.py",
-      "sha256": "13a5270566f21482e9cd331dcba228d0f860def32b34e74471603e3c640150ed"
+      "sha256": "6cf1a83aafa074272c4d1f5d87e0e0f43cb779c4a06032ec159196176657025b"
     },
     {
       "path": "scripts/execute_frozen_run.py",
-      "sha256": "b3b806c7fa9310ac926a87dbbe98186d60f80389b84cd7ccf632f62f382912c6"
+      "sha256": "3160a37f5bcbeebea863d360c1cf2d3e57e7cb0ada901793dda3d39599c0ef7b"
     },
     {
       "path": "scripts/finalize_principal_dependence_cohort.py",
@@ -511,7 +515,7 @@
     },
     {
       "path": "scripts/run_layer_d_confirmatory.py",
-      "sha256": "c2c3308e727882e734dad8ff1305789a5f8510ca104d8258f7b4f2b73c601660"
+      "sha256": "de5cf8aee34c113dd309ffd3ec01626a61b79ec61d7af225c9e864c2e42d12a6"
     },
     {
       "path": "scripts/run_source_matched_falsification_diagnostics.py",
@@ -535,7 +539,7 @@
     },
     {
       "path": "scripts/validate_protocol.py",
-      "sha256": "c2108fcfc76de76258e70270c814c43ecc966c8d2b05366671cd9dbd767e5c16"
+      "sha256": "448a8029fca7d5d29715b6ff245392da8614a23c3290153d1de79263e3bc5599"
     },
     {
       "path": "source_only_audit/source_input_hashes.csv",

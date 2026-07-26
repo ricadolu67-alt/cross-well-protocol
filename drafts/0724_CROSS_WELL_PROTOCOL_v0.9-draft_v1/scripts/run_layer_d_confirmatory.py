@@ -106,8 +106,10 @@ def conversion_factor(rule: str) -> float:
     return factors[rule]
 
 
-def load_las_rows(source: dict[str, str]) -> list[dict]:
-    archive = Path(source["archive_path"])
+def load_las_rows(source: dict[str, str], archive_path: str | None = None) -> list[dict]:
+    archive = Path(archive_path or source.get("archive_path", ""))
+    if not archive.is_file():
+        raise RuntimeError(f"Resolved archive path is missing: {archive}")
     if sha256(archive) != source["archive_sha256"].upper():
         raise RuntimeError(f"Archive hash mismatch: {archive}")
     with zipfile.ZipFile(archive) as zf:
@@ -278,7 +280,7 @@ def fixed_block_mae(points: list[dict], key: str) -> float:
     return statistics.fmean(errors) if errors else math.nan
 
 
-def validate_gate(root: Path, gate_path: Path) -> dict:
+def validate_gate(root: Path, gate_path: Path, locator_path: Path) -> dict:
     gate = json.loads(gate_path.read_text(encoding="utf-8"))
     required_true = [
         "osf_registration_completed", "github_signed_release_completed",
@@ -295,6 +297,8 @@ def validate_gate(root: Path, gate_path: Path) -> dict:
         raise RuntimeError("External gate does not identify this freeze manifest")
     if not gate.get("osf_registration_url") or not gate.get("github_release_url"):
         raise RuntimeError("External evidence URLs are missing")
+    if gate.get("local_archive_locator_sha256", "").upper() != sha256(locator_path):
+        raise RuntimeError("Private local archive locator identity mismatch")
     return gate
 
 
@@ -302,14 +306,16 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--protocol-root", required=True)
     parser.add_argument("--unlock-gate", required=True)
+    parser.add_argument("--archive-locator", required=True)
     parser.add_argument("--output-root", required=True)
     args = parser.parse_args()
     root = Path(args.protocol_root).resolve()
     gate_path = Path(args.unlock_gate).resolve()
+    locator_path = Path(args.archive_locator).resolve()
     output = Path(args.output_root).resolve()
     if output.exists():
         raise SystemExit("Output directory must not already exist")
-    gate = validate_gate(root, gate_path)  # Must finish before opening any LAS member.
+    gate = validate_gate(root, gate_path, locator_path)  # Must finish before opening any LAS member.
     output.mkdir(parents=True)
     raw_dir = output / "raw_family_predictions"
     raw_dir.mkdir()
@@ -325,6 +331,11 @@ def main() -> int:
     })
 
     source_map = read_csv(root / "registration" / "0726_frozen_scoring_source_map_v1.csv")
+    local_locator = json.loads(locator_path.read_text(encoding="utf-8"))
+    path_by_hash = {
+        row["archive_sha256"].upper(): row["archive_path"]
+        for row in local_locator["archives"]
+    }
     bundle = json.loads((root / "model_artifacts" / "model_bundle_manifest.json").read_text(encoding="utf-8"))
     for artifact in bundle["artifacts"]:
         path = root / "model_artifacts" / artifact["path"]
@@ -339,7 +350,10 @@ def main() -> int:
     source_median = json.loads((root / "model_artifacts" / "source_median.json").read_text(encoding="utf-8"))["value_m_per_h"]
     family_rows: list[dict] = []
     for source in source_map:
-        rows = load_las_rows(source)
+        archive_path = path_by_hash.get(source["archive_sha256"].upper())
+        if not archive_path:
+            raise RuntimeError(f'No private path for archive hash {source["archive_sha256"]}')
+        rows = load_las_rows(source, archive_path)
         frame = pd.DataFrame([{key: row[key] for key in FEATURE_ORDER} for row in rows], columns=FEATURE_ORDER)
         et_frame = frame.fillna({key: medians[key] for key in FEATURE_ORDER})
         predictors = {name: model.predict(et_frame) for name, model in models.items()}

@@ -154,6 +154,9 @@ T3_unlock:
   execution_environment_record: "registration/0726_execution_environment_lock_v1.json"
   execution_environment_hash_source: "SHA-256 entry in 16_freeze_manifest.json"
   frozen_scoring_source_map: "registration/0726_frozen_scoring_source_map_v1.csv"
+  private_local_archive_locator: "registration_external/0726_local_archive_locator_completed_v1.json"
+  private_locator_publication_prohibited: true
+  private_locator_identity_rule: "SHA-256 recorded in the completed external unlock gate"
   fail_closed_rule: >-
     scripts/run_layer_d_confirmatory.py validates every external-gate boolean,
     Lu Yuhan's named authorization, the freeze-manifest SHA-256, and both
