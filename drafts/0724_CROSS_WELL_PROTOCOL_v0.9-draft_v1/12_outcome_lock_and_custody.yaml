@@ -1,5 +1,5 @@
 schema_version: "0.9"
-status: "DRAFT_NOT_FROZEN"
+status: "PAYLOAD_RULES_FROZEN_EXTERNAL_UNLOCK_GATE_PENDING"
 
 integrity_label_target: "externally timestamped, access-controlled confirmatory freeze"
 
@@ -85,7 +85,13 @@ T2_confirmatory_freeze:
     content_identity: "SHA-256 freeze manifest"
     secondary_code_evidence: "GitHub signed commit and immutable release"
     final_public_reproduction_DOI: "Zenodo"
-  timestamp_receipt_path: "TO_BE_FROZEN_AFTER_OSF_REGISTRATION"
+  timestamp_receipt_path: "registration_external/0726_external_unlock_gate_completed_v1.json"
+  circularity_control: >-
+    The timestamp receipt and immediate pre-unlock attestation are external
+    sidecar evidence generated only after the payload ZIP and freeze manifest
+    exist. They are not embedded retroactively in the timestamped payload.
+  external_unlock_gate_schema: "schemas/external_unlock_gate.schema.json"
+  external_unlock_gate_template: "registration/0726_external_unlock_gate_template_v1.json"
 
 outcome_lock:
   mechanism: >-
@@ -132,7 +138,7 @@ outcome_lock:
 
 T3_unlock:
   prerequisites:
-    - "all freeze checklist items PASS"
+    - "payload-ready checklist items F01 through F22 PASS"
     - "minimum qualified field and basin threshold met"
     - "trusted timestamp obtained"
     - "outcome still inaccessible immediately before authorized unlock"
@@ -140,12 +146,18 @@ T3_unlock:
   unlock_instruction_required: true
   unlock_instruction_form: "explicit written single-use authorization after all prerequisites PASS"
   unlock_datetime_utc: "NOT_YET_AUTHORIZED"
-  execution_command: "TO_BE_FROZEN"
+  execution_command: "python scripts/execute_frozen_run.py"
   single_frozen_execution: true
-  stdout_path: "TO_BE_FROZEN"
-  stderr_path: "TO_BE_FROZEN"
-  raw_result_directory: "TO_BE_FROZEN"
-  execution_environment_hash: "TO_BE_FROZEN"
+  stdout_path: "execution/0726_layer_d_frozen_run_v1/stdout.log"
+  stderr_path: "execution/0726_layer_d_frozen_run_v1/stderr.log"
+  raw_result_directory: "execution/0726_layer_d_frozen_run_v1"
+  execution_environment_record: "registration/0726_execution_environment_lock_v1.json"
+  execution_environment_hash_source: "SHA-256 entry in 16_freeze_manifest.json"
+  frozen_scoring_source_map: "registration/0726_frozen_scoring_source_map_v1.csv"
+  fail_closed_rule: >-
+    scripts/run_layer_d_confirmatory.py validates every external-gate boolean,
+    Lu Yuhan's named authorization, the freeze-manifest SHA-256, and both
+    external evidence URLs before opening any selected LAS member.
 
 post_unlock:
   retain_all_unfavorable_results: true
@@ -158,7 +170,7 @@ post_unlock:
 
 custody_assertions:
   cohort_frozen: true
-  analytical_freedom_frozen: false
+  analytical_freedom_frozen: true
   outcome_inaccessible_before_unlock: true
   execution_trace_complete: false
   assertion_scope_note: >-

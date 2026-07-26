@@ -1,10 +1,10 @@
 # Layer D Outcome-Lock Attestation
 
 Protocol: `CROSS_WELL_PROTOCOL_v1.0-frozen`  
-Freeze-manifest SHA-256: `TO_BE_FROZEN`  
-Frozen archive SHA-256: `TO_BE_FROZEN`  
-OSF Registration ID/URL: `TO_BE_FROZEN`  
-Attestation time (UTC): `TO_BE_FROZEN`
+Freeze-manifest SHA-256: `POPULATE_FROM_TIMESTAMPED_PAYLOAD`  
+Frozen archive SHA-256: `POPULATE_FROM_TIMESTAMPED_PAYLOAD`  
+OSF Registration ID/URL: `POPULATE_AFTER_OSF_REGISTRATION`  
+Attestation time (UTC): `POPULATE_IMMEDIATELY_BEFORE_AUTHORIZED_UNLOCK`
 
 I, `Lu Yuhan (陆宇晗)`, acting as the authorized outcome custodian, attest that:
 

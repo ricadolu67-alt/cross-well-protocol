@@ -1,5 +1,5 @@
 schema_version: "0.9"
-status: "DRAFT_NOT_FROZEN"
+status: "PREUNLOCK_RULES_AND_COHORT_PRINCIPALLY_ACCEPTED"
 
 T1a_structural_qualification:
   numeric_arrays_readable: false
@@ -71,7 +71,7 @@ T1a1_restricted_header_qualification:
   automatic_archive_exclusion: false
 
 identity_dependence_review:
-  status: "CANDIDATES_READY_PENDING_PRINCIPAL_RESEARCHER_REVIEW"
+  status: "FINAL_PREUNLOCK_ACCEPTED_BY_PRINCIPAL_RESEARCHER"
   D2_identity_reconstruction_correction: "D2-T1A1-001"
   corrected_identity_reconstruction_path: "../0725_CROSS_WELL_identity_dependence_review_v1/0725_identity_item_reconstruction_v2.csv"
   corrected_identity_reconstruction_sha256: "a14db259e9a857308859ab82379535962921904f13313f57f257342aa6f30c5a"
@@ -81,9 +81,18 @@ identity_dependence_review:
   single_header_well_candidate_archives: 42
   multiple_header_well_candidate_archives: 7
   path_only_review_archives: 10
-  final_identity_assignment: false
-  final_field_assignment: false
-  final_dependence_assignment: false
+  final_identity_assignment: true
+  final_field_assignment: true
+  final_dependence_assignment: true
+  principal_acceptance_datetime_utc: "2026-07-25T10:02:38Z"
+  final_dependence_registry: "03e_final_preunlock_dependence_registry.csv"
+  final_family_manifest: "11e_final_preunlock_cohort_manifest.csv"
+  final_field_manifest: "11f_final_preunlock_field_manifest.csv"
+  development_family_count: 36
+  label_blinded_qualified_family_count: 23
+  retained_held_family_count: 13
+  primary_qualified_field_count: 8
+  represented_primary_basin_context_count: 5
 
 T1b_label_blinded_covariate_qualification:
   authorization_status: "AUTHORIZED_BY_PRINCIPAL_RESEARCHER_2026-07-25"
@@ -128,7 +137,7 @@ T1b_label_blinded_covariate_qualification:
   semantic_mapping_amendment:
     amendment_id: "SEMANTIC_MAP_AMENDMENT_20260725_V1"
     path: "05c_label_blinded_semantic_mapping_amendment_v1.yaml"
-    status: "PREUNLOCK_GLOBAL_DRAFT_AMENDMENT"
+    status: "PREUNLOCK_GLOBAL_AMENDMENT_ACCEPTED_IN_FINAL_COHORT"
     added_exact_tokens:
       measured_depth_mnemonic:
         - "TOTDEPTH"

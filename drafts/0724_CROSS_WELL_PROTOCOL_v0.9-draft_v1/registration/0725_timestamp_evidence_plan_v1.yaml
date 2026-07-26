@@ -41,7 +41,7 @@ evidence_stack:
 
 pre_submission_gates:
   - "v1.0_freeze_checklist.csv contains PASS for every requirement"
-  - "no TO_BE_FROZEN token remains in v1.0"
+  - "no unresolved payload parameter remains in v1.0"
   - "final archive and manifest validate"
   - "outcome-lock access test passes"
   - "custodian attests that Layer D ROP remains inaccessible"
@@ -50,4 +50,3 @@ pre_submission_gates:
 publication_authority:
   authorized_person: "principal researcher (user)"
   external_submission_requires_fresh_confirmation: true
-

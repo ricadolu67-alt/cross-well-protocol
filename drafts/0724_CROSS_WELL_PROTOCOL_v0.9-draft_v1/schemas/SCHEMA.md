@@ -5,7 +5,7 @@
 - Encoding: UTF-8.
 - Dates and times: ISO 8601; operational timestamps use UTC and end in `Z`.
 - Hashes: lowercase SHA-256, exactly 64 hexadecimal characters.
-- Missing draft values: the exact token `TO_BE_FROZEN` or a value beginning with it.
+- Missing draft values: a dedicated unresolved-value token; none is permitted in a payload-ready package.
 - Boolean values in YAML/JSON: native `true` or `false`.
 - Boolean values in CSV: lowercase `true` or `false`.
 - IDs: stable strings; never derive independence from filenames alone.
@@ -35,7 +35,7 @@
 - `PASS`: one supported canonical mapping.
 - `EXCLUDE`: ambiguity cannot be resolved without outcome feedback.
 - `SENSITIVITY`: multiple plausible mappings were specified before outcomes.
-- `TO_BE_FROZEN`: draft only.
+- `EXTERNAL_GATE_PENDING`: post-payload evidence required before unlock, not a missing payload parameter.
 
 `PRINCIPALLY_FROZEN` is permitted only for a semantic core whose remaining
 dependencies are explicitly named. It is not equivalent to `v1.0-frozen`.

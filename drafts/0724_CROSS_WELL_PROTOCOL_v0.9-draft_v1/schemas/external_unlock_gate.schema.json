@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CROSS-WELL external unlock gate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "gate_status", "single_use_run_id",
+    "freeze_manifest_sha256", "protocol_zip_sha256",
+    "osf_registration_completed", "osf_registration_url",
+    "osf_registration_timestamp_utc", "github_signed_release_completed",
+    "github_release_url", "github_signed_commit",
+    "github_signature_verification_record_sha256",
+    "outcome_lock_reconfirmed", "outcome_lock_reconfirmation_datetime_utc",
+    "principal_single_use_authorization", "authorized_by",
+    "authorization_datetime_utc", "all_payload_ready_checks_passed"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "gate_status": {"const": "PASS_AUTHORIZED_SINGLE_USE"},
+    "single_use_run_id": {"const": "CROSS_WELL_LAYER_D_RUN_001"},
+    "freeze_manifest_sha256": {"pattern": "^[A-Fa-f0-9]{64}$"},
+    "protocol_zip_sha256": {"pattern": "^[A-Fa-f0-9]{64}$"},
+    "osf_registration_completed": {"const": true},
+    "osf_registration_url": {"type": "string", "minLength": 10},
+    "osf_registration_timestamp_utc": {"type": "string", "minLength": 10},
+    "github_signed_release_completed": {"const": true},
+    "github_release_url": {"type": "string", "minLength": 10},
+    "github_signed_commit": {"pattern": "^[A-Fa-f0-9]{40}$"},
+    "github_signature_verification_record_sha256": {"pattern": "^[A-Fa-f0-9]{64}$"},
+    "outcome_lock_reconfirmed": {"const": true},
+    "outcome_lock_reconfirmation_datetime_utc": {"type": "string", "minLength": 10},
+    "principal_single_use_authorization": {"const": true},
+    "authorized_by": {"const": "Lu Yuhan"},
+    "authorization_datetime_utc": {"type": "string", "minLength": 10},
+    "all_payload_ready_checks_passed": {"const": true},
+    "completed_gate_sha256": {"type": "string"}
+  }
+}

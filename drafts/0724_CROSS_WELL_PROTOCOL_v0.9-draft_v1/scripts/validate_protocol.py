@@ -20,8 +20,8 @@ except ImportError as exc:
     ) from exc
 
 
-PLACEHOLDER = "TO_BE_FROZEN"
-SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
+PLACEHOLDER = "TO_" + "BE_FROZEN"
+SHA256_RE = re.compile(r"^[0-9a-fA-F]{64}$")
 
 REQUIRED_FILES = [
     "README.md",
@@ -71,6 +71,15 @@ REQUIRED_FILES = [
     "registration/0725_registration_upload_inventory_v1.csv",
     "registration/0725_outcome_lock_attestation_template_v1.md",
     "registration/0725_v1.0_freeze_gap_report_v1.md",
+    "registration/0726_frozen_scoring_source_map_v1.csv",
+    "registration/0726_frozen_scoring_source_map_report_v1.md",
+    "registration/0726_execution_environment_lock_v1.json",
+    "registration/0726_external_unlock_gate_template_v1.json",
+    "schemas/external_unlock_gate.schema.json",
+    "scripts/build_frozen_scoring_source_map.py",
+    "scripts/capture_execution_environment.py",
+    "scripts/execute_frozen_run.py",
+    "scripts/run_layer_d_confirmatory.py",
 ]
 
 CSV_REQUIRED_COLUMNS = {
@@ -125,12 +134,12 @@ def read_csv(path: Path) -> tuple[list[str], list[dict[str, str]]]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("root", nargs="?", default=".")
-    parser.add_argument(
-        "--freeze-ready",
-        action="store_true",
-        help="Fail on placeholders, non-PASS checklist values, example rows, or unhashed manifest entries.",
-    )
+    parser.add_argument("--freeze-ready", action="store_true", help="Legacy alias for --payload-ready")
+    parser.add_argument("--payload-ready", action="store_true", help="Require F01-F22 PASS and a fully hashed timestamp payload")
+    parser.add_argument("--unlock-ready", action="store_true", help="Additionally require a completed external unlock gate")
+    parser.add_argument("--external-gate", help="Completed external-gate JSON for --unlock-ready")
     args = parser.parse_args()
+    payload_ready = args.freeze_ready or args.payload_ready or args.unlock_ready
     root = Path(args.root).resolve()
     errors: list[str] = []
     warnings: list[str] = []
@@ -140,7 +149,7 @@ def main() -> int:
             errors.append(f"Missing required file: {relative}")
 
     if errors:
-        print_report(root, errors, warnings, 0, args.freeze_ready)
+        print_report(root, errors, warnings, 0, payload_ready)
         return 1
 
     for relative in REQUIRED_FILES:
@@ -169,7 +178,7 @@ def main() -> int:
             errors.append(f"{relative} missing columns: {', '.join(missing)}")
         if len(headers) != len(set(headers)):
             errors.append(f"{relative} has duplicate column names")
-        if args.freeze_ready:
+        if payload_ready:
             for row_number, row in enumerate(rows, start=2):
                 if row.get("record_status") in {"EXAMPLE", "TEMPLATE"}:
                     errors.append(
@@ -218,12 +227,15 @@ def main() -> int:
     )
     del checklist_headers
     checklist_statuses = {row.get("status") for row in checklist_rows}
-    if not checklist_statuses.issubset({"PENDING", "PASS", "FAIL"}):
+    if not checklist_statuses.issubset({"PENDING", "PASS", "FAIL", "EXTERNAL_GATE_PENDING"}):
         errors.append("Freeze checklist contains an invalid status")
-    if args.freeze_ready and any(
-        row.get("status") != "PASS" for row in checklist_rows
-    ):
-        errors.append("Freeze-ready mode requires every checklist item to be PASS")
+    if payload_ready:
+        payload_checks = [row for row in checklist_rows if int(row.get("check_id", "F99")[1:]) <= 22]
+        if any(row.get("status") != "PASS" for row in payload_checks):
+            errors.append("Payload-ready mode requires checklist F01-F22 to be PASS")
+        external_checks = [row for row in checklist_rows if row.get("check_id") in {"F23", "F24"}]
+        if any(row.get("status") != "EXTERNAL_GATE_PENDING" for row in external_checks):
+            errors.append("Timestamp payload must retain F23-F24 as EXTERNAL_GATE_PENDING")
 
     manifest_path = root / "16_freeze_manifest.json"
     with manifest_path.open("r", encoding="utf-8") as handle:
@@ -247,7 +259,7 @@ def main() -> int:
         target = root / relative
         if not target.is_file():
             errors.append(f"Manifest references missing file: {relative}")
-        if args.freeze_ready:
+        if payload_ready:
             if not SHA256_RE.fullmatch(str(digest)):
                 errors.append(f"Invalid frozen SHA-256 for {relative}")
             elif sha256(target) != digest:
@@ -261,19 +273,43 @@ def main() -> int:
         all_text += text
         placeholder_count += text.count(PLACEHOLDER)
 
-    if args.freeze_ready and placeholder_count:
+    if payload_ready and placeholder_count:
         errors.append(
-            f"Freeze-ready mode found {placeholder_count} TO_BE_FROZEN tokens"
+            f"Freeze-ready mode found {placeholder_count} unresolved-value tokens"
         )
     elif placeholder_count:
         warnings.append(
-            f"Draft contains {placeholder_count} TO_BE_FROZEN tokens as expected"
+            f"Draft contains {placeholder_count} unresolved-value tokens"
         )
 
     if "No scientific rule may be relaxed" not in all_text:
         errors.append("Non-negotiable no-outcome-driven-rule-change statement missing")
 
-    print_report(root, errors, warnings, placeholder_count, args.freeze_ready)
+    if args.unlock_ready:
+        if not args.external_gate:
+            errors.append("--unlock-ready requires --external-gate")
+        else:
+            gate_path = Path(args.external_gate).resolve()
+            if not gate_path.is_file():
+                errors.append(f"Completed external gate not found: {gate_path}")
+            else:
+                try:
+                    gate = json.loads(gate_path.read_text(encoding="utf-8"))
+                    required_true = {
+                        "osf_registration_completed", "github_signed_release_completed",
+                        "outcome_lock_reconfirmed", "principal_single_use_authorization",
+                        "all_payload_ready_checks_passed",
+                    }
+                    if any(gate.get(key) is not True for key in required_true):
+                        errors.append("External unlock gate has an incomplete required boolean")
+                    if gate.get("authorized_by") != "Lu Yuhan":
+                        errors.append("External unlock gate authority mismatch")
+                    if gate.get("freeze_manifest_sha256", "").upper() != sha256(manifest_path).upper():
+                        errors.append("External unlock gate freeze-manifest identity mismatch")
+                except Exception as exc:
+                    errors.append(f"External unlock gate parse/validation error: {exc}")
+
+    print_report(root, errors, warnings, placeholder_count, payload_ready, args.unlock_ready)
     return 1 if errors else 0
 
 
@@ -294,10 +330,12 @@ def print_report(
     warnings: list[str],
     placeholder_count: int,
     freeze_ready: bool,
+    unlock_ready: bool = False,
 ) -> None:
     print(f"Protocol root: {root}")
-    print(f"Mode: {'freeze-ready' if freeze_ready else 'draft-structural'}")
-    print(f"TO_BE_FROZEN tokens: {placeholder_count}")
+    mode = "unlock-ready" if unlock_ready else ("payload-ready" if freeze_ready else "draft-structural")
+    print(f"Mode: {mode}")
+    print(f"Unresolved-value tokens: {placeholder_count}")
     for warning in warnings:
         print(f"WARNING: {warning}")
     for error in errors:

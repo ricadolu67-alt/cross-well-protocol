@@ -6,7 +6,7 @@
 执行顺序固定为：
 
 1. 完成 source-only / synthetic dry run；
-2. 将全部 `TO_BE_FROZEN` 参数替换为有依据的确定值；
+2. 将全部未决参数替换为有依据的确定值；
 3. `v1.0_freeze_checklist.csv` 全部 PASS；
 4. 生成最终 SHA-256 manifest；
 5. 在 ROP outcome 仍不可访问时提交 OSF Registration；
@@ -17,4 +17,3 @@
 
 任何外部发布、注册、创建公开 release 或 DOI 的动作，都需要项目负责人在实际
 提交前再次明确确认。
-

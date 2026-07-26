@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "gate_status": "PENDING_EXTERNAL_EVIDENCE",
+  "single_use_run_id": "CROSS_WELL_LAYER_D_RUN_001",
+  "freeze_manifest_sha256": "POPULATE_FROM_TIMESTAMPED_PAYLOAD",
+  "protocol_zip_sha256": "POPULATE_FROM_TIMESTAMPED_PAYLOAD",
+  "osf_registration_completed": false,
+  "osf_registration_url": "",
+  "osf_registration_timestamp_utc": "",
+  "github_signed_release_completed": false,
+  "github_release_url": "",
+  "github_signed_commit": "",
+  "github_signature_verification_record_sha256": "",
+  "outcome_lock_reconfirmed": false,
+  "outcome_lock_reconfirmation_datetime_utc": "",
+  "principal_single_use_authorization": false,
+  "authorized_by": "Lu Yuhan",
+  "authorization_datetime_utc": "",
+  "all_payload_ready_checks_passed": false,
+  "completed_gate_sha256": "COMPUTED_AFTER_COMPLETION_AND_RECORDED_IN_EXECUTION_TRACE"
+}

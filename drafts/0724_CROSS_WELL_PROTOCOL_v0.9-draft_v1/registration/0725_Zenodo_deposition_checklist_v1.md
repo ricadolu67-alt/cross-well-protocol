@@ -22,10 +22,10 @@ Registration。当前阶段只准备元数据和交付规则，不创建 deposit
   cross-field ROP transport`
 - Resource type: Dataset or Software（根据最终包的主要内容在投稿前确定）
 - Creators / affiliations / ORCID: `Lu Yuhan (陆宇晗); Changzhou University; https://orcid.org/0009-0006-8513-2732`
-- Description: `TO_BE_FROZEN_FROM_FINAL_ABSTRACT`
+- Description: `DERIVE_FROM_FINAL_ACCEPTED_ABSTRACT_AFTER_CONFIRMATORY_EXECUTION`
 - Related identifiers: OSF Registration、GitHub release、论文 DOI
 - Version: `1.0` 或最终复现包版本
-- License: `TO_BE_FROZEN_AFTER_RIGHTS_AUDIT`
+- License: `SELECT_ONLY_AFTER_FINAL_RIGHTS_AND_DATA-REUSE_AUDIT`
 - Keywords: ROP; cross-well generalization; external validation; measurement
   semantics; confirmatory protocol
 

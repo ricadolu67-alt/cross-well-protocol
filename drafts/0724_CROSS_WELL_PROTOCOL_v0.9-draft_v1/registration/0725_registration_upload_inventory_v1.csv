@@ -1,10 +1,10 @@
 item_id,service,required_stage,local_path,sha256,status,notes
-REG-001,OSF,PRE_UNLOCK,CROSS_WELL_PROTOCOL_v1.0-frozen.zip,TO_BE_FROZEN,PENDING,Exact archive submitted to primary registration
-REG-002,OSF,PRE_UNLOCK,16_freeze_manifest.json,TO_BE_FROZEN,PENDING,Canonical content-identity manifest
-REG-003,OSF,PRE_UNLOCK,v1.0_freeze_checklist.csv,TO_BE_FROZEN,PENDING,Must contain PASS only
-REG-004,OSF,PRE_UNLOCK,parameter_register.csv,TO_BE_FROZEN,PENDING,All values and evidence bases frozen
-REG-005,OSF,PRE_UNLOCK,outcome_lock_attestation.pdf,TO_BE_FROZEN,PENDING,Signed by principal researcher or named custodian
-REG-006,GitHub,PRE_UNLOCK_OR_SAME_FREEZE_WINDOW,CROSS_WELL_PROTOCOL_v1.0-frozen.zip,TO_BE_FROZEN,PENDING,Must be byte-identical to OSF attachment
-REG-007,GitHub,PRE_UNLOCK_OR_SAME_FREEZE_WINDOW,SHA256SUMS.txt,TO_BE_FROZEN,PENDING,Signed commit and tagged immutable release
-REG-008,Zenodo,POST_EXECUTION,final_reproduction_package.zip,TO_BE_FROZEN,PENDING,Includes frozen protocol complete execution trace and all results
-REG-009,Zenodo,POST_EXECUTION,SHA256SUMS.txt,TO_BE_FROZEN,PENDING,Final public package digest
+REG-001,OSF,PRE_UNLOCK,CROSS_WELL_PROTOCOL_v1.0-frozen.zip,POPULATE_FROM_PAYLOAD_BUILD,EXTERNAL_GATE_PENDING,Exact archive submitted to primary registration
+REG-002,OSF,PRE_UNLOCK,16_freeze_manifest.json,POPULATE_FROM_PAYLOAD_BUILD,EXTERNAL_GATE_PENDING,Canonical content-identity manifest
+REG-003,OSF,PRE_UNLOCK,v1.0_freeze_checklist.csv,POPULATE_FROM_PAYLOAD_BUILD,EXTERNAL_GATE_PENDING,F01-F22 PASS; F23-F24 are non-circular external gates
+REG-004,OSF,PRE_UNLOCK,parameter_register.csv,POPULATE_FROM_PAYLOAD_BUILD,EXTERNAL_GATE_PENDING,All values and evidence bases frozen
+REG-005,OSF,PRE_UNLOCK,outcome_lock_attestation.pdf,POPULATE_AFTER_OSF_REGISTRATION,EXTERNAL_GATE_PENDING,Signed by principal researcher immediately before unlock
+REG-006,GitHub,PRE_UNLOCK_OR_SAME_FREEZE_WINDOW,CROSS_WELL_PROTOCOL_v1.0-frozen.zip,POPULATE_FROM_IDENTICAL_PAYLOAD,EXTERNAL_GATE_PENDING,Must be byte-identical to OSF attachment
+REG-007,GitHub,PRE_UNLOCK_OR_SAME_FREEZE_WINDOW,SHA256SUMS.txt,POPULATE_FROM_PAYLOAD_BUILD,EXTERNAL_GATE_PENDING,Signed commit and tagged immutable release
+REG-008,Zenodo,POST_EXECUTION,final_reproduction_package.zip,POPULATE_AFTER_CONFIRMATORY_EXECUTION,POST_EXECUTION_PENDING,Includes frozen protocol complete execution trace and all results
+REG-009,Zenodo,POST_EXECUTION,SHA256SUMS.txt,POPULATE_AFTER_CONFIRMATORY_EXECUTION,POST_EXECUTION_PENDING,Final public package digest

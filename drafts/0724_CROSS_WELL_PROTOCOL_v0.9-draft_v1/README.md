@@ -4,7 +4,7 @@
 
 This directory is the pre-freeze engineering package for the CROSS-WELL study. It converts the agreed research design into parseable configuration files, tabular registries, output shells, validation rules, and a future hash manifest.
 
-Version `v0.9-draft` is not a confirmatory freeze and must not be described as preregistered, externally timestamped, or outcome-locked. It may be promoted to `v1.0-frozen` only after every item in `v1.0_freeze_checklist.csv` is `PASS`.
+Version `v0.9-draft` is not a confirmatory freeze and must not be described as preregistered, externally timestamped, or outcome-locked. The timestamp payload becomes `PAYLOAD_READY` only when F01--F22 are `PASS`. F23--F24 remain `EXTERNAL_GATE_PENDING` inside that immutable payload and are completed later in a separately hashed sidecar; the timestamped payload is never edited to insert its own receipt.
 
 Acquisition was explicitly closed by the principal researcher on
 `2026-07-25T16:56:00+08:00`, before Layer D ROP outcome access. The immutable
@@ -39,7 +39,7 @@ no real Layer D archive was opened. Freeze-check F16 is `PASS`.
 
 ## 3. Draft placeholders
 
-Every unresolved value is represented by the exact token `TO_BE_FROZEN` or a string beginning with it. A draft may validate structurally while still failing freeze readiness. The validation script reports both conditions separately.
+Every unresolved draft value was represented by a dedicated placeholder token. The payload candidate contains no unresolved scientific or execution value. Post-payload timestamp and immediate pre-unlock evidence are deliberately represented as `EXTERNAL_GATE_PENDING`, because embedding them retroactively would create circular evidence.
 
 Do not replace a placeholder using Layer D ROP values or model-performance feedback. Governance values must be justified by study governance; sampling and loss parameters may be justified only by source-side geometry, metadata, or engineering representation; execution values must be fixed from the reproducible environment.
 
@@ -76,6 +76,19 @@ Additional control files:
   access log, machine-readable result, report and evidence manifest.
 - `scripts/test_outcome_lock_synthetic.py`: synthetic-only fail-closed access
   test; its path guard does not accept a real Layer D archive.
+- `registration/0726_frozen_scoring_source_map_v1.csv`: the 23-family
+  pre-unlock map from final family to exact archive identity, selected LAS
+  member and frozen feature-target mnemonic/conversion rules. It was built
+  using inventories and ZIP central directories only.
+- `registration/0726_execution_environment_lock_v1.json`: Python, platform,
+  package versions, frozen command and scientific-code SHA-256 identity.
+- `registration/0726_external_unlock_gate_template_v1.json` and
+  `schemas/external_unlock_gate.schema.json`: the non-circular post-payload
+  timestamp, signed-release, custody and authorization gate.
+- `scripts/run_layer_d_confirmatory.py`: fail-closed real-data execution; the
+  completed external gate is validated before any selected LAS member opens.
+- `scripts/execute_frozen_run.py`: sole frozen launcher, with no-overwrite and
+  stdout/stderr retention rules.
 - `registration/0725_measurement_semantic_contract_audit_v1/`: metadata-only
   completeness audit proving that all 23 qualified archive scopes contain the
   exact common4-plus-ROP contract without numeric ROP access.
@@ -161,10 +174,23 @@ Exit meanings:
 Before `v1.0-frozen`, run again with:
 
 ```powershell
-python scripts/validate_protocol.py . --freeze-ready
+python scripts/validate_protocol.py . --payload-ready
 ```
 
-This stricter mode fails if any `TO_BE_FROZEN` token remains, any checklist item is not `PASS`, or a manifest hash is not a lowercase SHA-256 digest.
+Payload-ready mode fails if any unresolved placeholder value remains, any item F01--F22 is not `PASS`, or a manifest hash is invalid. Unlock-ready status is assessed separately from the completed external gate; F23--F24 cannot be converted to PASS inside the already timestamped payload.
+
+After the external sidecar is completed, validate it without opening outcomes:
+
+```powershell
+python scripts/validate_protocol.py . --unlock-ready --external-gate registration_external/0726_external_unlock_gate_completed_v1.json
+```
+
+Only after this command passes and Lu Yuhan gives the explicit single-use
+authorization may the fixed run start:
+
+```powershell
+python scripts/execute_frozen_run.py
+```
 
 ## 7. Dry-run acceptance
 

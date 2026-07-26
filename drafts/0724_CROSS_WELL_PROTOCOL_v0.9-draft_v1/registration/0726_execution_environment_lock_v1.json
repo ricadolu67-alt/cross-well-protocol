@@ -1,0 +1,24 @@
+{
+  "status": "PREUNLOCK_EXECUTION_ENVIRONMENT_LOCKED",
+  "captured_at_utc": "2026-07-26T04:14:15.962250+00:00",
+  "layer_D_numeric_ROP_accessed": false,
+  "python_executable": "D:\\python\\python.exe",
+  "python_version": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3",
+    "PyYAML": "6.0.3"
+  },
+  "scientific_code_sha256": {
+    "scripts/run_layer_d_confirmatory.py": "C2C3308E727882E734DAD8FF1305789A5F8510CA104D8258F7B4F2B73C601660",
+    "scripts/execute_frozen_run.py": "B3B806C7FA9310AC926A87DBBE98186D60F80389B84CD7CCF632F62F382912C6",
+    "scripts/build_frozen_scoring_source_map.py": "9E8E4AEE58FEA1932B913AE60CA0B6940F6AF6289FE4018C64733D56A7CF9099",
+    "scripts/validate_protocol.py": "C2108FCFC76DE76258E70270C814C43ECC966C8D2B05366671CD9DBD767E5C16",
+    "scripts/generate_freeze_manifest.py": "843A077FD8CDD9A47BBDB863C6A24C02878DE9CAA40B3A6D2B85785F8EEBF700"
+  },
+  "frozen_command": "python scripts/execute_frozen_run.py"
+}
