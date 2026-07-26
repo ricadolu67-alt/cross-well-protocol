@@ -40,6 +40,15 @@ github:
 osf:
   role: "primary externally trusted timestamp"
   browser_session_observed: "signed-in dashboard available"
+  private_project_title: "CROSS-WELL Confirmatory Protocol"
+  private_project_id: "zr3kw"
+  private_project_url: "https://osf.io/zr3kw/"
+  private_project_created: true
+  staging_archive_name: "0726_CROSS_WELL_PROTOCOL_v0.9-draft_v21.zip"
+  staging_archive_sha256: "BE709763A824BA7C566C0098385E4CDB5A84CD2062B5EED94B59DDD5DB103014"
+  staging_upload_status: "UPLOADED_PRIVATE_2026-07-26T03:51Z"
+  staging_upload_displayed_size: "3.5 MB"
+  staging_upload_evidence: "registration/0726_OSF_private_staging_record_v1.md"
   registration_submission_status: "NOT_SUBMITTED"
   fresh_confirmation_required_before_submission: true
 
