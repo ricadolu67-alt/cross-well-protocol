@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "source_sha256": "00b96d890a5e815b5f015d7e486922690d861f880339d60201c79a66198cf6e5",
+  "primary_fields": 8,
+  "positive_field_fraction": 1.0,
+  "field_equal_transfer_gain_m_per_h": 2.07186853190208,
+  "small_sample_t_interval_95": [
+    1.0248606156868203,
+    3.11887644811734
+  ],
+  "family_then_field_equal_log_MAE_ratio": -0.09307030943604601,
+  "geometric_ratio_reduction_percent": 8.887056295284223,
+  "gorgon_scorable_families": 3,
+  "scope": "post-unlock derived-data reproduction; frozen protocol release unchanged"
+}
