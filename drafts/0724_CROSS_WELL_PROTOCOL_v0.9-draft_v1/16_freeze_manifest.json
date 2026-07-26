@@ -3,9 +3,9 @@
   "protocol_id": "CROSS_WELL_PROTOCOL_v0.9-draft",
   "status": "DRAFT_NOT_FROZEN",
   "hash_algorithm": "SHA-256",
-  "generated_at_utc": "2026-07-26T03:42:19.642708+00:00",
+  "generated_at_utc": "2026-07-26T03:43:24.175334+00:00",
   "generated_by": "Codex protocol engineering",
-  "git_commit_or_code_snapshot": "PREPARATION_COMMIT_PENDING",
+  "git_commit_or_code_snapshot": "e84edc549c28a5fb572efd2d5db2fc0c3b1db21c",
   "environment_lock_path": "../../content/0718_机械钻速跨井泛化复现包_v3/environment_lock.txt",
   "environment_sha256": "ef41422ba934cd310c485d66b95566a669416617681960175ecccb76c69a07de",
   "trusted_timestamp_service": "OSF Registration (primary); GitHub signed release (secondary); Zenodo DOI (final public package)",
@@ -520,8 +520,13 @@
     },
     {
       "path": "registration/0726_registration_identity_metadata_v1.yaml",
-      "sha256": "3f03ea0d7737cbdd210c3fb471d877f7ee2b6b1c5590049bce4ab2069dc422fc",
+      "sha256": "f2ccf1e7f0a37bb92bfc21d86e76a81fb07ac43fc3f3064d951755716303bdf7",
       "role": "registration_identity_and_repository_metadata"
+    },
+    {
+      "path": "registration/0726_allowed_signers_v1.txt",
+      "sha256": "57d17623782901a3b4ceb37de39917bd97780cde8034226c38b4215ad289043b",
+      "role": "local_ssh_signature_identity_binding"
     }
   ],
   "external_artifacts": [

@@ -33,7 +33,9 @@ github:
   authentication_key_registration: "VERIFIED_ON_GITHUB_2026-07-26"
   signing_key_registration: "VERIFIED_ON_GITHUB_2026-07-26"
   ssh_authentication_retest: "PASS_2026-07-26"
-  signed_commit_status: "PENDING_LOCAL_SIGNING_TEST"
+  signed_commit_status: "LOCAL_PREPARATION_SIGNING_TEST_CREATED"
+  preparation_signing_test_commit: "e84edc549c28a5fb572efd2d5db2fc0c3b1db21c"
+  preparation_signing_test_scope: "v0.9 draft only; not the final v1.0 freeze commit"
 
 osf:
   role: "primary externally trusted timestamp"
