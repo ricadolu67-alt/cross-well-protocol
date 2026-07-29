@@ -1,16 +1,18 @@
-# CROSS-WELL protocol and headline reproduction
+# XW-AUDIT protocol and headline reproduction
 
 This repository preserves the auditable protocol and executable artifacts for:
 
-> **CROSS-WELL: quantifying evidence distortion and confirming baseline-relative cross-field transport of a frozen conditional ROP model**
+> **XW-AUDIT (Cross-Well Audit of Deployment, Units, Independence and Transport): quantifying evidence distortion and confirming baseline-relative cross-field transport of a frozen conditional ROP model**
 
-CROSS-WELL treats a cross-well generalization claim as an evidence experiment. It fixes a depth-indexed, non-causal rate-of-penetration (ROP) claim; audits provenance, dependence and predictor-target measurement semantics; quantifies matched evidence distortions; freezes analytical freedom; and aggregates external evidence at the independent field level.
+XW-AUDIT treats a cross-well generalization claim as an evidence experiment. It fixes a depth-indexed, non-causal rate-of-penetration (ROP) claim; audits provenance, dependence and predictor-target measurement semantics; quantifies matched evidence distortions; freezes analytical freedom; and aggregates external evidence at the independent field level.
+
+XW-AUDIT was registered under the working name **CROSS-WELL**. The immutable release tag, frozen filenames, run identifiers and historical paths retain that registered working name; this is a nomenclature change only and does not alter the protocol, cohort, models, endpoints, estimands or confirmatory procedures.
 
 ## Evidence status
 
 - The immutable pre-outcome protocol is preserved in release [`cross-well-protocol-v1.0`](https://github.com/ricadolu67-alt/cross-well-protocol/releases/tag/cross-well-protocol-v1.0).
 - That release remains anchored to verified signed commit `50e964a67bf24f4f4bea890d34eac77cde53e476`.
-- The OSF registration is embargoed through 31 December 2028; [confidential reviewer access](https://osf.io/zr3kw/overview?view_only=a1ba9f64aea54e23bf0dd069647bcee5) is available.
+- The OSF registration is embargoed through 31 December 2028. A confidential view-only reviewer link is provided only through the journal's private submission or editorial channel and is intentionally not stored in this public repository.
 - The post-unlock reproduction files in `reproduction/` are derived from the retained field-level outputs. They do not alter the frozen release.
 
 ## Reproduce the headline result
@@ -45,6 +47,7 @@ Expected headline values:
 
 - `drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/` — protocol modules and executable pipeline preserved for the frozen release
 - `reproduction/` — small, post-unlock, derived-data headline reproduction
+- `content/0730_XW_AUDIT_v17.8.6_pre-submission/integrity_companion/` — byte-identical copies and a SHA-256 crosswalk for four historical evidence records listed by, but absent from, the earlier integrity-package directory
 - `LICENSE` — license for original author-created code and documentation
 
 ## Data and license boundary
