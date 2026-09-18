@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "run_id": "CROSS_WELL_LAYER_D_RUN_001",
+  "deviation_class": "D2_OUTCOME_INDEPENDENT_TECHNICAL_CORRECTION",
+  "registered_executor_sha256": "DE5CF8AEE34C113DD309FFD3EC01626A61B79EC61D7AF225C9E864C2E42D12A6",
+  "only_code_change": "Add conversion lookup x1_tonne_force_to_kkgf = 1.0",
+  "files": [
+    {
+      "path": "run_layer_d_confirmatory.py",
+      "bytes": 27805,
+      "sha256": "970141BAFAD66A2C49A40222200D1862B4A97A41E4E7187235D7D467F6D14E17"
+    },
+    {
+      "path": "test_uncertainty_plan.py",
+      "bytes": 7893,
+      "sha256": "A814D3DC7818DC9C5286318B1B29D4945723B855DF4A8E02DE0E4EE71CADEBFA"
+    },
+    {
+      "path": "0726_D2_correction_README_v1.md",
+      "bytes": 511,
+      "sha256": "59191DE378992C688AA932374C95D369895842212FB80593AD3984818C809EC4"
+    }
+  ]
+}

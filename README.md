@@ -46,6 +46,7 @@ Expected headline values:
 ## Repository map
 
 - `drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/` — protocol modules and executable pipeline preserved for the frozen release
+- `drafts/0726_CROSS_WELL_D2_correction_v1/` — the D2-corrected executor that produced the reported Layer D run; it adds one frozen unit-conversion entry (`x1_tonne_force_to_kkgf`) to the registered executor, which is left unchanged. Published 2026-09-19; see its publication note
 - `reproduction/` — small, post-unlock, derived-data headline reproduction
 - `content/0730_XW_AUDIT_v17.8.6_pre-submission/integrity_companion/` — byte-identical copies and a SHA-256 crosswalk for four historical evidence records listed by, but absent from, the earlier integrity-package directory
 - `LICENSE` — license for original author-created code and documentation
