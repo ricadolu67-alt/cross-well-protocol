@@ -1,0 +1,27 @@
+﻿candidate_id,seed,n_iter,loss,best_validation_score,warning_categories,warning_messages
+ExtraTrees_depth12_leaf30,20260722,,,,,
+ExtraTrees_depth12_leaf30,20260723,,,,,
+ExtraTrees_depth12_leaf30,20260724,,,,,
+ExtraTrees_depth12_leaf30,20260725,,,,,
+ExtraTrees_depth12_leaf30,20260726,,,,,
+HistGB_lr005_leaf15,20260722,,,,,
+HistGB_lr005_leaf15,20260723,,,,,
+HistGB_lr005_leaf15,20260724,,,,,
+HistGB_lr005_leaf15,20260725,,,,,
+HistGB_lr005_leaf15,20260726,,,,,
+HistGB_lr008_leaf31,20260722,,,,,
+HistGB_lr008_leaf31,20260723,,,,,
+HistGB_lr008_leaf31,20260724,,,,,
+HistGB_lr008_leaf31,20260725,,,,,
+HistGB_lr008_leaf31,20260726,,,,,
+MLP_64_32,20260722,80,0.17101424843417537,0.6937011019754085,ConvergenceWarning,Stochastic Optimizer: Maximum iterations (80) reached and the optimization hasn't converged yet.
+MLP_64_32,20260723,80,0.174361811951974,0.6852519006327271,ConvergenceWarning,Stochastic Optimizer: Maximum iterations (80) reached and the optimization hasn't converged yet.
+MLP_64_32,20260724,80,0.16688123433352758,0.6992699105036839,ConvergenceWarning,Stochastic Optimizer: Maximum iterations (80) reached and the optimization hasn't converged yet.
+MLP_64_32,20260725,80,0.16911493008261463,0.7366521819285161,ConvergenceWarning,Stochastic Optimizer: Maximum iterations (80) reached and the optimization hasn't converged yet.
+MLP_64_32,20260726,80,0.15486933768536315,0.6937307785459035,ConvergenceWarning,Stochastic Optimizer: Maximum iterations (80) reached and the optimization hasn't converged yet.
+MLP_96_48,20260722,80,0.15967198943863287,0.7182022464271802,ConvergenceWarning,Stochastic Optimizer: Maximum iterations (80) reached and the optimization hasn't converged yet.
+MLP_96_48,20260723,80,0.1664115061084623,0.7144634909331071,ConvergenceWarning,Stochastic Optimizer: Maximum iterations (80) reached and the optimization hasn't converged yet.
+MLP_96_48,20260724,80,0.1567821860991744,0.6892557692797381,ConvergenceWarning,Stochastic Optimizer: Maximum iterations (80) reached and the optimization hasn't converged yet.
+MLP_96_48,20260725,80,0.15783903452407116,0.7608429841498425,ConvergenceWarning,Stochastic Optimizer: Maximum iterations (80) reached and the optimization hasn't converged yet.
+MLP_96_48,20260726,80,0.1529086778187328,0.7366363051206309,ConvergenceWarning,Stochastic Optimizer: Maximum iterations (80) reached and the optimization hasn't converged yet.
+Ridge_alpha_1,20260722,,,,,

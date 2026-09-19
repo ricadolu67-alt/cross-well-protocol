@@ -1,0 +1,193 @@
+﻿candidate_id,contrast,basin_id,field_id,n_families,gain,warning_seed_count,fit_warning,self_comparison
+Ridge_alpha_1,c_vs_md_only,Bonaparte Basin,Montara,3,-0.3365543529062549,0,none,False
+Ridge_alpha_1,c_vs_md_only,Browse Basin,Ichthys,2,-1.80480187264482,0,none,False
+Ridge_alpha_1,c_vs_md_only,Browse Basin,Prelude,3,-1.1069405595139628,0,none,False
+Ridge_alpha_1,c_vs_md_only,Gippsland Basin,Cobia,2,-2.140730925976076,0,none,False
+Ridge_alpha_1,c_vs_md_only,Gippsland Basin,Fortescue,2,1.1412706791593976,0,none,False
+Ridge_alpha_1,c_vs_md_only,Northern Carnarvon Basin,Gorgon,3,-1.5136839380284783,0,none,False
+Ridge_alpha_1,c_vs_md_only,Otway Basin,Geographe,2,-0.6459867627016873,0,none,False
+Ridge_alpha_1,c_vs_md_only,Otway Basin,Thylacine,2,-0.6317432382099204,0,none,False
+Ridge_alpha_1,c_vs_source_median,Bonaparte Basin,Montara,3,-2.508702211291004,0,none,False
+Ridge_alpha_1,c_vs_source_median,Browse Basin,Ichthys,2,-1.7308554460963528,0,none,False
+Ridge_alpha_1,c_vs_source_median,Browse Basin,Prelude,3,3.073662505474488,0,none,False
+Ridge_alpha_1,c_vs_source_median,Gippsland Basin,Cobia,2,4.022927849242038,0,none,False
+Ridge_alpha_1,c_vs_source_median,Gippsland Basin,Fortescue,2,2.6552837649880487,0,none,False
+Ridge_alpha_1,c_vs_source_median,Northern Carnarvon Basin,Gorgon,3,4.212431952653401,0,none,False
+Ridge_alpha_1,c_vs_source_median,Otway Basin,Geographe,2,-0.0992411415456056,0,none,False
+Ridge_alpha_1,c_vs_source_median,Otway Basin,Thylacine,2,1.2533843638322877,0,none,False
+Ridge_alpha_1,c_vs_frozen_et,Bonaparte Basin,Montara,3,-2.7376503736680107,0,none,False
+Ridge_alpha_1,c_vs_frozen_et,Browse Basin,Ichthys,2,-2.5402300256792785,0,none,False
+Ridge_alpha_1,c_vs_frozen_et,Browse Basin,Prelude,3,0.956452704493671,0,none,False
+Ridge_alpha_1,c_vs_frozen_et,Gippsland Basin,Cobia,2,0.8528786623504772,0,none,False
+Ridge_alpha_1,c_vs_frozen_et,Gippsland Basin,Fortescue,2,1.1792305024761731,0,none,False
+Ridge_alpha_1,c_vs_frozen_et,Northern Carnarvon Basin,Gorgon,3,0.47933634496664723,0,none,False
+Ridge_alpha_1,c_vs_frozen_et,Otway Basin,Geographe,2,-1.8242997863995818,0,none,False
+Ridge_alpha_1,c_vs_frozen_et,Otway Basin,Thylacine,2,-2.061774646499435,0,none,False
+Ridge_alpha_100,c_vs_md_only,Bonaparte Basin,Montara,3,-0.2322184805680684,0,none,False
+Ridge_alpha_100,c_vs_md_only,Browse Basin,Ichthys,2,-1.7721327830475744,0,none,False
+Ridge_alpha_100,c_vs_md_only,Browse Basin,Prelude,3,-1.1307753078538123,0,none,False
+Ridge_alpha_100,c_vs_md_only,Gippsland Basin,Cobia,2,-2.17657979396947,0,none,False
+Ridge_alpha_100,c_vs_md_only,Gippsland Basin,Fortescue,2,1.1552207612537373,0,none,False
+Ridge_alpha_100,c_vs_md_only,Northern Carnarvon Basin,Gorgon,3,-1.5432427150873569,0,none,False
+Ridge_alpha_100,c_vs_md_only,Otway Basin,Geographe,2,-0.6187174081211042,0,none,False
+Ridge_alpha_100,c_vs_md_only,Otway Basin,Thylacine,2,-0.6108992224083662,0,none,False
+Ridge_alpha_100,c_vs_source_median,Bonaparte Basin,Montara,3,-2.404366338952818,0,none,False
+Ridge_alpha_100,c_vs_source_median,Browse Basin,Ichthys,2,-1.698186356499107,0,none,False
+Ridge_alpha_100,c_vs_source_median,Browse Basin,Prelude,3,3.0498277571346386,0,none,False
+Ridge_alpha_100,c_vs_source_median,Gippsland Basin,Cobia,2,3.987078981248644,0,none,False
+Ridge_alpha_100,c_vs_source_median,Gippsland Basin,Fortescue,2,2.6692338470823884,0,none,False
+Ridge_alpha_100,c_vs_source_median,Northern Carnarvon Basin,Gorgon,3,4.182873175594523,0,none,False
+Ridge_alpha_100,c_vs_source_median,Otway Basin,Geographe,2,-0.0719717869650224,0,none,False
+Ridge_alpha_100,c_vs_source_median,Otway Basin,Thylacine,2,1.2742283796338416,0,none,False
+Ridge_alpha_100,c_vs_frozen_et,Bonaparte Basin,Montara,3,-2.6333145013298243,0,none,False
+Ridge_alpha_100,c_vs_frozen_et,Browse Basin,Ichthys,2,-2.5075609360820295,0,none,False
+Ridge_alpha_100,c_vs_frozen_et,Browse Basin,Prelude,3,0.9326179561538233,0,none,False
+Ridge_alpha_100,c_vs_frozen_et,Gippsland Basin,Cobia,2,0.817029794357083,0,none,False
+Ridge_alpha_100,c_vs_frozen_et,Gippsland Basin,Fortescue,2,1.193180584570527,0,none,False
+Ridge_alpha_100,c_vs_frozen_et,Northern Carnarvon Basin,Gorgon,3,0.44977756790778045,0,none,False
+Ridge_alpha_100,c_vs_frozen_et,Otway Basin,Geographe,2,-1.7970304318189996,0,none,False
+Ridge_alpha_100,c_vs_frozen_et,Otway Basin,Thylacine,2,-2.040930630697881,0,none,False
+HistGB_lr005_leaf15,c_vs_md_only,Bonaparte Basin,Montara,3,-1.3747431333746445,0,none,False
+HistGB_lr005_leaf15,c_vs_md_only,Browse Basin,Ichthys,2,-1.504654629023145,0,none,False
+HistGB_lr005_leaf15,c_vs_md_only,Browse Basin,Prelude,3,-2.462252361415389,0,none,False
+HistGB_lr005_leaf15,c_vs_md_only,Gippsland Basin,Cobia,2,-3.756074389649616,0,none,False
+HistGB_lr005_leaf15,c_vs_md_only,Gippsland Basin,Fortescue,2,-0.6677624457969173,0,none,False
+HistGB_lr005_leaf15,c_vs_md_only,Northern Carnarvon Basin,Gorgon,3,-3.1379432330263106,0,none,False
+HistGB_lr005_leaf15,c_vs_md_only,Otway Basin,Geographe,2,0.610758696131338,0,none,False
+HistGB_lr005_leaf15,c_vs_md_only,Otway Basin,Thylacine,2,0.3833248872205264,0,none,False
+HistGB_lr005_leaf15,c_vs_source_median,Bonaparte Basin,Montara,3,-3.546890991759394,0,none,False
+HistGB_lr005_leaf15,c_vs_source_median,Browse Basin,Ichthys,2,-1.430708202474678,0,none,False
+HistGB_lr005_leaf15,c_vs_source_median,Browse Basin,Prelude,3,1.7183507035730614,0,none,False
+HistGB_lr005_leaf15,c_vs_source_median,Gippsland Basin,Cobia,2,2.407584385568498,0,none,False
+HistGB_lr005_leaf15,c_vs_source_median,Gippsland Basin,Fortescue,2,0.8462506400317338,0,none,False
+HistGB_lr005_leaf15,c_vs_source_median,Northern Carnarvon Basin,Gorgon,3,2.5881726576555693,0,none,False
+HistGB_lr005_leaf15,c_vs_source_median,Otway Basin,Geographe,2,1.1575043172874198,0,none,False
+HistGB_lr005_leaf15,c_vs_source_median,Otway Basin,Thylacine,2,2.2684524892627342,0,none,False
+HistGB_lr005_leaf15,c_vs_frozen_et,Bonaparte Basin,Montara,3,-3.7758391541364027,0,none,False
+HistGB_lr005_leaf15,c_vs_frozen_et,Browse Basin,Ichthys,2,-2.2400827820575984,0,none,False
+HistGB_lr005_leaf15,c_vs_frozen_et,Browse Basin,Prelude,3,-0.3988590974077564,0,none,False
+HistGB_lr005_leaf15,c_vs_frozen_et,Gippsland Basin,Cobia,2,-0.7624648013230626,0,none,False
+HistGB_lr005_leaf15,c_vs_frozen_et,Gippsland Basin,Fortescue,2,-0.6298026224801418,0,none,False
+HistGB_lr005_leaf15,c_vs_frozen_et,Northern Carnarvon Basin,Gorgon,3,-1.1449229500311802,0,none,False
+HistGB_lr005_leaf15,c_vs_frozen_et,Otway Basin,Geographe,2,-0.5675543275665582,0,none,False
+HistGB_lr005_leaf15,c_vs_frozen_et,Otway Basin,Thylacine,2,-1.0467065210689892,0,none,False
+HistGB_lr008_leaf31,c_vs_md_only,Bonaparte Basin,Montara,3,-1.318935262130773,0,none,False
+HistGB_lr008_leaf31,c_vs_md_only,Browse Basin,Ichthys,2,-1.7171941489445448,0,none,False
+HistGB_lr008_leaf31,c_vs_md_only,Browse Basin,Prelude,3,-3.295251277762849,0,none,False
+HistGB_lr008_leaf31,c_vs_md_only,Gippsland Basin,Cobia,2,-5.0053882778397565,0,none,False
+HistGB_lr008_leaf31,c_vs_md_only,Gippsland Basin,Fortescue,2,-1.1463365620285018,0,none,False
+HistGB_lr008_leaf31,c_vs_md_only,Northern Carnarvon Basin,Gorgon,3,-4.1744306900214125,0,none,False
+HistGB_lr008_leaf31,c_vs_md_only,Otway Basin,Geographe,2,-0.0407607725319776,0,none,False
+HistGB_lr008_leaf31,c_vs_md_only,Otway Basin,Thylacine,2,-0.4811555966087164,0,none,False
+HistGB_lr008_leaf31,c_vs_source_median,Bonaparte Basin,Montara,3,-3.4910831205155226,0,none,False
+HistGB_lr008_leaf31,c_vs_source_median,Browse Basin,Ichthys,2,-1.6432477223960775,0,none,False
+HistGB_lr008_leaf31,c_vs_source_median,Browse Basin,Prelude,3,0.8853517872256015,0,none,False
+HistGB_lr008_leaf31,c_vs_source_median,Gippsland Basin,Cobia,2,1.158270497378357,0,none,False
+HistGB_lr008_leaf31,c_vs_source_median,Gippsland Basin,Fortescue,2,0.3676765238001493,0,none,False
+HistGB_lr008_leaf31,c_vs_source_median,Northern Carnarvon Basin,Gorgon,3,1.5516852006604676,0,none,False
+HistGB_lr008_leaf31,c_vs_source_median,Otway Basin,Geographe,2,0.5059848486241041,0,none,False
+HistGB_lr008_leaf31,c_vs_source_median,Otway Basin,Thylacine,2,1.4039720054334914,0,none,False
+HistGB_lr008_leaf31,c_vs_frozen_et,Bonaparte Basin,Montara,3,-3.7200312828925277,0,none,False
+HistGB_lr008_leaf31,c_vs_frozen_et,Browse Basin,Ichthys,2,-2.452622301979005,0,none,False
+HistGB_lr008_leaf31,c_vs_frozen_et,Browse Basin,Prelude,3,-1.2318580137552146,0,none,False
+HistGB_lr008_leaf31,c_vs_frozen_et,Gippsland Basin,Cobia,2,-2.011778689513207,0,none,False
+HistGB_lr008_leaf31,c_vs_frozen_et,Gippsland Basin,Fortescue,2,-1.1083767387117263,0,none,False
+HistGB_lr008_leaf31,c_vs_frozen_et,Northern Carnarvon Basin,Gorgon,3,-2.1814104070262843,0,none,False
+HistGB_lr008_leaf31,c_vs_frozen_et,Otway Basin,Geographe,2,-1.219073796229873,0,none,False
+HistGB_lr008_leaf31,c_vs_frozen_et,Otway Basin,Thylacine,2,-1.911187004898233,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_md_only,Bonaparte Basin,Montara,3,1.8979947918010376,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_md_only,Browse Basin,Ichthys,2,0.5020302873003804,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_md_only,Browse Basin,Prelude,3,-1.953836591985332,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_md_only,Gippsland Basin,Cobia,2,-3.295833904166376,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_md_only,Gippsland Basin,Fortescue,2,-0.3233326416002544,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_md_only,Northern Carnarvon Basin,Gorgon,3,-2.4577819558763707,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_md_only,Otway Basin,Geographe,2,1.0196826349327894,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_md_only,Otway Basin,Thylacine,2,1.3013529723569937,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_source_median,Bonaparte Basin,Montara,3,-0.2741530665837117,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_source_median,Browse Basin,Ichthys,2,0.5759767138488474,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_source_median,Browse Basin,Prelude,3,2.226766473003119,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_source_median,Gippsland Basin,Cobia,2,2.867824871051738,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_source_median,Gippsland Basin,Fortescue,2,1.1906804442283967,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_source_median,Northern Carnarvon Basin,Gorgon,3,3.268333934805509,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_source_median,Otway Basin,Geographe,2,1.5664282560888712,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_source_median,Otway Basin,Thylacine,2,3.186480574399201,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_frozen_et,Bonaparte Basin,Montara,3,-0.5031012289607162,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_frozen_et,Browse Basin,Ichthys,2,-0.2333978657340765,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_frozen_et,Browse Basin,Prelude,3,0.10955667202230224,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_frozen_et,Gippsland Basin,Cobia,2,-0.30222431583982257,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_frozen_et,Gippsland Basin,Fortescue,2,-0.28537281828347716,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_frozen_et,Northern Carnarvon Basin,Gorgon,3,-0.46476167288123804,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_frozen_et,Otway Basin,Geographe,2,-0.15863038876510593,0,none,False
+ExtraTrees_depth12_leaf30,c_vs_frozen_et,Otway Basin,Thylacine,2,-0.12867843593252282,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_md_only,Bonaparte Basin,Montara,3,2.4010960207617558,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_md_only,Browse Basin,Ichthys,2,0.7354281530344622,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_md_only,Browse Basin,Prelude,3,-2.063393264007635,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_md_only,Gippsland Basin,Cobia,2,-2.9936095883265565,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_md_only,Gippsland Basin,Fortescue,2,-0.0379598233167683,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_md_only,Northern Carnarvon Basin,Gorgon,3,-1.9930202829951305,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_md_only,Otway Basin,Geographe,2,1.1783130236978945,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_md_only,Otway Basin,Thylacine,2,1.4300314082895156,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_source_median,Bonaparte Basin,Montara,3,0.2289481623770057,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_source_median,Browse Basin,Ichthys,2,0.8093745795829292,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_source_median,Browse Basin,Prelude,3,2.117209800980816,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_source_median,Gippsland Basin,Cobia,2,3.170049186891557,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_source_median,Gippsland Basin,Fortescue,2,1.4760532625118827,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_source_median,Northern Carnarvon Basin,Gorgon,3,3.733095607686749,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_source_median,Otway Basin,Geographe,2,1.7250586448539762,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_source_median,Otway Basin,Thylacine,2,3.3151590103317234,0,none,False
+ExtraTrees_depth18_leaf100,c_vs_frozen_et,Bonaparte Basin,Montara,3,0.0,0,none,True
+ExtraTrees_depth18_leaf100,c_vs_frozen_et,Browse Basin,Ichthys,2,0.0,0,none,True
+ExtraTrees_depth18_leaf100,c_vs_frozen_et,Browse Basin,Prelude,3,0.0,0,none,True
+ExtraTrees_depth18_leaf100,c_vs_frozen_et,Gippsland Basin,Cobia,2,0.0,0,none,True
+ExtraTrees_depth18_leaf100,c_vs_frozen_et,Gippsland Basin,Fortescue,2,0.0,0,none,True
+ExtraTrees_depth18_leaf100,c_vs_frozen_et,Northern Carnarvon Basin,Gorgon,3,0.0,0,none,True
+ExtraTrees_depth18_leaf100,c_vs_frozen_et,Otway Basin,Geographe,2,0.0,0,none,True
+ExtraTrees_depth18_leaf100,c_vs_frozen_et,Otway Basin,Thylacine,2,0.0,0,none,True
+MLP_64_32,c_vs_md_only,Bonaparte Basin,Montara,3,-0.2922336073408977,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_md_only,Browse Basin,Ichthys,2,-8.159910596437694,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_md_only,Browse Basin,Prelude,3,-4.170888133177411,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_md_only,Gippsland Basin,Cobia,2,-5.35770926279881,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_md_only,Gippsland Basin,Fortescue,2,-1.6147892769816234,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_md_only,Northern Carnarvon Basin,Gorgon,3,-6.802148584828046,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_md_only,Otway Basin,Geographe,2,-1.2423130126570945,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_md_only,Otway Basin,Thylacine,2,-1.8035754370684751,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_source_median,Bonaparte Basin,Montara,3,-2.4643814657256478,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_source_median,Browse Basin,Ichthys,2,-8.085964169889227,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_source_median,Browse Basin,Prelude,3,0.0097149318110402,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_source_median,Gippsland Basin,Cobia,2,0.8059495124193035,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_source_median,Gippsland Basin,Fortescue,2,-0.1007761911529723,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_source_median,Northern Carnarvon Basin,Gorgon,3,-1.0760326941461666,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_source_median,Otway Basin,Geographe,2,-0.6955673915010125,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_source_median,Otway Basin,Thylacine,2,0.0815521649737327,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_frozen_et,Bonaparte Basin,Montara,3,-2.693329628102653,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_frozen_et,Browse Basin,Ichthys,2,-8.895338749472145,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_frozen_et,Browse Basin,Prelude,3,-2.1074948691697752,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_frozen_et,Gippsland Basin,Cobia,2,-2.364099674472257,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_frozen_et,Gippsland Basin,Fortescue,2,-1.5768294536648568,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_frozen_et,Northern Carnarvon Basin,Gorgon,3,-4.809128301832921,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_frozen_et,Otway Basin,Geographe,2,-2.4206260363549887,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_64_32,c_vs_frozen_et,Otway Basin,Thylacine,2,-3.2336068453579916,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_md_only,Bonaparte Basin,Montara,3,-1.5462171811047956,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_md_only,Browse Basin,Ichthys,2,-3.161324350666149,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_md_only,Browse Basin,Prelude,3,-4.215445201447456,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_md_only,Gippsland Basin,Cobia,2,-5.810488684361175,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_md_only,Gippsland Basin,Fortescue,2,-2.5869501002321584,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_md_only,Northern Carnarvon Basin,Gorgon,3,-6.264618447837286,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_md_only,Otway Basin,Geographe,2,-0.8488712126925968,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_md_only,Otway Basin,Thylacine,2,-2.4854143329291998,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_source_median,Bonaparte Basin,Montara,3,-3.718365039489545,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_source_median,Browse Basin,Ichthys,2,-3.087377924117682,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_source_median,Browse Basin,Prelude,3,-0.0348421364590046,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_source_median,Gippsland Basin,Cobia,2,0.3531700908569384,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_source_median,Gippsland Basin,Fortescue,2,-1.0729370144035073,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_source_median,Northern Carnarvon Basin,Gorgon,3,-0.5385025571554062,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_source_median,Otway Basin,Geographe,2,-0.3021255915365151,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_source_median,Otway Basin,Thylacine,2,-0.6002867308869915,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_frozen_et,Bonaparte Basin,Montara,3,-3.9473132018665495,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_frozen_et,Browse Basin,Ichthys,2,-3.896752503700611,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_frozen_et,Browse Basin,Prelude,3,-2.152051937439822,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_frozen_et,Gippsland Basin,Cobia,2,-2.8168790960346257,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_frozen_et,Gippsland Basin,Fortescue,2,-2.54899027691539,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_frozen_et,Northern Carnarvon Basin,Gorgon,3,-4.271598164842153,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_frozen_et,Otway Basin,Geographe,2,-2.027184236390493,5,ConvergenceWarning: frozen max_iter=80 retained,False
+MLP_96_48,c_vs_frozen_et,Otway Basin,Thylacine,2,-3.9154457412187167,5,ConvergenceWarning: frozen max_iter=80 retained,False

@@ -1,0 +1,28 @@
+{
+  "identity": "post_unlock_exploratory_derived_results",
+  "contract_v1_sha256": "1178946d54b43964435807d8613d0c93b258ce4a8f7d8be18a84fd7d9372efb7",
+  "amendment_v2_sha256": "59153449679a8d7b2a3de7e7f3c9f4262f6f3f7c47e09c702d79f45d928286b2",
+  "original_reporting_manifest_sha256": "09dbeecfda0dd24ec493ee6642157b3fc5c3e1f209b32f6e3612a40fbfaea2e6",
+  "source_mapping": {
+    "field_effects.csv": "0919_候选池场级效应_v2.csv",
+    "contrast_summary.csv": "0919_候选池对比汇总_v2.csv",
+    "leave_one_field_out.csv": "0919_候选池逐场留一_v2.csv",
+    "source_target_ranks.csv": "0918_源域与LayerD排名并列_v1.csv",
+    "source_outer_fold_ranks.csv": "0918_源域逐外折排名_v1.csv",
+    "results_ZH.md": "0919_冻结候选池稳健性分析报告_v2.md"
+  },
+  "sha256": {
+    "contrast_summary.csv": "8975603342d0479cfd7b85c8c0db0d80b513607f76fb0dff14244e16948c10d9",
+    "field_effects.csv": "4c6d33a776b2ee01efdd85f86a57ddd1ff2e92381891bee4e54938f2f0389d6b",
+    "fit_diagnostics.csv": "35238266c8a4d6c74024ff5043b8d3ed7ce458100b819a2f7a8c50356a1a9553",
+    "leave_one_field_out.csv": "a6edfed790b5c8eae2a90a9d8d478c89bd5359a0661ae68892c2f81122104f33",
+    "README.md": "4674f36247bed9462a972d2be8cbce840dea8d5d2b51dbe44ab333233256bac4",
+    "reproduce_pool.py": "8aeec771b20074cc9f7c089ed99e6759e90f1b8be9468a4ee284ec0bb9e124d5",
+    "results_ZH.md": "c0ec3dcd6a1380d8f100678922cfa55f86dc983eeb2f1b8fab92d053231d9559",
+    "source_outer_fold_ranks.csv": "1e710197c68994a75d0f76c1bd1a778f570f56c32e036e0f684839093d81b04a",
+    "source_target_ranks.csv": "d9162443dd9e765de46458996179833ed216829a2b43d1cd1a42a10ef0629671",
+    "execution_notes.md": "a6f1e64d412b12de466a68e79e5b3ef94190b004c6dbdc57a2abb274490cd7ee",
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  "release_package_version": "v1"
+}
