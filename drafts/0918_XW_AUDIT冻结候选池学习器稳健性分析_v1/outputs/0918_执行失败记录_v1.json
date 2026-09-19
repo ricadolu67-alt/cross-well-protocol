@@ -1,0 +1,54 @@
+{
+  "status": "FAILED_CLOSED",
+  "guards": {
+    "contract_tag_and_19_inputs": true
+  },
+  "warnings": [],
+  "new_candidate_predictions_generated": false,
+  "started_at": "2026-09-19T10:38:05.725244+00:00",
+  "command": [
+    "D:\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\Administrator\\Documents\\论文\\drafts\\0918_XW_AUDIT冻结候选池学习器稳健性分析_v1\\scripts\\run_pool_v1.py"
+  ],
+  "environment": {
+    "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "sklearn": "1.9.0",
+    "scipy": "1.18.0",
+    "joblib": "1.5.3",
+    "platform": "Windows-11-10.0.26100-SP0"
+  },
+  "phase": "contract_and_input_hashes",
+  "tag": "xw-audit-learner-pool-contract-v1",
+  "commit": "431d1095dcf27ab5460adff75db8b718dbd7d561",
+  "contract_sha256": "1178946d54b43964435807d8613d0c93b258ce4a8f7d8be18a84fd7d9372efb7",
+  "script_sha256": "36994e225a3fd2da04098e60195dbd5f15ed01e08b3882769a5f0ead157667de",
+  "input_sha256": {
+    "drafts/0726_CROSS_WELL_LAYER_D_RUN_001_corrected_results_v1.zip": "35ddf0510366defc146f8055f7ab4acc7a949bc74c3ee0b8afa0a837f7b78b7d",
+    "drafts/0722_跨井泛化证据链工作/0722_CROSS_WELL正式实验清单_v1.json": "fe71beba8685bfc9647c3ae42ae7889e6c5b65d049d8ba90e29c1f25a163de1e",
+    "drafts/0722_跨井泛化证据链工作/0722_CROSS_WELL正式LayerA编排器_v1.py": "2e86f08c79ff6d2eb015c73abf3ad14988a6517184794e621782f482a2cfeb2c",
+    "drafts/0722_跨井泛化证据链工作/0722_CROSS_WELL正式算法核心_v1.py": "3d9ee3dc02d539735465ceee2c149bc53afe231d5027641db26871d1df52eae0",
+    "drafts/0722_跨井泛化证据链工作/0722_CROSS_WELL正式LayerA结果_v1/outer_selection_and_thresholds.csv": "c23c2ea626064eadab374555739144d12857186d161c9d527166dd6f0a4cb610",
+    "drafts/0722_跨井泛化证据链工作/0722_CROSS_WELL正式LayerA结果_v1/inner_candidate_seed_unit_MAE.csv.gz": "8ba2359d7bceff1f73976846a390dddc834a275657f65ddd73f60fa7038aaef6",
+    "drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/scripts/build_frozen_model_bundle.py": "789e7c86be92b80c6bf9b4e51107e8bd304e1b81d6df275cc1abdf08b798c09f",
+    "drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/scripts/run_layer_d_confirmatory.py": "de5cf8aee34c113dd309ffd3ec01626a61b79ec61d7af225c9e864c2e42d12a6",
+    "drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/model_artifacts/model_bundle_manifest.json": "230d822e4261cf54442175e853ca59832d8c337f3793d6907acc8ef452e501b3",
+    "drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/model_artifacts/source_training_selection.csv": "3759a76e0b94ab1935b2ac5f821a5915df10e87c9dc731f1fcdbea2b1d03b238",
+    "drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/model_artifacts/source_feature_medians.json": "d44e254ca8f9f2b3e7e08f32001cf452a152a8d0a53bf0c09cdcc04fc0f4d457",
+    "drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/model_artifacts/FrozenExtraTrees_seed_20260722.joblib": "8048a6210dae166627992be93f13f528b223a91d750cbd28e3eabaff81015ed6",
+    "drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/model_artifacts/FrozenExtraTrees_seed_20260723.joblib": "6e2773883c52a065b55b843ff11e5e60e34f469e9ba53238d4f8c427b5966a8e",
+    "drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/model_artifacts/FrozenExtraTrees_seed_20260724.joblib": "d14da2f28a3aaa1e51190acea65d8b8245d1916d25c01d17e9569da75a7a6644",
+    "drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/model_artifacts/FrozenExtraTrees_seed_20260725.joblib": "eac8f4f27a475a5b974dc44de0445281dc00da1fce66305f4644a605f634680a",
+    "drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/model_artifacts/FrozenExtraTrees_seed_20260726.joblib": "579715bb38df97315f26a3b38e056453c8ba86a88f4852df93f5e3dc33cd9dd4",
+    "drafts/0724_CROSS_WELL_PROTOCOL_v0.9-draft_v1/model_artifacts/FrozenSourceOnlyRidge_alpha100.joblib": "3d8c24431f51f97f7b430e98c25b8de67f530e0f0c85cf46336a348e24ccc857",
+    "drafts/0802_XW_AUDIT更强基线探索性分析_v1/model_artifacts/0802_MDOnlyRidge_alpha100_v1.joblib": "e82e3eb49199f3751ba330ce210e22d43578226ec1da716129eef206e0c65524",
+    "drafts/0802_XW_AUDIT更强基线探索性分析_v1/outputs/0802_场级效应_v1.csv": "6ec0f53613c7dc0412029ff2ebcb432195f941b1de766094115b8e54ba919ad6"
+  },
+  "ended_at": "2026-09-19T10:38:06.640982+00:00",
+  "error": "Nonunique source loader",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Administrator\\Documents\\论文\\drafts\\0918_XW_AUDIT冻结候选池学习器稳健性分析_v1\\scripts\\run_pool_v1.py\", line 237, in <module>\n    try:main()\n        ~~~~^^\n  File \"C:\\Users\\Administrator\\Documents\\论文\\drafts\\0918_XW_AUDIT冻结候选池学习器稳健性分析_v1\\scripts\\run_pool_v1.py\", line 68, in main\n    if list(ROOT.glob('drafts/**/0718_ten_family_nested_lofo_v1.py'))!=[loader]:raise RuntimeError('Nonunique source loader')\n                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Nonunique source loader\n"
+}
